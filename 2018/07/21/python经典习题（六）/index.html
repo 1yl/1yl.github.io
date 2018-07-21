@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018 | YouliChao&#39;s blog</title>
+  <title>python经典习题(六) | YouliChao&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="YouliChao&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/archives/2018/index.html">
+  <meta name="description" content="作业1：编程判断3人中谁的年龄最大，并打印最大者的年龄123456789101112a = int(input(&quot;请输入第一个人的年龄：&quot;))b = int(input(&quot;请输入第二个人的年龄：&quot;))c = int(input(&quot;请输入第三个人的年龄：&quot;))# if(a&amp;gt;b and a&amp;gt;c):#     print(&quot;第一个人年龄最大为:&quot;,a)# elif(b&amp;gt;a and b">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python经典习题(六)">
+<meta property="og:url" content="http://yoursite.com/2018/07/21/python经典习题（六）/index.html">
 <meta property="og:site_name" content="YouliChao&#39;s blog">
+<meta property="og:description" content="作业1：编程判断3人中谁的年龄最大，并打印最大者的年龄123456789101112a = int(input(&quot;请输入第一个人的年龄：&quot;))b = int(input(&quot;请输入第二个人的年龄：&quot;))c = int(input(&quot;请输入第三个人的年龄：&quot;))# if(a&amp;gt;b and a&amp;gt;c):#     print(&quot;第一个人年龄最大为:&quot;,a)# elif(b&amp;gt;a and b">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-21T15:54:28.665Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="YouliChao&#39;s blog">
+<meta name="twitter:title" content="python经典习题(六)">
+<meta name="twitter:description" content="作业1：编程判断3人中谁的年龄最大，并打印最大者的年龄123456789101112a = int(input(&quot;请输入第一个人的年龄：&quot;))b = int(input(&quot;请输入第二个人的年龄：&quot;))c = int(input(&quot;请输入第三个人的年龄：&quot;))# if(a&amp;gt;b and a&amp;gt;c):#     print(&quot;第一个人年龄最大为:&quot;,a)# elif(b&amp;gt;a and b">
   
     <link rel="alternative" href="/atom.xml" title="YouliChao&#39;s blog" type="application/atom+xml">
   
@@ -164,238 +168,162 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-python经典习题（六）" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      python经典习题(六)
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python经典习题（六）/" class="archive-article-date">
+
+        
+        <a href="/2018/07/21/python经典习题（六）/" class="archive-article-date">
   	<time datetime="2018-07-21T15:50:21.986Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python经典习题（六）/">python经典习题(六)</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="作业1：编程判断3人中谁的年龄最大，并打印最大者的年龄"><a href="#作业1：编程判断3人中谁的年龄最大，并打印最大者的年龄" class="headerlink" title="作业1：编程判断3人中谁的年龄最大，并打印最大者的年龄"></a>作业1：编程判断3人中谁的年龄最大，并打印最大者的年龄</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">a = int(input(<span class="string">"请输入第一个人的年龄："</span>))</span><br><span class="line">b = int(input(<span class="string">"请输入第二个人的年龄："</span>))</span><br><span class="line">c = int(input(<span class="string">"请输入第三个人的年龄："</span>))</span><br><span class="line"><span class="comment"># if(a&gt;b and a&gt;c):</span></span><br><span class="line"><span class="comment">#     print("第一个人年龄最大为:",a)</span></span><br><span class="line"><span class="comment"># elif(b&gt;a and b &gt;c):</span></span><br><span class="line"><span class="comment">#     print("第二个人年龄最大为:",b)</span></span><br><span class="line"><span class="comment"># else:</span></span><br><span class="line"><span class="comment">#     print("第三个人年龄最大为:",c)</span></span><br><span class="line">listage=[a,b,c]</span><br><span class="line"><span class="built_in">print</span>(max(listage))</span><br><span class="line"><span class="built_in">print</span>(min(listage))</span><br></pre></td></tr></table></figure>
+<h3 id="作业2：-91-78-84-67-83-76-99-95-93-88"><a href="#作业2：-91-78-84-67-83-76-99-95-93-88" class="headerlink" title="作业2：[91,78,84,67,83,76,99,95,93,88]"></a>作业2：[91,78,84,67,83,76,99,95,93,88]</h3><h3 id="歌手打分：在歌唱比赛中，共有10位评委进行打分，"><a href="#歌手打分：在歌唱比赛中，共有10位评委进行打分，" class="headerlink" title="歌手打分：在歌唱比赛中，共有10位评委进行打分，"></a>歌手打分：在歌唱比赛中，共有10位评委进行打分，</h3><h3 id="在计算歌手得分时，去掉一个最高分，去掉一个最低分，"><a href="#在计算歌手得分时，去掉一个最高分，去掉一个最低分，" class="headerlink" title="在计算歌手得分时，去掉一个最高分，去掉一个最低分，"></a>在计算歌手得分时，去掉一个最高分，去掉一个最低分，</h3><h3 id="然后剩余的8位评委的分数进行平均，"><a href="#然后剩余的8位评委的分数进行平均，" class="headerlink" title="然后剩余的8位评委的分数进行平均，"></a>然后剩余的8位评委的分数进行平均，</h3><h3 id="就是该选手的最终得分。输入每个评委的评分，求某选手的得分"><a href="#就是该选手的最终得分。输入每个评委的评分，求某选手的得分" class="headerlink" title="就是该选手的最终得分。输入每个评委的评分，求某选手的得分"></a>就是该选手的最终得分。输入每个评委的评分，求某选手的得分</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">str=[]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(1,11):</span><br><span class="line">    a = <span class="built_in">float</span>(input(<span class="string">"请输入选手的得分:"</span>))</span><br><span class="line">    str.append(a)</span><br><span class="line">str.sort()</span><br><span class="line">j = 1</span><br><span class="line">sum = 0</span><br><span class="line"><span class="keyword">while</span>(j&lt;9):</span><br><span class="line">    sum+=str[j]</span><br><span class="line">    j+=1</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"最终得分："</span>,sum/8)</span><br><span class="line"></span><br><span class="line">lists=[91,78,84,67,83,76,99,95,93,88]</span><br><span class="line">maxs = max(lists)</span><br><span class="line">mins = min(lists)</span><br><span class="line">sum=nums=0</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> lists:</span><br><span class="line">    <span class="keyword">if</span> i != maxs and i != mins:</span><br><span class="line">        sum+=i</span><br><span class="line">        nums+=1</span><br><span class="line"><span class="built_in">print</span>(sum/nums)</span><br><span class="line"></span><br><span class="line"><span class="comment"># lists.sort()</span></span><br><span class="line"><span class="comment"># newstr=lists[1:len(lists)-1]</span></span><br><span class="line"><span class="comment"># sum = num =0</span></span><br><span class="line"><span class="comment"># for i in newstr:</span></span><br><span class="line"><span class="comment">#     sum+=i</span></span><br><span class="line"><span class="comment">#     num+=1</span></span><br><span class="line"><span class="comment"># print(sum/num)</span></span><br></pre></td></tr></table></figure>
+<h3 id="作业3：声明一个列表，接收3个学生的成绩，计算这3个学生的总分及平均分、"><a href="#作业3：声明一个列表，接收3个学生的成绩，计算这3个学生的总分及平均分、" class="headerlink" title="作业3：声明一个列表，接收3个学生的成绩，计算这3个学生的总分及平均分、"></a>作业3：声明一个列表，接收3个学生的成绩，计算这3个学生的总分及平均分、</h3><h3 id="最高分和最低分，参考函数：最大（max）、最小（min）"><a href="#最高分和最低分，参考函数：最大（max）、最小（min）" class="headerlink" title="最高分和最低分，参考函数：最大（max）、最小（min）"></a>最高分和最低分，参考函数：最大（max）、最小（min）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">str = []</span><br><span class="line">sum = 0</span><br><span class="line">a = <span class="built_in">float</span>(input(<span class="string">"请输入第一个学生的成绩:"</span>))</span><br><span class="line">b = <span class="built_in">float</span>(input(<span class="string">"请输入第二个学生的成绩:"</span>))</span><br><span class="line">c = <span class="built_in">float</span>(input(<span class="string">"请输入第三个学生的成绩:"</span>))</span><br><span class="line">str.append(a)</span><br><span class="line">str.append(b)</span><br><span class="line">str.append(c)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"总分:"</span>,a+b+c)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"平均分:"</span>,(a+b+c)/3)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"最高分:"</span>,max(str))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"最高分:"</span>,min(str))</span><br></pre></td></tr></table></figure>
+<h3 id="打印1-100的数，并求1-100之和，奇数之和，偶数之和"><a href="#打印1-100的数，并求1-100之和，奇数之和，偶数之和" class="headerlink" title="打印1-100的数，并求1-100之和，奇数之和，偶数之和"></a>打印1-100的数，并求1-100之和，奇数之和，偶数之和</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">ji = ou = sum = 0</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(1,101):</span><br><span class="line">    sum+=i</span><br><span class="line">    <span class="keyword">if</span>(i&lt;100):</span><br><span class="line">        <span class="built_in">print</span>(i,end=<span class="string">"+"</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(i,end=<span class="string">"="</span>)</span><br><span class="line">        <span class="built_in">print</span>(sum)</span><br><span class="line">    <span class="keyword">if</span>(i%2==0):</span><br><span class="line">        ou+=i</span><br><span class="line">        <span class="keyword">if</span>(i&lt;100):</span><br><span class="line">            <span class="built_in">print</span>(i,end=<span class="string">"+"</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(i,end=<span class="string">"="</span>)</span><br><span class="line">            <span class="built_in">print</span>(ou)      </span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        ji+=i</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"总和:"</span>,sum)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"偶数之和:"</span>,ou)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"奇数之和:"</span>,ji)</span><br></pre></td></tr></table></figure>
+<h3 id="判断质数"><a href="#判断质数" class="headerlink" title="判断质数"></a>判断质数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">n = int(input(<span class="string">"请输入一个数:"</span>))</span><br><span class="line"><span class="keyword">if</span>(n &gt; 1):</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(2,n):</span><br><span class="line">        <span class="keyword">if</span>(n%i == 0):</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"你输入的这个数不是质数"</span>)</span><br><span class="line">            <span class="built_in">break</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"你输入的这个数是质数"</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"质数必须大于1"</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="水仙花"><a href="#水仙花" class="headerlink" title="水仙花"></a>水仙花</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(100,1000):</span><br><span class="line">    <span class="comment"># i//100+i%100/10+i%100%10 </span></span><br><span class="line">    <span class="keyword">if</span>((i//100)**3+(i//10%10)**3+(i%10)**3 == i):</span><br><span class="line">        <span class="built_in">print</span>(i)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(1,10):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(0,10):</span><br><span class="line">        <span class="keyword">for</span> z <span class="keyword">in</span> range(0,10):</span><br><span class="line">            <span class="keyword">if</span>((i**3)+(j**3)+(z**3)==i*100+j*10+z):</span><br><span class="line">                <span class="built_in">print</span>(i*100+j*10+z)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(100,1000):</span><br><span class="line">    str1 = str(i)</span><br><span class="line">    <span class="keyword">if</span>(int(str1[0])*100+int(str1[1])*10+int(str1[2])) == int(str1[0])**3+int(str1[1])**3+int(str1[2])**3:</span><br><span class="line">        <span class="built_in">print</span>(str1)</span><br></pre></td></tr></table></figure>
+<h3 id="10-100随机取20个整数，append"><a href="#10-100随机取20个整数，append" class="headerlink" title="10-100随机取20个整数，append"></a>10-100随机取20个整数，append</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import random</span><br><span class="line">list=[]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(1,21):</span><br><span class="line">    m = random.randint(10,100)</span><br><span class="line">    list.append(m)</span><br><span class="line"><span class="built_in">print</span>(list)</span><br></pre></td></tr></table></figure>
+<h3 id="求1X2X3X4X5X6X7X-X20的结果？"><a href="#求1X2X3X4X5X6X7X-X20的结果？" class="headerlink" title="求1X2X3X4X5X6X7X..X20的结果？"></a>求1X2X3X4X5X6X7X..X20的结果？</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sum = 1</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(1,21):</span><br><span class="line">    sum*=i</span><br><span class="line"><span class="built_in">print</span>(sum)</span><br></pre></td></tr></table></figure>
+      
 
-        <div class="article-info info-on-right">
-          
-          
-
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/07/21/python经典习题（六）/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python经典习题（五）/" class="archive-article-date">
-  	<time datetime="2018-07-21T15:39:33.567Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/21/python经典习题（五）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">python经典习题(五)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python经典习题（五）/">python经典习题(五)</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python经典习题（四）/" class="archive-article-date">
-  	<time datetime="2018-07-21T15:28:22.821Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python经典习题（四）/">python经典习题(四)</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python个人笔记(一)/" class="archive-article-date">
-  	<time datetime="2018-07-21T15:17:54.134Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python个人笔记(一)/">python个人笔记(一)</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python经典习题（三）/" class="archive-article-date">
-  	<time datetime="2018-07-21T15:06:39.495Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python经典习题（三）/">python经典习题(三)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python经典习题（二）/" class="archive-article-date">
-  	<time datetime="2018-07-21T14:53:57.653Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python经典习题（二）/">python经典习题(二)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/17/python经典习题（一）/" class="archive-article-date">
-  	<time datetime="2018-07-17T07:04:12.716Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/17/python经典习题（一）/">python经典习题(一)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/14/hello-world/" class="archive-article-date">
-  	<time datetime="2018-07-14T01:01:02.738Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/14/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -418,8 +346,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
