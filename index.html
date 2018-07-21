@@ -166,6 +166,81 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-python个人笔记(一)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/21/python个人笔记(一)/">python个人笔记(一)</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/21/python个人笔记(一)/" class="archive-article-date">
+  	<time datetime="2018-07-21T15:17:54.134Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="运算过程中的自动转换规则"><a href="#运算过程中的自动转换规则" class="headerlink" title="运算过程中的自动转换规则"></a>运算过程中的自动转换规则</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">num=250</span><br><span class="line">num1=3.14</span><br><span class="line">result=num+int(num1)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">float</span>(num))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(result))</span><br></pre></td></tr></table></figure>
+<h3 id="判断中的自动转换"><a href="#判断中的自动转换" class="headerlink" title="判断中的自动转换"></a>判断中的自动转换</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> 120 (bool  120num-&gt;bool):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'true'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'false'</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="int-强制转换"><a href="#int-强制转换" class="headerlink" title="int 强制转换"></a>int 强制转换</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">num=10</span><br><span class="line">bool=5 <span class="comment">#转换成数字1</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(num//bool))</span><br><span class="line"><span class="built_in">print</span>(int(<span class="string">'250'</span>))  <span class="comment">#250</span></span><br><span class="line"><span class="comment"># print(int('250.5'))  # Error</span></span><br><span class="line"><span class="comment">#print(int('10k'))   # Error</span></span><br><span class="line"><span class="built_in">print</span>(int(<span class="string">'abc123'</span>)) <span class="comment">#Error</span></span><br></pre></td></tr></table></figure>
+<h3 id="float行强制转换"><a href="#float行强制转换" class="headerlink" title="float行强制转换"></a>float行强制转换</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># num=3.157</span></span><br><span class="line"><span class="comment">#print(round(num)) </span></span><br><span class="line">n=10</span><br><span class="line"><span class="built_in">print</span>((n/2).is_integer())</span><br></pre></td></tr></table></figure>
+<h3 id="复数强制转换"><a href="#复数强制转换" class="headerlink" title="复数强制转换"></a>复数强制转换</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(complex(5))</span><br><span class="line"><span class="built_in">print</span>(complex(5,5))</span><br><span class="line"><span class="built_in">print</span>(complex(True))</span><br><span class="line"><span class="built_in">print</span>(complex(False))</span><br></pre></td></tr></table></figure>
+<h3 id="bool值强制转换"><a href="#bool值强制转换" class="headerlink" title="bool值强制转换"></a>bool值强制转换</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var1=0</span><br><span class="line">var1=[0]</span><br><span class="line">var1=(0)</span><br><span class="line">newvar=bool(var1)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(var1))</span><br><span class="line"><span class="comment"># print(bool(var1))</span></span><br><span class="line"><span class="keyword">if</span> newvar:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'当前为true'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'当前为false'</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="字符串强制转换"><a href="#字符串强制转换" class="headerlink" title="字符串强制转换"></a>字符串强制转换</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var=[<span class="string">'one'</span>,<span class="string">'two'</span>]</span><br><span class="line">var=<span class="string">'one two thr'</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(var))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(str(var)))</span><br><span class="line"><span class="built_in">print</span>(str(var))</span><br><span class="line"><span class="built_in">print</span>(var)</span><br><span class="line"><span class="built_in">print</span>(repr(var))</span><br></pre></td></tr></table></figure>
+<h3 id="eval用法，字符串转为其他类型"><a href="#eval用法，字符串转为其他类型" class="headerlink" title="eval用法，字符串转为其他类型"></a>eval用法，字符串转为其他类型</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">str=<span class="string">'pow(2,3)'</span></span><br><span class="line">str=<span class="string">"['one','two','thr']"</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(str))</span><br><span class="line">newstr=<span class="built_in">eval</span>(str)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(newstr))</span><br></pre></td></tr></table></figure>
+<h3 id="列表转为字典类型"><a href="#列表转为字典类型" class="headerlink" title="列表转为字典类型"></a>列表转为字典类型</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">list1=([<span class="string">'uname'</span>,<span class="string">'张三'</span>],[<span class="string">'age'</span>,45],[<span class="string">'class'</span>,<span class="string">'python'</span>])</span><br><span class="line"><span class="built_in">print</span>(list1)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(list1))</span><br><span class="line">dict1=dict(list1)</span><br><span class="line"><span class="comment"># &#123;键：值&#125;</span></span><br><span class="line"><span class="built_in">print</span>(dict1)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(dict1))</span><br><span class="line"><span class="comment">#把其他类型转为元组类型，注意键：值的分配</span></span><br><span class="line"><span class="comment">#字典转为其他（列表），只获取键部分</span></span><br></pre></td></tr></table></figure>
+<h3 id="random-random-的取值范围在0到1这个区间内"><a href="#random-random-的取值范围在0到1这个区间内" class="headerlink" title="random.random()的取值范围在0到1这个区间内"></a>random.random()的取值范围在0到1这个区间内</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(0-10)(10之内)</span><br><span class="line">import random</span><br><span class="line">import math</span><br><span class="line">num = random.random()*10</span><br><span class="line"><span class="built_in">print</span>(math.floor(num))</span><br></pre></td></tr></table></figure>
+<h3 id="19-180的随机数-乘上两数之差加1-最小数"><a href="#19-180的随机数-乘上两数之差加1-最小数" class="headerlink" title="19-180的随机数(乘上两数之差加1+最小数)"></a>19-180的随机数(乘上两数之差加1+最小数)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import random</span><br><span class="line">import math</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(14):</span><br><span class="line">    num1 = random.random()*162+19</span><br><span class="line">    <span class="built_in">print</span>(math.floor(num1))</span><br></pre></td></tr></table></figure>
+<h3 id="累加运算"><a href="#累加运算" class="headerlink" title="累加运算"></a>累加运算</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sum = 0 </span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(1,11):</span><br><span class="line">    sum+=i</span><br><span class="line"><span class="built_in">print</span>(sum)</span><br></pre></td></tr></table></figure>
+<h3 id="被除数-除数"><a href="#被除数-除数" class="headerlink" title="被除数%除数"></a>被除数%除数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">num1 = -9</span><br><span class="line">num2 = 2</span><br><span class="line">num = num1 % num2</span><br><span class="line"><span class="built_in">print</span>(num)</span><br></pre></td></tr></table></figure>
+<h3 id="闰年问题"><a href="#闰年问题" class="headerlink" title="闰年问题"></a>闰年问题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">year = int(input(<span class="string">"请输入年份："</span>))</span><br><span class="line"><span class="keyword">if</span>(year%4 == 0 and year%100 != 0):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"闰年"</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"平年"</span>)</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/21/python个人笔记(一)/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-python经典习题（三）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
