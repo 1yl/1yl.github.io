@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018/7 | YouliChao&#39;s blog</title>
+  <title>python经典习题(三) | YouliChao&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="YouliChao&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/archives/2018/07/index.html">
+  <meta name="description" content="作业一：获取19-180之间的随机数作业二：将list1=[‘one’,’two’,’thr’]拼接成一个字符串作业三：将当前字典user = {‘姓名’:’张三’,’年龄’:’18’,’性别’:’男’}，输出字典user的key,以’,’ 连接，如 ‘姓名，年龄，性别’。 作业一：获取19-180之间的随机数123456    #解题思路：180-19+1=162 random.random()">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python经典习题(三)">
+<meta property="og:url" content="http://yoursite.com/2018/07/21/python经典习题（三）/index.html">
 <meta property="og:site_name" content="YouliChao&#39;s blog">
+<meta property="og:description" content="作业一：获取19-180之间的随机数作业二：将list1=[‘one’,’two’,’thr’]拼接成一个字符串作业三：将当前字典user = {‘姓名’:’张三’,’年龄’:’18’,’性别’:’男’}，输出字典user的key,以’,’ 连接，如 ‘姓名，年龄，性别’。 作业一：获取19-180之间的随机数123456    #解题思路：180-19+1=162 random.random()">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-21T15:10:31.121Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="YouliChao&#39;s blog">
+<meta name="twitter:title" content="python经典习题(三)">
+<meta name="twitter:description" content="作业一：获取19-180之间的随机数作业二：将list1=[‘one’,’two’,’thr’]拼接成一个字符串作业三：将当前字典user = {‘姓名’:’张三’,’年龄’:’18’,’性别’:’男’}，输出字典user的key,以’,’ 连接，如 ‘姓名，年龄，性别’。 作业一：获取19-180之间的随机数123456    #解题思路：180-19+1=162 random.random()">
   
     <link rel="alternative" href="/atom.xml" title="YouliChao&#39;s blog" type="application/atom+xml">
   
@@ -164,130 +168,159 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-python经典习题（三）" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      python经典习题(三)
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python经典习题（三）/" class="archive-article-date">
+
+        
+        <a href="/2018/07/21/python经典习题（三）/" class="archive-article-date">
   	<time datetime="2018-07-21T15:06:39.495Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python经典习题（三）/">python经典习题(三)</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>作业一：获取19-180之间的随机数<br>作业二：将list1=[‘one’,’two’,’thr’]拼接成一个字符串<br>作业三：将当前字典user = {‘姓名’:’张三’,’年龄’:’18’,’性别’:’男’}，输出字典user的key,以’,’ 连接，如 ‘姓名，年龄，性别’。</p>
+<h3 id="作业一：获取19-180之间的随机数"><a href="#作业一：获取19-180之间的随机数" class="headerlink" title="作业一：获取19-180之间的随机数"></a>作业一：获取19-180之间的随机数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">    <span class="comment">#解题思路：180-19+1=162 random.random()*162+19</span></span><br><span class="line">import random</span><br><span class="line">import math</span><br><span class="line"><span class="built_in">print</span>(random.random()*162+19)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(1,11):</span><br><span class="line">    <span class="built_in">print</span>(math.floor(random.random()*162+19))</span><br></pre></td></tr></table></figure>
+<h3 id="作业二：将list1-‘one’-’two’-’thr’-拼接成一个字符串"><a href="#作业二：将list1-‘one’-’two’-’thr’-拼接成一个字符串" class="headerlink" title="作业二：将list1=[‘one’,’two’,’thr’]拼接成一个字符串"></a>作业二：将list1=[‘one’,’two’,’thr’]拼接成一个字符串</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">list = [<span class="string">'one'</span>,<span class="string">'two'</span>,<span class="string">'thr'</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">""</span>.join(list))</span><br><span class="line"><span class="built_in">print</span>(list[0]+list[1]+list[2])</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> list:</span><br><span class="line">    <span class="comment"># print(i,end=""+"\n")</span></span><br><span class="line">    <span class="built_in">print</span>(i,end=<span class="string">""</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'\n'</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="作业三：将当前字典user-‘姓名’-’张三’-’年龄’-’18’-’性别’-’男’-，"><a href="#作业三：将当前字典user-‘姓名’-’张三’-’年龄’-’18’-’性别’-’男’-，" class="headerlink" title="作业三：将当前字典user = {‘姓名’:’张三’,’年龄’:’18’,’性别’:’男’}，"></a>作业三：将当前字典user = {‘姓名’:’张三’,’年龄’:’18’,’性别’:’男’}，</h3><h3 id="输出字典user的key-以’-’-连接，如-‘姓名，年龄，性别’。"><a href="#输出字典user的key-以’-’-连接，如-‘姓名，年龄，性别’。" class="headerlink" title="输出字典user的key,以’,’ 连接，如 ‘姓名，年龄，性别’。"></a>输出字典user的key,以’,’ 连接，如 ‘姓名，年龄，性别’。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">user = &#123;<span class="string">'姓名'</span>:<span class="string">'张三'</span>,<span class="string">'年龄'</span>:<span class="string">'18'</span>,<span class="string">'性别'</span>:<span class="string">'男'</span>&#125;</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> user:</span><br><span class="line">    <span class="built_in">print</span>(i,end=<span class="string">","</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"\n"</span>)    </span><br><span class="line"><span class="comment"># print(tuple(user.keys()))</span></span><br><span class="line"><span class="comment"># user1 = tuple(user.keys())</span></span><br><span class="line"><span class="comment"># for k in user1:</span></span><br><span class="line"><span class="comment">#     print(k,end=",")</span></span><br><span class="line"><span class="built_in">print</span>(repr(<span class="string">","</span>.join(user)))</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/07/21/python经典习题（三）/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python经典习题（二）/" class="archive-article-date">
-  	<time datetime="2018-07-21T14:53:57.653Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/21/python经典习题（二）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">python经典习题(二)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python经典习题（二）/">python经典习题(二)</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/17/python经典习题（一）/" class="archive-article-date">
-  	<time datetime="2018-07-17T07:04:12.716Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/17/python经典习题（一）/">python经典习题(一)</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/14/hello-world/" class="archive-article-date">
-  	<time datetime="2018-07-14T01:01:02.738Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/14/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -310,8 +343,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
