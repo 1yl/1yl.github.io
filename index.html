@@ -166,6 +166,75 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-python经典习题（五）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/21/python经典习题（五）/">python经典习题(五)</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/21/python经典习题（五）/" class="archive-article-date">
+  	<time datetime="2018-07-21T15:39:33.567Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1、百元买百鸡"><a href="#1、百元买百鸡" class="headerlink" title="1、百元买百鸡"></a>1、百元买百鸡</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># a = 0</span></span><br><span class="line"><span class="comment"># while(a&lt;=20):</span></span><br><span class="line"><span class="comment">#     while(b)</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(0,21):</span><br><span class="line">    <span class="keyword">for</span> m <span class="keyword">in</span> range(0,34):</span><br><span class="line">        <span class="keyword">for</span> n <span class="keyword">in</span> range(1,300):</span><br><span class="line">            <span class="keyword">if</span>(i+n+m==100 and 5*i+3*m+n/3==100):</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">"公鸡有"</span>,i,<span class="string">"只"</span>,end=<span class="string">" "</span>)</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">"母鸡有"</span>,m,<span class="string">"只"</span>,end=<span class="string">" "</span>)</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">"小鸡有"</span>,n,<span class="string">"只"</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="2、白僧吃百馍"><a href="#2、白僧吃百馍" class="headerlink" title="2、白僧吃百馍"></a>2、白僧吃百馍</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(1,100):</span><br><span class="line">    j=100-i</span><br><span class="line">    <span class="keyword">if</span>(3*i+j/3==100):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"大和尚:"</span>,i,<span class="string">"人"</span>,end=<span class="string">" "</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"小和尚:"</span>,j,<span class="string">"人"</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="3、打印输出0-200之间能被7整除但不能被4整除的所有整数"><a href="#3、打印输出0-200之间能被7整除但不能被4整除的所有整数" class="headerlink" title="3、打印输出0-200之间能被7整除但不能被4整除的所有整数!"></a>3、打印输出0-200之间能被7整除但不能被4整除的所有整数!</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(0,201):</span><br><span class="line">    <span class="keyword">if</span>(i%7==0 and i%4!=0):</span><br><span class="line">        <span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure>
+<h3 id="4、求1到100的奇数的平均值"><a href="#4、求1到100的奇数的平均值" class="headerlink" title="4、求1到100的奇数的平均值"></a>4、求1到100的奇数的平均值</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sum=0</span><br><span class="line">m=0</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(1,101):</span><br><span class="line">    <span class="keyword">if</span>(i%2!=0):</span><br><span class="line">        sum+=i</span><br><span class="line">        m+=1</span><br><span class="line">    i+=2 </span><br><span class="line"><span class="built_in">print</span>(sum/m)</span><br></pre></td></tr></table></figure>
+<h3 id="5、获取当前的时间，并判断在7-8点提醒吃早饭，12-1点提醒吃午饭，6点提醒下班，11点提醒该睡觉了。"><a href="#5、获取当前的时间，并判断在7-8点提醒吃早饭，12-1点提醒吃午饭，6点提醒下班，11点提醒该睡觉了。" class="headerlink" title="5、获取当前的时间，并判断在7-8点提醒吃早饭，12-1点提醒吃午饭，6点提醒下班，11点提醒该睡觉了。"></a>5、获取当前的时间，并判断在7-8点提醒吃早饭，12-1点提醒吃午饭，6点提醒下班，11点提醒该睡觉了。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import datetime</span><br><span class="line">datetime.datetime.now().hour</span><br><span class="line"><span class="keyword">if</span>(datetime.datetime.now().hour &gt;= 7 and datetime.datetime.now().hour &lt; 8):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"该吃早饭啦"</span>)</span><br><span class="line"><span class="keyword">elif</span>(datetime.datetime.now().hour &gt;= 12 and datetime.datetime.now().hour &lt; 13):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"该吃午饭啦"</span>)</span><br><span class="line"><span class="keyword">elif</span> (datetime.datetime.now().hour &gt;= 18 and datetime.datetime.now().hour &lt; 23):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"该下班了"</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"该睡觉了"</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="6、使用for循环，打印菱形"><a href="#6、使用for循环，打印菱形" class="headerlink" title="6、使用for循环，打印菱形"></a>6、使用for循环，打印菱形</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">n = int(input(<span class="string">"请输入你需要的行数："</span>))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(1,n+1):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">" "</span>*(n-i)+<span class="string">"★"</span>*(2*i-1))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(n,0,-1):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">" "</span>*(n-i)+<span class="string">"★"</span>*(2*i-1))</span><br></pre></td></tr></table></figure>
+<h3 id="7、乘法表"><a href="#7、乘法表" class="headerlink" title="7、乘法表"></a>7、乘法表</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">i = 1</span><br><span class="line"><span class="keyword">while</span>(i&lt;10):</span><br><span class="line">    j = 1</span><br><span class="line">    <span class="keyword">while</span>(j&lt;=i):</span><br><span class="line">        <span class="built_in">print</span>(str(j)+<span class="string">"*"</span>+str(i)+<span class="string">"="</span>+str(i*j),end=<span class="string">" "</span>)</span><br><span class="line">        j+=1</span><br><span class="line">    i+=1</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">""</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="8、输出金字塔"><a href="#8、输出金字塔" class="headerlink" title="8、输出金字塔"></a>8、输出金字塔</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">i = 0 <span class="comment">#行</span></span><br><span class="line">j = 0 <span class="comment">#列</span></span><br><span class="line">m = <span class="string">"★"</span> <span class="comment">#符号</span></span><br><span class="line">n = <span class="string">" "</span> <span class="comment">#空格</span></span><br><span class="line">a = int(input(<span class="string">"请输入你需要的行数"</span>))</span><br><span class="line"><span class="keyword">while</span>(i&lt;a):</span><br><span class="line">    i+=1</span><br><span class="line">    <span class="keyword">while</span>(j&lt;(2*a-1)):</span><br><span class="line">        j+=1</span><br><span class="line">    <span class="built_in">print</span>((a-i)*n,end=<span class="string">""</span>)</span><br><span class="line">    <span class="built_in">print</span>((2*i-1)*m)</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/21/python经典习题（五）/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-python经典习题（四）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
