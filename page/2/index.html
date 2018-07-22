@@ -166,6 +166,72 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-python经典习题（三）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/21/python经典习题（三）/">python经典习题(三)</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/21/python经典习题（三）/" class="archive-article-date">
+  	<time datetime="2018-07-21T15:06:39.495Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>作业一：获取19-180之间的随机数<br>作业二：将list1=[‘one’,’two’,’thr’]拼接成一个字符串<br>作业三：将当前字典user = {‘姓名’:’张三’,’年龄’:’18’,’性别’:’男’}，输出字典user的key,以’,’ 连接，如 ‘姓名，年龄，性别’。</p>
+<h3 id="作业一：获取19-180之间的随机数"><a href="#作业一：获取19-180之间的随机数" class="headerlink" title="作业一：获取19-180之间的随机数"></a>作业一：获取19-180之间的随机数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">    <span class="comment">#解题思路：180-19+1=162 random.random()*162+19</span></span><br><span class="line">import random</span><br><span class="line">import math</span><br><span class="line"><span class="built_in">print</span>(random.random()*162+19)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(1,11):</span><br><span class="line">    <span class="built_in">print</span>(math.floor(random.random()*162+19))</span><br></pre></td></tr></table></figure>
+<h3 id="作业二：将list1-‘one’-’two’-’thr’-拼接成一个字符串"><a href="#作业二：将list1-‘one’-’two’-’thr’-拼接成一个字符串" class="headerlink" title="作业二：将list1=[‘one’,’two’,’thr’]拼接成一个字符串"></a>作业二：将list1=[‘one’,’two’,’thr’]拼接成一个字符串</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">list = [<span class="string">'one'</span>,<span class="string">'two'</span>,<span class="string">'thr'</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">""</span>.join(list))</span><br><span class="line"><span class="built_in">print</span>(list[0]+list[1]+list[2])</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> list:</span><br><span class="line">    <span class="comment"># print(i,end=""+"\n")</span></span><br><span class="line">    <span class="built_in">print</span>(i,end=<span class="string">""</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'\n'</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="作业三：将当前字典user-‘姓名’-’张三’-’年龄’-’18’-’性别’-’男’-，"><a href="#作业三：将当前字典user-‘姓名’-’张三’-’年龄’-’18’-’性别’-’男’-，" class="headerlink" title="作业三：将当前字典user = {‘姓名’:’张三’,’年龄’:’18’,’性别’:’男’}，"></a>作业三：将当前字典user = {‘姓名’:’张三’,’年龄’:’18’,’性别’:’男’}，</h3><h3 id="输出字典user的key-以’-’-连接，如-‘姓名，年龄，性别’。"><a href="#输出字典user的key-以’-’-连接，如-‘姓名，年龄，性别’。" class="headerlink" title="输出字典user的key,以’,’ 连接，如 ‘姓名，年龄，性别’。"></a>输出字典user的key,以’,’ 连接，如 ‘姓名，年龄，性别’。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">user = &#123;<span class="string">'姓名'</span>:<span class="string">'张三'</span>,<span class="string">'年龄'</span>:<span class="string">'18'</span>,<span class="string">'性别'</span>:<span class="string">'男'</span>&#125;</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> user:</span><br><span class="line">    <span class="built_in">print</span>(i,end=<span class="string">","</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"\n"</span>)    </span><br><span class="line"><span class="comment"># print(tuple(user.keys()))</span></span><br><span class="line"><span class="comment"># user1 = tuple(user.keys())</span></span><br><span class="line"><span class="comment"># for k in user1:</span></span><br><span class="line"><span class="comment">#     print(k,end=",")</span></span><br><span class="line"><span class="built_in">print</span>(repr(<span class="string">","</span>.join(user)))</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/21/python经典习题（三）/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-python经典习题（二）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
