@@ -166,6 +166,215 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-python个人笔记(三)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/22/python个人笔记(三)/">python个人笔记(三)</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/22/python个人笔记(三)/" class="archive-article-date">
+  	<time datetime="2018-07-22T01:11:44.590Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="数学函数"><a href="#数学函数" class="headerlink" title="数学函数"></a>数学函数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import math</span><br><span class="line">import random</span><br></pre></td></tr></table></figure>
+<h3 id="获取绝对值"><a href="#获取绝对值" class="headerlink" title="获取绝对值"></a>获取绝对值</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(abs(-10))</span><br></pre></td></tr></table></figure>
+<h3 id="向上取整"><a href="#向上取整" class="headerlink" title="向上取整"></a>向上取整</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(math.ceil(2.8))</span><br></pre></td></tr></table></figure>
+<h3 id="向下取整"><a href="#向下取整" class="headerlink" title="向下取整"></a>向下取整</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(math.floor(2.4))</span><br></pre></td></tr></table></figure>
+<h3 id="求和"><a href="#求和" class="headerlink" title="求和"></a>求和</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(sum(&#123;1,2,3&#125;))</span><br></pre></td></tr></table></figure>
+<h3 id="生成序列"><a href="#生成序列" class="headerlink" title="生成序列"></a>生成序列</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(sum(range(5)))</span><br></pre></td></tr></table></figure>
+<h3 id="获取e的x次幂"><a href="#获取e的x次幂" class="headerlink" title="获取e的x次幂"></a>获取e的x次幂</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(math.exp(3))</span><br></pre></td></tr></table></figure>
+<h3 id="获取绝对值的浮点数"><a href="#获取绝对值的浮点数" class="headerlink" title="获取绝对值的浮点数"></a>获取绝对值的浮点数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(math.fabs(5))</span><br></pre></td></tr></table></figure>
+<h3 id="将浮点数，分为整数和小数部分，小数部分是一个完整的小数"><a href="#将浮点数，分为整数和小数部分，小数部分是一个完整的小数" class="headerlink" title="将浮点数，分为整数和小数部分，小数部分是一个完整的小数"></a>将浮点数，分为整数和小数部分，小数部分是一个完整的小数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(math.modf(6.855))</span><br></pre></td></tr></table></figure>
+<h3 id="对浮点数进行四舍五入，保留小数点后几位"><a href="#对浮点数进行四舍五入，保留小数点后几位" class="headerlink" title="对浮点数进行四舍五入，保留小数点后几位"></a>对浮点数进行四舍五入，保留小数点后几位</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(round(6.855,2))</span><br></pre></td></tr></table></figure>
+<h3 id="获取常量π"><a href="#获取常量π" class="headerlink" title="获取常量π"></a>获取常量π</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(math.pi)</span><br></pre></td></tr></table></figure>
+<p>###获取常量e</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(math.e)</span><br></pre></td></tr></table></figure>
+<h3 id="使用del删除元素，删除多个时，中间用逗号隔开，在列表中删除一个元素之后，会重新将内容的下标排序"><a href="#使用del删除元素，删除多个时，中间用逗号隔开，在列表中删除一个元素之后，会重新将内容的下标排序" class="headerlink" title="使用del删除元素，删除多个时，中间用逗号隔开，在列表中删除一个元素之后，会重新将内容的下标排序"></a>使用del删除元素，删除多个时，中间用逗号隔开，在列表中删除一个元素之后，会重新将内容的下标排序</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var1=1</span><br><span class="line">var2=2</span><br><span class="line">del var2,var1</span><br><span class="line"><span class="built_in">print</span>(var1)</span><br></pre></td></tr></table></figure>
+<h3 id="删除列表中的前两个元素"><a href="#删除列表中的前两个元素" class="headerlink" title="删除列表中的前两个元素"></a>删除列表中的前两个元素</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">lists=[<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>]</span><br><span class="line"><span class="built_in">print</span>(lists)</span><br><span class="line">del lists[0],lists[0]</span><br><span class="line"><span class="built_in">print</span>(lists)</span><br></pre></td></tr></table></figure>
+<h3 id="3-6之前的版本获取所有内置变量和函数名需要import，3-6-5中不需要引入"><a href="#3-6之前的版本获取所有内置变量和函数名需要import，3-6-5中不需要引入" class="headerlink" title="3.6之前的版本获取所有内置变量和函数名需要import，3.6.5中不需要引入"></a>3.6之前的版本获取所有内置变量和函数名需要import，3.6.5中不需要引入</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># import builtins</span></span><br><span class="line"><span class="built_in">print</span>(dir(__builtins__))</span><br></pre></td></tr></table></figure>
+<h3 id="random-获取0-1之间的随机数，包含0，不包含1"><a href="#random-获取0-1之间的随机数，包含0，不包含1" class="headerlink" title="random()获取0-1之间的随机数，包含0，不包含1"></a>random()获取0-1之间的随机数，包含0，不包含1</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ran=math.floor(random.random()*11)<span class="comment">#*floor(max-min+1)+min</span></span><br></pre></td></tr></table></figure>
+<h3 id="choice随机获取列表中的一个元素"><a href="#choice随机获取列表中的一个元素" class="headerlink" title="choice随机获取列表中的一个元素"></a>choice随机获取列表中的一个元素</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ran1=random.choice(range(10))</span><br><span class="line">ran1=[<span class="string">'胡辣汤'</span>,<span class="string">'豆腐脑'</span>,<span class="string">'油条'</span>,<span class="string">'煎饼果子'</span>,<span class="string">'鸡蛋饼'</span>]</span><br><span class="line"><span class="built_in">print</span>(random.choice(ran1))</span><br></pre></td></tr></table></figure>
+<h3 id="将序列中的所有元素随机排序，获取固定下标的值，类似于choice，随机获取"><a href="#将序列中的所有元素随机排序，获取固定下标的值，类似于choice，随机获取" class="headerlink" title="将序列中的所有元素随机排序，获取固定下标的值，类似于choice，随机获取"></a>将序列中的所有元素随机排序，获取固定下标的值，类似于choice，随机获取</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">random.shuffle(ran1)</span><br><span class="line"><span class="built_in">print</span>(ran1[0])</span><br></pre></td></tr></table></figure>
+<h3 id="获取指定范围内的随机整数，间隔值默认为1，可以定义起始值；如果只写一个参数表示从0开始到指定数值，不包含数值本身"><a href="#获取指定范围内的随机整数，间隔值默认为1，可以定义起始值；如果只写一个参数表示从0开始到指定数值，不包含数值本身" class="headerlink" title="获取指定范围内的随机整数，间隔值默认为1，可以定义起始值；如果只写一个参数表示从0开始到指定数值，不包含数值本身"></a>获取指定范围内的随机整数，间隔值默认为1，可以定义起始值；如果只写一个参数表示从0开始到指定数值，不包含数值本身</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(random.randrange(100,1000,2))</span><br></pre></td></tr></table></figure>
+<h3 id="随机返回一个整数，包含开始值和结束值"><a href="#随机返回一个整数，包含开始值和结束值" class="headerlink" title="随机返回一个整数，包含开始值和结束值"></a>随机返回一个整数，包含开始值和结束值</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(random.randint(5,7))</span><br></pre></td></tr></table></figure>
+<h3 id="随机生成下一个实数（小数），它在-x-y-范围内，包含边界值"><a href="#随机生成下一个实数（小数），它在-x-y-范围内，包含边界值" class="headerlink" title="随机生成下一个实数（小数），它在[x,y]范围内，包含边界值"></a>随机生成下一个实数（小数），它在[x,y]范围内，包含边界值</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(random.uniform(1,10))</span><br></pre></td></tr></table></figure>
+<h3 id="原型打印内容"><a href="#原型打印内容" class="headerlink" title="原型打印内容"></a>原型打印内容</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">str1=<span class="string">'hello wworld'</span></span><br><span class="line"><span class="built_in">print</span>(str1)     <span class="comment">#hello wworld</span></span><br><span class="line"><span class="built_in">print</span>(repr(str1))  <span class="comment">#'hello wworld'</span></span><br><span class="line"><span class="comment">#把字符串当做py代码执行</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">eval</span>(repr(str1)))</span><br></pre></td></tr></table></figure>
+<h3 id="locals表示当前环境中的所有变量，如果在函数中，稚嫩获取函数中的变量"><a href="#locals表示当前环境中的所有变量，如果在函数中，稚嫩获取函数中的变量" class="headerlink" title="locals表示当前环境中的所有变量，如果在函数中，稚嫩获取函数中的变量"></a>locals表示当前环境中的所有变量，如果在函数中，稚嫩获取函数中的变量</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">def one():</span><br><span class="line">    a=<span class="string">'123'</span></span><br><span class="line">    b=<span class="string">'456'</span></span><br><span class="line">    <span class="built_in">print</span>(locals())</span><br><span class="line">one()</span><br></pre></td></tr></table></figure>
+<h3 id="类型相关函数："><a href="#类型相关函数：" class="headerlink" title="类型相关函数："></a>类型相关函数：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int,<span class="built_in">float</span>,bool,str,list,tuple,<span class="built_in">set</span>,dict,complex</span><br></pre></td></tr></table></figure>
+<h3 id="变量相关："><a href="#变量相关：" class="headerlink" title="变量相关："></a>变量相关：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">type</span>,id,<span class="built_in">print</span></span><br></pre></td></tr></table></figure>
+<h3 id="数学函数-1"><a href="#数学函数-1" class="headerlink" title="数学函数:"></a>数学函数:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">abs，round，sum,min,max,pow,range,repr,<span class="built_in">eval</span>,locals</span><br></pre></td></tr></table></figure>
+<h3 id="进制"><a href="#进制" class="headerlink" title="进制"></a>进制</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin,oct,hex,ord,chr</span><br></pre></td></tr></table></figure>
+<h3 id="使用operator代替之前的cmp，对两个变量进行对比，返回值为bool值"><a href="#使用operator代替之前的cmp，对两个变量进行对比，返回值为bool值" class="headerlink" title="使用operator代替之前的cmp，对两个变量进行对比，返回值为bool值"></a>使用operator代替之前的cmp，对两个变量进行对比，返回值为bool值</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import operator</span><br><span class="line">list1=[12,45,78,75]</span><br><span class="line">list2=[12,45,78]</span><br><span class="line"><span class="built_in">print</span>(operator.gt(list1,list2))</span><br></pre></td></tr></table></figure>
+<h3 id="关键词参数-键–值"><a href="#关键词参数-键–值" class="headerlink" title="关键词参数 键–值"></a>关键词参数 键–值</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">"我的名字&#123;name&#125;,我的年龄&#123;age&#125;"</span></span><br><span class="line">res1 = str1.format(name=<span class="string">"rose"</span>,age=<span class="string">"18"</span>)</span><br><span class="line"><span class="built_in">print</span>(res1)</span><br></pre></td></tr></table></figure>
+<h3 id="非关键词参数-没有参数"><a href="#非关键词参数-没有参数" class="headerlink" title="非关键词参数 (没有参数)"></a>非关键词参数 (没有参数)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">str2 = <span class="string">"我的名字&#123;&#125;,我的年龄&#123;&#125;,级别&#123;&#125;"</span></span><br><span class="line">res2 = str2.format(<span class="string">"jack"</span>,18,<span class="string">"高级"</span>)</span><br><span class="line"><span class="built_in">print</span>(res2)</span><br></pre></td></tr></table></figure>
+<h3 id="多次使用"><a href="#多次使用" class="headerlink" title="多次使用"></a>多次使用</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">str3 = <span class="string">"我的名字&#123;0&#125;,我的年龄&#123;1&#125;,小明和我一样大&#123;0&#125;"</span></span><br><span class="line">res3 = str3.format(<span class="string">"花花"</span>,18)</span><br><span class="line"><span class="built_in">print</span>(res3)</span><br></pre></td></tr></table></figure>
+<h3 id="列表推导式的四种格式"><a href="#列表推导式的四种格式" class="headerlink" title="列表推导式的四种格式"></a>列表推导式的四种格式</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 简单的列表推导式</span></span><br><span class="line"><span class="comment"># 带有判断条件的列表推导式</span></span><br><span class="line"><span class="comment"># 多个列表同时循环的列表推导式</span></span><br><span class="line"><span class="comment"># 带有判断条件的多个列表的同时循环列表推导式</span></span><br><span class="line">li=[1,2,3,4,5,6]</span><br><span class="line">li2=[<span class="string">'apple'</span>,<span class="string">'orange'</span>,<span class="string">'strawberry'</span>,<span class="string">'banana'</span>,<span class="string">'xigua'</span>,<span class="string">'li'</span>]</span><br><span class="line"><span class="built_in">print</span>([i**2 <span class="keyword">for</span> i <span class="keyword">in</span> li])</span><br><span class="line"><span class="built_in">print</span>([i**2 <span class="keyword">for</span> i <span class="keyword">in</span> li <span class="keyword">if</span> i&gt;3])</span><br><span class="line"><span class="built_in">print</span>([str(i)+<span class="string">'=&gt;'</span>+j <span class="keyword">for</span> i <span class="keyword">in</span> li <span class="keyword">for</span> j <span class="keyword">in</span> li2])</span><br><span class="line"><span class="built_in">print</span>([str(i)+<span class="string">'=&gt;'</span>+j <span class="keyword">for</span> i <span class="keyword">in</span> li <span class="keyword">for</span> j <span class="keyword">in</span> li2 <span class="keyword">if</span> li.index(i)==li2.index(j)])</span><br></pre></td></tr></table></figure>
+<h3 id="for-变量1-变量2-in-列表-循环格式"><a href="#for-变量1-变量2-in-列表-循环格式" class="headerlink" title="for 变量1,变量2 in 列表   循环格式"></a>for 变量1,变量2 in 列表   循环格式</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">list7=[[<span class="string">'age'</span>,<span class="string">'18'</span>,20],[<span class="string">'class'</span>,<span class="string">'py'</span>],[<span class="string">'name'</span>,<span class="string">'林俊杰'</span>]]</span><br><span class="line">dict1=&#123;<span class="string">'age'</span>:<span class="string">'18'</span>,<span class="string">'name'</span>:<span class="string">'林俊杰'</span>&#125;</span><br><span class="line"><span class="keyword">for</span> i,j <span class="keyword">in</span> dict1.items():</span><br><span class="line">    <span class="built_in">print</span>(i,j)</span><br></pre></td></tr></table></figure>
+<h3 id="extend，将list4追加到list3上，类似于-的作用"><a href="#extend，将list4追加到list3上，类似于-的作用" class="headerlink" title="extend，将list4追加到list3上，类似于+的作用"></a>extend，将list4追加到list3上，类似于+的作用</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">list3=[<span class="string">'apple'</span>,<span class="string">'orange'</span>,<span class="string">'strawberry'</span>,<span class="string">'banana'</span>]</span><br><span class="line">list4=[<span class="string">'oppo'</span>,<span class="string">'华为'</span>,<span class="string">'小米'</span>,<span class="string">'vivo'</span>,<span class="string">'联想'</span>,<span class="string">'360'</span>,<span class="string">'格力'</span>,<span class="string">'坚果'</span>,<span class="string">'魅族'</span>,<span class="string">'TCL'</span>,<span class="string">'HTC'</span>,<span class="string">'LG'</span>,<span class="string">'诺基亚'</span>,<span class="string">'oppo'</span>,<span class="string">'华为'</span>,<span class="string">'小米'</span>,<span class="string">'vivo'</span>,<span class="string">'联想'</span>,<span class="string">'360'</span>,<span class="string">'格力'</span>,<span class="string">'坚果'</span>,<span class="string">'魅族'</span>,<span class="string">'TCL'</span>,<span class="string">'HTC'</span>,<span class="string">'LG'</span>,<span class="string">'诺基亚'</span>]</span><br><span class="line"><span class="built_in">print</span>(list3.extend(list4))</span><br></pre></td></tr></table></figure>
+<h3 id="复制list3并将赋值的结果赋给list5"><a href="#复制list3并将赋值的结果赋给list5" class="headerlink" title="复制list3并将赋值的结果赋给list5"></a>复制list3并将赋值的结果赋给list5</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">list5=list3.copy()</span><br><span class="line"><span class="built_in">print</span>(list5)</span><br><span class="line">list6=[]</span><br></pre></td></tr></table></figure>
+<h3 id="使用count统计字符串中有多少个指定的字符。默认count统计的是元素出现的次数"><a href="#使用count统计字符串中有多少个指定的字符。默认count统计的是元素出现的次数" class="headerlink" title="使用count统计字符串中有多少个指定的字符。默认count统计的是元素出现的次数"></a>使用count统计字符串中有多少个指定的字符。默认count统计的是元素出现的次数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> list3:</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> i:</span><br><span class="line">        list6.append(j)</span><br><span class="line"><span class="built_in">print</span>(list6.count(<span class="string">'a'</span>))</span><br><span class="line"></span><br><span class="line">newlist3=<span class="string">''</span>.join(list3)</span><br><span class="line"><span class="built_in">print</span>(newlist3.count(<span class="string">'a'</span>))</span><br></pre></td></tr></table></figure>
+<h3 id="index查询自字符串出现的位置（下标），可以指定查询开始和结束的位置"><a href="#index查询自字符串出现的位置（下标），可以指定查询开始和结束的位置" class="headerlink" title="index查询自字符串出现的位置（下标），可以指定查询开始和结束的位置"></a>index查询自字符串出现的位置（下标），可以指定查询开始和结束的位置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(list4.index(<span class="string">'360'</span>,6))</span><br></pre></td></tr></table></figure>
+<h3 id="pop默认删除最后一个元素（-1），加参数删除指定位置的值"><a href="#pop默认删除最后一个元素（-1），加参数删除指定位置的值" class="headerlink" title="pop默认删除最后一个元素（-1），加参数删除指定位置的值"></a>pop默认删除最后一个元素（-1），加参数删除指定位置的值</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(list4.pop(1))</span><br></pre></td></tr></table></figure>
+<h3 id="remove移除指定元素（根据内容进行移除）"><a href="#remove移除指定元素（根据内容进行移除）" class="headerlink" title="remove移除指定元素（根据内容进行移除）"></a>remove移除指定元素（根据内容进行移除）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list4.remove(<span class="string">'小米'</span>)</span><br><span class="line"><span class="built_in">print</span>(list4)</span><br></pre></td></tr></table></figure>
+<h3 id="反向列表中元素list3-reverse-和-reversede-list3区分"><a href="#反向列表中元素list3-reverse-和-reversede-list3区分" class="headerlink" title="反向列表中元素list3.reverse 和 reversede()list3区分"></a>反向列表中元素list3.reverse 和 reversede()list3区分</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(list3.reverse())</span><br><span class="line"><span class="built_in">print</span>(list3)</span><br><span class="line"><span class="built_in">print</span>(reversed(list3))</span><br><span class="line"><span class="built_in">print</span>(list3)</span><br><span class="line"><span class="built_in">print</span>(list3)</span><br></pre></td></tr></table></figure>
+<h3 id="sort-对列表内容进行排序，区分sort和sorted"><a href="#sort-对列表内容进行排序，区分sort和sorted" class="headerlink" title="sort 对列表内容进行排序，区分sort和sorted"></a>sort 对列表内容进行排序，区分sort和sorted</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(list3.sort())</span><br><span class="line"><span class="built_in">print</span>(sorted(list3,reverse=True))</span><br><span class="line"></span><br><span class="line">str1=<span class="string">'abcdefg'</span></span><br><span class="line">list4=[]</span><br><span class="line"></span><br><span class="line">list3=[<span class="string">'appless'</span>,<span class="string">'banana'</span>,<span class="string">'orange'</span>,<span class="string">'strawberry'</span>]</span><br></pre></td></tr></table></figure>
+<h3 id="获取最大值，最小值"><a href="#获取最大值，最小值" class="headerlink" title="获取最大值，最小值"></a>获取最大值，最小值</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(min(list3))</span><br><span class="line"><span class="built_in">print</span>(max(list3))</span><br></pre></td></tr></table></figure>
+<h3 id="将字符串转换为列表"><a href="#将字符串转换为列表" class="headerlink" title="将字符串转换为列表"></a>将字符串转换为列表</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(list(str1))</span><br></pre></td></tr></table></figure>
+<h3 id="append，向list3追加内容"><a href="#append，向list3追加内容" class="headerlink" title="append，向list3追加内容"></a>append，向list3追加内容</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(list3.append(<span class="string">'tomato'</span>))</span><br><span class="line"><span class="built_in">print</span>(list3)</span><br></pre></td></tr></table></figure>
+<h3 id="循环字符串，将内容追加到指定列表中"><a href="#循环字符串，将内容追加到指定列表中" class="headerlink" title="循环字符串，将内容追加到指定列表中"></a>循环字符串，将内容追加到指定列表中</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> str1:</span><br><span class="line">    list4.append(i)</span><br><span class="line"><span class="built_in">print</span>(list4)</span><br></pre></td></tr></table></figure>
+<h3 id="向list3中插入指定内容，第一个参数可以指定追加位置"><a href="#向list3中插入指定内容，第一个参数可以指定追加位置" class="headerlink" title="向list3中插入指定内容，第一个参数可以指定追加位置"></a>向list3中插入指定内容，第一个参数可以指定追加位置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">list3=[<span class="string">'apple'</span>,<span class="string">'banana'</span>,<span class="string">'orange'</span>,<span class="string">'strawberry'</span>]</span><br><span class="line">list3.insert(2,<span class="string">'car'</span>)</span><br><span class="line"><span class="built_in">print</span>(list3)</span><br></pre></td></tr></table></figure>
+<h3 id="使用insert实现列表内容的翻转"><a href="#使用insert实现列表内容的翻转" class="headerlink" title="使用insert实现列表内容的翻转"></a>使用insert实现列表内容的翻转</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> list3:</span><br><span class="line">    list4.insert(0,i)</span><br><span class="line"><span class="built_in">print</span>(list4)</span><br><span class="line"></span><br><span class="line">lis=[<span class="string">'one'</span>,<span class="string">'two'</span>]</span><br><span class="line">lisone=[[<span class="string">'age'</span>,<span class="string">'18'</span>],[<span class="string">'class'</span>,<span class="string">'py'</span>]]</span><br></pre></td></tr></table></figure>
+<h3 id="获取多层列表中的一个值"><a href="#获取多层列表中的一个值" class="headerlink" title="获取多层列表中的一个值"></a>获取多层列表中的一个值</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lisone[0][1]=<span class="string">'20'</span></span><br><span class="line">lis+=[<span class="string">'thr'</span>]</span><br></pre></td></tr></table></figure>
+<h3 id="删除列表中的一个元素"><a href="#删除列表中的一个元素" class="headerlink" title="删除列表中的一个元素"></a>删除列表中的一个元素</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">del lis[0]</span><br><span class="line"><span class="built_in">print</span>(lis)</span><br></pre></td></tr></table></figure>
+<h3 id="使用len循环，根绝下标取其中的值"><a href="#使用len循环，根绝下标取其中的值" class="headerlink" title="使用len循环，根绝下标取其中的值"></a>使用len循环，根绝下标取其中的值</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(lis)):</span><br><span class="line">    <span class="built_in">print</span>(lis[i])</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">hello</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/22/python个人笔记(三)/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-python经典习题（八）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/22/python经典习题（八）/">python经典习题(八)</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/22/python经典习题（八）/" class="archive-article-date">
+  	<time datetime="2018-07-22T00:49:17.978Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1、截取特定区间的字符："><a href="#1、截取特定区间的字符：" class="headerlink" title="1、截取特定区间的字符："></a>1、截取特定区间的字符：</h3><h3 id="比如：s-‘ilove…-python’-截取中间的…"><a href="#比如：s-‘ilove…-python’-截取中间的…" class="headerlink" title="比如：s = ‘ilove….python’ 截取中间的…."></a>比如：s = ‘ilove….python’ 截取中间的….</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">s = input(<span class="string">"请输入字符："</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(s)):</span><br><span class="line">    <span class="keyword">if</span> str.isalpha(s[i]) == False:</span><br><span class="line">        <span class="built_in">print</span>(s[i],end=<span class="string">""</span>)</span><br><span class="line"><span class="built_in">print</span>()</span><br></pre></td></tr></table></figure>
+<h3 id="2、给定一个句子，包含字母和空格，将句子中的单词位置翻转，单词用空格分隔，单词之间只有一个空格"><a href="#2、给定一个句子，包含字母和空格，将句子中的单词位置翻转，单词用空格分隔，单词之间只有一个空格" class="headerlink" title="2、给定一个句子，包含字母和空格，将句子中的单词位置翻转，单词用空格分隔，单词之间只有一个空格"></a>2、给定一个句子，包含字母和空格，将句子中的单词位置翻转，单词用空格分隔，单词之间只有一个空格</h3><h3 id="hello-xiao-mi-》mi-xiao-hello"><a href="#hello-xiao-mi-》mi-xiao-hello" class="headerlink" title="hello xiao mi-》mi xiao hello"></a>hello xiao mi-》mi xiao hello</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">"hello xiao mi"</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">" "</span>.join(str1.split()[::-1]))</span><br></pre></td></tr></table></figure>
+<h3 id="3、将以下字符串替换成指定的ascii编码"><a href="#3、将以下字符串替换成指定的ascii编码" class="headerlink" title="3、将以下字符串替换成指定的ascii编码"></a>3、将以下字符串替换成指定的ascii编码</h3><h3 id="ss-‘The-quick-brown-fox-jumped-over-the-lazy-dog-’"><a href="#ss-‘The-quick-brown-fox-jumped-over-the-lazy-dog-’" class="headerlink" title="ss = ‘The quick brown fox jumped over the lazy dog.’"></a>ss = ‘The quick brown fox jumped over the lazy dog.’</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ss = <span class="string">'The quick brown fox jumped over the lazy dog.'</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(ss)):</span><br><span class="line">    <span class="built_in">print</span>(ord(ss[i]),end=<span class="string">" "</span>)</span><br><span class="line"><span class="built_in">print</span>()</span><br></pre></td></tr></table></figure>
+<h3 id="4、使用列表嵌套，完成8名老师随机分配3个办公室"><a href="#4、使用列表嵌套，完成8名老师随机分配3个办公室" class="headerlink" title="4、使用列表嵌套，完成8名老师随机分配3个办公室"></a>4、使用列表嵌套，完成8名老师随机分配3个办公室</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import random</span><br><span class="line">teacher = [<span class="string">"A"</span>,<span class="string">"B"</span>,<span class="string">"C"</span>,<span class="string">"D"</span>,<span class="string">"E"</span>,<span class="string">"F"</span>,<span class="string">"G"</span>,<span class="string">"H"</span>]</span><br><span class="line">office = [[],[],[]]</span><br><span class="line"><span class="keyword">for</span> t <span class="keyword">in</span> teacher:</span><br><span class="line">    office[random.randint(0,2)].append(t)</span><br><span class="line"><span class="keyword">for</span> o <span class="keyword">in</span> office:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"第%s间教室有%s名老师,分别是:"</span> %(office.index(o)+1,len(o)),end=<span class="string">""</span>)</span><br><span class="line">    <span class="keyword">for</span> tec <span class="keyword">in</span> o:</span><br><span class="line">        <span class="built_in">print</span>(tec,end=<span class="string">""</span>)</span><br><span class="line">    <span class="built_in">print</span>()</span><br></pre></td></tr></table></figure>
+<h3 id="5、统计字符串中，各个字符的个数"><a href="#5、统计字符串中，各个字符的个数" class="headerlink" title="5、统计字符串中，各个字符的个数"></a>5、统计字符串中，各个字符的个数</h3><h3 id="比如：”hello-world”-字符串统计的结果为：-h-1-e-1-l-3-o-2-d-1-r-1-w-1"><a href="#比如：”hello-world”-字符串统计的结果为：-h-1-e-1-l-3-o-2-d-1-r-1-w-1" class="headerlink" title="比如：”hello world” 字符串统计的结果为： h:1 e:1 l:3 o:2 d:1 r:1 w:1"></a>比如：”hello world” 字符串统计的结果为： h:1 e:1 l:3 o:2 d:1 r:1 w:1</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">str1 = input(<span class="string">"请输入字符串:"</span>)</span><br><span class="line">dict1 = &#123;&#125;</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> str1:</span><br><span class="line">    <span class="keyword">if</span> i == <span class="string">" "</span>:</span><br><span class="line">        <span class="built_in">continue</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        dict1[i]=str1.count(i)</span><br><span class="line"><span class="built_in">print</span>(dict1)</span><br></pre></td></tr></table></figure>
+<h3 id="6、‘扁担长，板凳宽。板凳没有扁担长，扁担没有板凳宽。扁担要绑在板凳上，板凳偏不让扁担绑在板凳上’。"><a href="#6、‘扁担长，板凳宽。板凳没有扁担长，扁担没有板凳宽。扁担要绑在板凳上，板凳偏不让扁担绑在板凳上’。" class="headerlink" title="6、‘扁担长，板凳宽。板凳没有扁担长，扁担没有板凳宽。扁担要绑在板凳上，板凳偏不让扁担绑在板凳上’。"></a>6、‘扁担长，板凳宽。板凳没有扁担长，扁担没有板凳宽。扁担要绑在板凳上，板凳偏不让扁担绑在板凳上’。</h3><h3 id="请计算出‘扁担子串在字符串中出现的次数，并输出该次数"><a href="#请计算出‘扁担子串在字符串中出现的次数，并输出该次数" class="headerlink" title="请计算出‘扁担子串在字符串中出现的次数，并输出该次数"></a>请计算出‘扁担子串在字符串中出现的次数，并输出该次数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">oldstr = <span class="string">"扁担"</span></span><br><span class="line">newstr = <span class="string">"扁担长，板凳宽。板凳没有扁担长，扁担没有板凳宽。扁担要绑在板凳上，板凳偏不让扁担绑在板凳上"</span></span><br><span class="line"><span class="built_in">print</span>(len(newstr.split(oldstr))-1)</span><br></pre></td></tr></table></figure>
+<h3 id="7、li-‘sam’-’tom’-’jack’-利用下划线将列表的每一个元素拼接成字符串”sam-tom-jack”"><a href="#7、li-‘sam’-’tom’-’jack’-利用下划线将列表的每一个元素拼接成字符串”sam-tom-jack”" class="headerlink" title="7、li = [‘sam’,’tom’,’jack’]   利用下划线将列表的每一个元素拼接成字符串”sam_tom_jack”"></a>7、li = [‘sam’,’tom’,’jack’]   利用下划线将列表的每一个元素拼接成字符串”sam_tom_jack”</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">li = [<span class="string">'sam'</span>,<span class="string">'tom'</span>,<span class="string">'jack'</span>]</span><br><span class="line">res1 = <span class="string">"_"</span>.join(li)</span><br><span class="line"><span class="built_in">print</span>(repr(res1))</span><br><span class="line">res2 = repr(res1)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">eval</span>(res2))</span><br></pre></td></tr></table></figure>
+<h3 id="8、已知字符串-a-“aAsmr3idd4bgs7Dlsf9eAF”"><a href="#8、已知字符串-a-“aAsmr3idd4bgs7Dlsf9eAF”" class="headerlink" title="8、已知字符串 a = “aAsmr3idd4bgs7Dlsf9eAF”"></a>8、已知字符串 a = “aAsmr3idd4bgs7Dlsf9eAF”</h3><h3 id="请将a字符串的大写改为小写，小写改为大写"><a href="#请将a字符串的大写改为小写，小写改为大写" class="headerlink" title="请将a字符串的大写改为小写，小写改为大写"></a>请将a字符串的大写改为小写，小写改为大写</h3><h3 id="请将a字符串的数字取出，并输出成一个新的字符串"><a href="#请将a字符串的数字取出，并输出成一个新的字符串" class="headerlink" title="请将a字符串的数字取出，并输出成一个新的字符串"></a>请将a字符串的数字取出，并输出成一个新的字符串</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">'aAsmr3idd4bgs7Dlsf9eAF'</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(a)):</span><br><span class="line">    <span class="keyword">if</span>(ord(a[i]) <span class="keyword">in</span> range(65,91)):</span><br><span class="line">        a[i].upper()</span><br><span class="line">    <span class="keyword">elif</span>(ord(a[i]) <span class="keyword">in</span> range(97,123)):</span><br><span class="line">        a[i].lower()</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        pass</span><br><span class="line"><span class="built_in">print</span>(a[i])</span><br><span class="line"></span><br><span class="line"><span class="comment"># a = 'aAsmr3idd4bgs7Dlsf9eAF'</span></span><br><span class="line"><span class="comment"># print(a.swapcase())</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># a = 'aAsmr3idd4bgs7Dlsf9eAF'</span></span><br></pre></td></tr></table></figure>
+<h3 id="输出剔除数字的字符串"><a href="#输出剔除数字的字符串" class="headerlink" title="输出剔除数字的字符串"></a>输出剔除数字的字符串</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> a:</span><br><span class="line">    <span class="keyword">if</span>(i.isdigit() == False):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">""</span>.join(i),end=<span class="string">""</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="输出数字组成的字符串"><a href="#输出数字组成的字符串" class="headerlink" title="输出数字组成的字符串"></a>输出数字组成的字符串</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> a:</span><br><span class="line">    <span class="keyword">if</span>(i.isdigit() == True):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">""</span>.join(i),end=<span class="string">""</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="输出数字组成的字符串-1"><a href="#输出数字组成的字符串-1" class="headerlink" title="输出数字组成的字符串"></a>输出数字组成的字符串</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">''</span>.join([s <span class="keyword">for</span> s <span class="keyword">in</span> a <span class="keyword">if</span> s.isdigit()]))</span><br></pre></td></tr></table></figure>
+<h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一:"></a>方法一:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">'aAsmr3idd4bgs7Dlsf9eAF'</span></span><br><span class="line">list1 = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(a)):</span><br><span class="line">    <span class="keyword">if</span>(ord(a[i]) <span class="keyword">in</span> range(65,91)):</span><br><span class="line">        b = a[i].upper()</span><br><span class="line">    <span class="keyword">elif</span>(ord(a[i]) <span class="keyword">in</span> range(97,123)):</span><br><span class="line">        b = a[i].lower()</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        b = a[i]  </span><br><span class="line">    list1.append(b)</span><br><span class="line"><span class="built_in">print</span>(list1)</span><br></pre></td></tr></table></figure>
+<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二:"></a>方法二:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">'aAsmr3idd4bgs7Dlsf9eAF'</span></span><br><span class="line">str1 = <span class="string">''</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(a)):</span><br><span class="line">    <span class="keyword">if</span> a[i] &gt;= <span class="string">'a'</span> and a[i] &lt;= <span class="string">'z'</span>:</span><br><span class="line">        b = a[i].upper()</span><br><span class="line">    <span class="keyword">elif</span> a[i] &gt;= <span class="string">'A'</span> and a[i] &lt;= <span class="string">'Z'</span>:</span><br><span class="line">        b = a[i].lower()</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        b = a[i]</span><br><span class="line">    str1 += b</span><br><span class="line"><span class="built_in">print</span>(str1)</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">hello</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/22/python经典习题（八）/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-python经典习题（七）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -816,160 +1025,9 @@
 
 
   
-    <article id="post-python经典习题（一）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/17/python经典习题（一）/">python经典习题(一)</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/17/python经典习题（一）/" class="archive-article-date">
-  	<time datetime="2018-07-17T07:04:12.716Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1、实现字符串反转 输入str=”string”输出’gnirts’<br>2、输入一行字符， 分别统计出其中英文字母、空格、数字和其它字符的个数<br>3、一球从100米高度自由落下，每次落地后反跳回原高度的一半，再落下，<br>求他在第10次落地时，共经过多少米？第10次反弹多高？<br>4、有字符串s = ‘alex’通过操作该字符串构造一个字符串s1 = ‘a_l_e_x’<br>5、有字符串s = ‘alex wusir’,通过操作该字符串构造一个列表li = [‘alex’,’wusir’]</p>
-<h2 id="1、实现字符串反转-输入str-”string”输出’gnirts’"><a href="#1、实现字符串反转-输入str-”string”输出’gnirts’" class="headerlink" title="1、实现字符串反转 输入str=”string”输出’gnirts’"></a>1、实现字符串反转 输入str=”string”输出’gnirts’</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">"string"</span></span><br><span class="line"><span class="built_in">print</span>(str[::-1])</span><br></pre></td></tr></table></figure>
-<h2 id="2、输入一行字符，-分别统计出其中英文字母、空格、数字和其它字符的个数"><a href="#2、输入一行字符，-分别统计出其中英文字母、空格、数字和其它字符的个数" class="headerlink" title="2、输入一行字符， 分别统计出其中英文字母、空格、数字和其它字符的个数"></a>2、输入一行字符， 分别统计出其中英文字母、空格、数字和其它字符的个数</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">list1 = input(<span class="string">"请输入一行字符:"</span>)</span><br><span class="line">zimu = []</span><br><span class="line">space = []</span><br><span class="line">number = []</span><br><span class="line">other = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(list1)):</span><br><span class="line">    <span class="keyword">if</span> ord(list1[i]) <span class="keyword">in</span> range(65, 91) or ord(list1[i]) <span class="keyword">in</span> range(97,123):</span><br><span class="line">        zimu.append(list1[i])</span><br><span class="line">        <span class="keyword">elif</span> list1[i] == <span class="string">" "</span>:</span><br><span class="line">        space.append(list1[i])</span><br><span class="line">    <span class="keyword">elif</span> ord(list1[i]) <span class="keyword">in</span> range(48,58):</span><br><span class="line">        number.append(list1[i])</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        other.append(list1[i])</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'中英文字母个数：%s'</span> % len(zimu))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'空格个数：%s'</span> % len(space))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'数字个数：%s'</span> % len(number))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'其它字符个数：%s'</span> % len(other))</span><br></pre></td></tr></table></figure>
-<h2 id="3、一球从100米高度自由落下，每次落地后反跳回原高度的一半，再落下，求他在第10次落地时，共经过多少米？第10次反弹多高？"><a href="#3、一球从100米高度自由落下，每次落地后反跳回原高度的一半，再落下，求他在第10次落地时，共经过多少米？第10次反弹多高？" class="headerlink" title="3、一球从100米高度自由落下，每次落地后反跳回原高度的一半，再落下，求他在第10次落地时，共经过多少米？第10次反弹多高？"></a>3、一球从100米高度自由落下，每次落地后反跳回原高度的一半，再落下，求他在第10次落地时，共经过多少米？第10次反弹多高？</h2><h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一:"></a>方法一:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">height = 100</span><br><span class="line">height1 = 0 <span class="comment">#总路程</span></span><br><span class="line">i = 1</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(1,11):</span><br><span class="line">    height1+=height</span><br><span class="line">    height = height/2</span><br><span class="line">    <span class="keyword">if</span> i &lt; 10:</span><br><span class="line">        height1+=height   </span><br><span class="line"><span class="built_in">print</span>(<span class="string">"共经过了%.3f米,第十次反弹上升%.3f米"</span>%(height1,height))</span><br></pre></td></tr></table></figure>
-<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二:"></a>方法二:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sum = j = 50</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(1,11):</span><br><span class="line">    <span class="keyword">if</span> i == 1:</span><br><span class="line">        sum = 100</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        sum += j*2</span><br><span class="line">        j = j/2</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"共经过%.8f米，第十次反弹%.8f米"</span> % (sum, j))</span><br></pre></td></tr></table></figure>
-<h2 id="4、有字符串s-‘alex’通过操作该字符串构造一个字符串s1-‘a-l-e-x’"><a href="#4、有字符串s-‘alex’通过操作该字符串构造一个字符串s1-‘a-l-e-x’" class="headerlink" title="4、有字符串s = ‘alex’通过操作该字符串构造一个字符串s1 = ‘a_l_e_x’"></a>4、有字符串s = ‘alex’通过操作该字符串构造一个字符串s1 = ‘a_l_e_x’</h2><h3 id="方法一-1"><a href="#方法一-1" class="headerlink" title="方法一:"></a>方法一:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">'alex'</span></span><br><span class="line"><span class="built_in">print</span>(repr(<span class="string">"_"</span>.join(s)))</span><br></pre></td></tr></table></figure>
-<h2 id="5、有字符串s-‘alex-wusir’-通过操作该字符串构造一个列表li-‘alex’-’wusir’"><a href="#5、有字符串s-‘alex-wusir’-通过操作该字符串构造一个列表li-‘alex’-’wusir’" class="headerlink" title="5、有字符串s = ‘alex wusir’,通过操作该字符串构造一个列表li = [‘alex’,’wusir’]"></a>5、有字符串s = ‘alex wusir’,通过操作该字符串构造一个列表li = [‘alex’,’wusir’]</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">'alex wusir'</span></span><br><span class="line">li = s.split()</span><br><span class="line"><span class="built_in">print</span>(li)</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">hello</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/17/python经典习题（一）/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/14/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/14/hello-world/" class="archive-article-date">
-  	<time datetime="2018-07-14T01:01:02.738Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/14/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
     </nav>
   
 

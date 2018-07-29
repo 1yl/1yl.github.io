@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018 | YouliChao&#39;s blog</title>
+  <title>python经典案例(一) | YouliChao&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="YouliChao&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/archives/2018/page/3/index.html">
+  <meta name="description" content="购买商品功能要求：要求用户输入总资产，例如：2000显示商品列表，让用户根据序号选择商品，加入购物车购买，如果商品总额大于总资产，提示账户余额不足，否则，购买成功。钱-商品（名称，价格）-操作（买，删除，充值，退出） 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950">
+<meta name="keywords" content="hello">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python经典案例(一)">
+<meta property="og:url" content="http://yoursite.com/2018/07/29/python经典案例（一）/index.html">
 <meta property="og:site_name" content="YouliChao&#39;s blog">
+<meta property="og:description" content="购买商品功能要求：要求用户输入总资产，例如：2000显示商品列表，让用户根据序号选择商品，加入购物车购买，如果商品总额大于总资产，提示账户余额不足，否则，购买成功。钱-商品（名称，价格）-操作（买，删除，充值，退出） 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-29T02:14:52.397Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="YouliChao&#39;s blog">
+<meta name="twitter:title" content="python经典案例(一)">
+<meta name="twitter:description" content="购买商品功能要求：要求用户输入总资产，例如：2000显示商品列表，让用户根据序号选择商品，加入购物车购买，如果商品总额大于总资产，提示账户余额不足，否则，购买成功。钱-商品（名称，价格）-操作（买，删除，充值，退出） 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950">
   
     <link rel="alternative" href="/atom.xml" title="YouliChao&#39;s blog" type="application/atom+xml">
   
@@ -164,36 +169,59 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-python经典案例（一）" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      python经典案例(一)
+    </h1>
+  
+
+        
+        <a href="/2018/07/29/python经典案例（一）/" class="archive-article-date">
+  	<time datetime="2018-07-29T01:35:28.030Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-29</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="购买商品"><a href="#购买商品" class="headerlink" title="购买商品"></a>购买商品</h3><p>功能要求：<br>要求用户输入总资产，例如：2000<br>显示商品列表，让用户根据序号选择商品，加入购物车<br>购买，如果商品总额大于总资产，提示账户余额不足，否则，购买成功。<br>钱-商品（名称，价格）-操作（买，删除，充值，退出）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"> goods = [</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">"shop_name"</span>:<span class="string">"牛奶"</span>,</span><br><span class="line">        <span class="string">"shop_price"</span>:20,</span><br><span class="line">        <span class="string">"shop_from"</span>:<span class="string">"英国"</span>,</span><br><span class="line">        <span class="string">"shop_effectiveDate"</span>:<span class="string">"2018.12.12"</span>&#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">"shop_name"</span>:<span class="string">"汉堡包"</span>,</span><br><span class="line">        <span class="string">"shop_price"</span>:30,</span><br><span class="line">        <span class="string">"shop_from"</span>:<span class="string">"美国"</span>,</span><br><span class="line">        <span class="string">"shop_effectiveDate"</span>:<span class="string">"2018.8.2"</span>&#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">"shop_name"</span>:<span class="string">"火腿"</span>,</span><br><span class="line">        <span class="string">"shop_price"</span>:120,</span><br><span class="line">        <span class="string">"shop_from"</span>:<span class="string">"新西兰"</span>,</span><br><span class="line">        <span class="string">"shop_effectiveDate"</span>:<span class="string">"2019.2.12"</span></span><br><span class="line">    &#125;</span><br><span class="line">]</span><br><span class="line">shopcar = []</span><br><span class="line"><span class="keyword">while</span> True:</span><br><span class="line">    money = input(<span class="string">"请输入你的资产:"</span>).strip()</span><br><span class="line">    <span class="keyword">if</span> money.isdigit():</span><br><span class="line">        <span class="built_in">break</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"请输入正确的资产金额！"</span>)</span><br><span class="line">money = int(money)</span><br><span class="line"><span class="keyword">while</span> True:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"请选择你要购买的商品序号"</span>.center(50,<span class="string">"*"</span>))</span><br><span class="line">    <span class="keyword">for</span> i,j <span class="keyword">in</span> enumerate(goods,1):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"商品序号:&#123;&#125;,shop_name:&#123;&#125;,shop_price:&#123;&#125;,shop_from:&#123;&#125;,shop_effectiveDate:&#123;&#125;"</span>.format(i,j[<span class="string">"shop_name"</span>],j[<span class="string">"shop_price"</span>],j[<span class="string">"shop_from"</span>],j[<span class="string">"shop_effectiveDate"</span>]))</span><br><span class="line">    <span class="built_in">print</span>(80*<span class="string">"*"</span>)</span><br><span class="line">    input_1 = input(<span class="string">"请输入你要购买的商品编号:\n*充值请按C/c\n*删除请按D/d\n*退出请按Q\q\n:"</span>).strip()</span><br><span class="line">    <span class="keyword">if</span> input_1.isdigit():</span><br><span class="line">        <span class="comment">#判断编号</span></span><br><span class="line">        input_1 = int(input_1)</span><br><span class="line">        <span class="keyword">if</span> 0 &lt; input_1 &lt;= len(goods):</span><br><span class="line">            <span class="comment">#属于可购买的范围</span></span><br><span class="line">            <span class="keyword">if</span>  goods[input_1-1][<span class="string">"shop_price"</span>] &lt; money:</span><br><span class="line">                money-=goods[input_1-1][<span class="string">"shop_price"</span>]</span><br><span class="line">                shopcar.append(goods[input_1-1][<span class="string">"shop_name"</span>])</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">"成功购买&#123;&#125;,剩余余额&#123;&#125;"</span>.format(goods[input_1-1][<span class="string">"shop_name"</span>],money))</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">"有卡余额不足，请给许他充值。"</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"你要购买的商品断货了，不好意思..."</span>)</span><br><span class="line">    <span class="keyword">elif</span> input_1.upper() == <span class="string">"C"</span>:</span><br><span class="line">        <span class="comment">#充值</span></span><br><span class="line">        input_2 = input(<span class="string">"请输入你要充值的金额:"</span>).strip()</span><br><span class="line">        <span class="keyword">if</span> input_2.isdigit():</span><br><span class="line">            input_2 = int(input_2)</span><br><span class="line">            money+=input_2</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"你已成功充值,余额：&#123;&#125;"</span>.format(money))</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"操作异常，请稍后重试。"</span>)</span><br><span class="line">    <span class="keyword">elif</span> input_1.upper() == <span class="string">"Q"</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"你购买的的商品有&#123;&#125;,余额还有&#123;&#125;"</span>.format(shopcar,money))</span><br><span class="line">        <span class="comment">#退出</span></span><br><span class="line">        <span class="built_in">exit</span>()</span><br><span class="line">    <span class="keyword">elif</span> input_1.upper() == <span class="string">"D"</span>:</span><br><span class="line">        <span class="comment">#删除</span></span><br><span class="line">        input_2 = int(input(<span class="string">"请输入你要删除的物品序号:"</span>).strip())</span><br><span class="line">        <span class="keyword">if</span> goods[input_2-1][<span class="string">"shop_name"</span>] <span class="keyword">in</span> shopcar:</span><br><span class="line">            money+=int(goods[input_2-1][<span class="string">"shop_price"</span>])</span><br><span class="line">            shopcar.remove(goods[input_2-1][<span class="string">"shop_name"</span>])</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"你购买的的商品有&#123;&#125;,余额还有&#123;&#125;"</span>.format(shopcar,money))</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"你输入的格式不正确，请稍后重试。"</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"你输入的格式不正确，请稍后重试。"</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="获取本地指定文件夹下的所有文件"><a href="#获取本地指定文件夹下的所有文件" class="headerlink" title="获取本地指定文件夹下的所有文件"></a>获取本地指定文件夹下的所有文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import os<span class="comment">#引入文件模板</span></span><br><span class="line">def file(path,list1):<span class="comment">#定义一个函数，定义形参path：表示要获取文件的路径. list1:表示获取文件路径下的所有文件要存放的列表</span></span><br><span class="line">    filelist = os.listdir(path)<span class="comment">#获取目录下的所有文件(返回类型是列表类型) listdir:打开当前路径文件</span></span><br><span class="line">    <span class="comment">#print(filelist)</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> filelist:</span><br><span class="line">        filepath = os.path.join(path,i)<span class="comment">#将遍历出来的文件名与传入的当前路径进行完美拼接</span></span><br><span class="line">        <span class="keyword">if</span> os.path.isdir(filepath):<span class="comment">#根据拼接后的文件路径进行判断：文件是否为一个文件夹</span></span><br><span class="line">            file(filepath,list1)<span class="comment">#如果是一个文件夹调用函数，再次操作</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            list1.append(path)<span class="comment">#如果不是文件夹而是一个文件，指定存放文件的列表追加当前路径</span></span><br><span class="line">    <span class="built_in">return</span> list1<span class="comment">#将存放文件名的列表进行返回</span></span><br><span class="line"><span class="built_in">print</span>(file(<span class="string">"E:/python/code/python base/day01"</span>,[]))</span><br></pre></td></tr></table></figure>
+<h3 id="药品进销存练习题"><a href="#药品进销存练习题" class="headerlink" title="药品进销存练习题"></a>药品进销存练习题</h3><p>需求：<br>1、写一个药品进货记录字典，有药品编号、药品名称、药品分类、药品单价、进货时间、进货人属性。<br>2、写一个药品销售销售字典，有药品编号、药品名称、药品分类、药品单价、药品总价、销售时间、销售人属性<br>3、写一个药品库存记录字典，有药品编号、药品名称、药品分类、药品单价、入库时间、库存管理人属性<br>4、写一个用户权限字典，有用户名、密码、身份<br>操作：<br>1、登陆药品进销存模块<br>2、药品购入（对进货记录、库存记录进行添加）<br>3、销售药品（对销售记录、库存记录进行添加和修改）<br>4、药品入库（对库存记录进行添加或修改）<br>5、药品统计<br>通过输入药品名称，得到下列内容：<br> 药品名称  药品购入数量 购入人  药品销售数量 销售人 药品库存数量 保管人<br>统计所有库存药品的销售情况（按照销售数量，进行降序）<br>药品名称  药品销售数量   药品总价  药品销售比例</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br></pre></td><td class="code"><pre><span class="line">def regist(list1):</span><br><span class="line">    flag = True</span><br><span class="line">    <span class="keyword">while</span> flag:</span><br><span class="line">        word_sensitive = [<span class="string">"习大大"</span>,<span class="string">"周总理"</span>,<span class="string">"邓小平"</span>]</span><br><span class="line">        pid = input(<span class="string">"请输入你的身份:"</span>).strip()</span><br><span class="line">        username = input(<span class="string">"请输入你要注册的用户名(如果退出请按Q/q(quit/QUIT)):"</span>).strip()</span><br><span class="line">        <span class="keyword">if</span>(username.upper() == <span class="string">"Q"</span> or username.upper() == <span class="string">"QUIT"</span>):</span><br><span class="line">            flag = False</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            password = input(<span class="string">"请输入密码:"</span>).strip()</span><br><span class="line">            upwdd = input(<span class="string">"请再次输入你的密码:"</span>).strip()</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> word_sensitive:</span><br><span class="line">                <span class="keyword">if</span> i <span class="keyword">in</span> username:</span><br><span class="line">                    username = username.replace(i,len(i)*<span class="string">"*"</span>)</span><br><span class="line">            <span class="keyword">if</span> upwdd != password:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">"两次输入密码不同，请重新输入"</span>)</span><br><span class="line">                <span class="built_in">break</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                dict1 = dict(&#123;<span class="string">"username"</span>:username,<span class="string">"password"</span>:password,<span class="string">"pid"</span>:pid&#125;)</span><br><span class="line">                list1.append(dict1)</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">"注册成功"</span>)</span><br><span class="line">                <span class="built_in">print</span>(list1)</span><br><span class="line">                input1 = input(<span class="string">"是否立即登陆(Y/Yes)"</span>).strip()</span><br><span class="line">                <span class="keyword">if</span> input1.upper() == <span class="string">"Y"</span> or input1.upper() == <span class="string">"YES"</span>:</span><br><span class="line">                    <span class="built_in">print</span>(<span class="string">"当前登录用户:"</span>,username)</span><br><span class="line">                    flag = False</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    pass</span><br><span class="line">    <span class="built_in">return</span> (username,list1)</span><br><span class="line">def login(list1,time):</span><br><span class="line">    login_count = 1</span><br><span class="line">    <span class="keyword">while</span> login_count &lt;= 3:</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> list1:</span><br><span class="line">            username = input(<span class="string">"请输入你的用户名:"</span>).strip()</span><br><span class="line">            password = input(<span class="string">"请输入你的密码:"</span>).strip()</span><br><span class="line">            <span class="keyword">if</span> username <span class="keyword">in</span> list(i.values())[0] and password <span class="keyword">in</span> list(i.values())[1]:                </span><br><span class="line">                <span class="built_in">print</span>(<span class="string">"用户:"</span>,username,<span class="string">"在"</span>,time,<span class="string">"登陆成功"</span>)</span><br><span class="line">                login_count = 4</span><br><span class="line">                <span class="built_in">break</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">if</span> login_count &lt; 3:</span><br><span class="line">                    <span class="built_in">print</span>(<span class="string">"登陆失败，你还有"</span>,(3-login_count),<span class="string">"次机会"</span>)</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    <span class="built_in">print</span>(<span class="string">"账户已被锁定"</span>)</span><br><span class="line">            login_count+=1</span><br><span class="line">    <span class="built_in">return</span> username</span><br><span class="line">def medicine_buy(list_medicine_buy,time):</span><br><span class="line">    <span class="comment">#进货</span></span><br><span class="line">    <span class="keyword">while</span> True:</span><br><span class="line">        bianhao = input(<span class="string">"请输入你要进的药品编号:"</span>)</span><br><span class="line">        mingcheng = input(<span class="string">"请输入你要进的药品名称:"</span>)</span><br><span class="line">        fenlei = input(<span class="string">"请输入你要进的药品分类:"</span>)</span><br><span class="line">        danjia = <span class="built_in">float</span>(input(<span class="string">"请输入你要进的药品单价:"</span>))</span><br><span class="line">        shuxing = input(<span class="string">"请输入你的属性(管理员00X):"</span>)</span><br><span class="line">        shuliang = input(<span class="string">"药品数量："</span>).strip()</span><br><span class="line">        list_medicine_buy[bianhao] = &#123;<span class="string">"药品编号"</span>:bianhao,<span class="string">"药品名称"</span>:mingcheng, <span class="string">"药品分类"</span>:fenlei,<span class="string">"药品单价"</span>:danjia,<span class="string">"药品数量"</span>:shuliang,<span class="string">"进货时间"</span>:time,<span class="string">"进货人属性"</span>:shuxing&#125;</span><br><span class="line">        <span class="comment"># print(list_medicine_buy)</span></span><br><span class="line">        input1 = input(<span class="string">"是否继续购买:(Y/Yes)"</span>).strip()</span><br><span class="line">        <span class="keyword">if</span> input1.upper() == <span class="string">"Y"</span> or input1.upper() == <span class="string">"YES"</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"继续购买ing..."</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"返回上一级目录"</span>)</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"尊敬的货物管理员,小Ai为您报况"</span>+<span class="string">"&gt;&gt;"</span>*30)</span><br><span class="line">            <span class="built_in">print</span>(list_medicine_buy)</span><br><span class="line">            <span class="built_in">break</span></span><br><span class="line">    <span class="built_in">return</span> (list_medicine_buy)</span><br><span class="line">def medicine_sell(time,list_medicine_kucun,list_medicine_jiaoyi):</span><br><span class="line">    <span class="comment">#药品销售 </span></span><br><span class="line">    <span class="comment"># print(list_medicine_kucun)</span></span><br><span class="line">    shuxing = input(<span class="string">"请输入你的属性(销售经理00X):"</span>).strip()</span><br><span class="line">    bianhao = input(<span class="string">"请输入你要卖的药品编号:"</span>).strip()</span><br><span class="line">    <span class="keyword">if</span> bianhao <span class="keyword">in</span> list_medicine_kucun:</span><br><span class="line">        <span class="comment">#进行卖操作</span></span><br><span class="line">        shuliang = int(input(<span class="string">"你要出售的药品数量："</span>).strip())</span><br><span class="line">        list_medicine_kucun[bianhao][<span class="string">"药品单价"</span>] = int(list_medicine_kucun[bianhao][<span class="string">"药品单价"</span>])</span><br><span class="line">        list_medicine_kucun[bianhao][<span class="string">"药品数量"</span>] = int((list_medicine_kucun[bianhao][<span class="string">"药品数量"</span>]))</span><br><span class="line">        list_medicine_kucun[bianhao][<span class="string">'销售经理'</span>] = shuxing</span><br><span class="line">        list_medicine_kucun[bianhao][<span class="string">"卖出时间"</span>] = time</span><br><span class="line">        list_medicine_kucun[bianhao][<span class="string">"销售数量"</span>] = shuliang</span><br><span class="line">        <span class="keyword">if</span> shuliang &lt;= list_medicine_kucun[bianhao][<span class="string">"药品数量"</span>]:</span><br><span class="line">            list_medicine_kucun[bianhao][<span class="string">"药品数量"</span>] -= shuliang</span><br><span class="line">            list_medicine_kucun[bianhao][<span class="string">"药品总价"</span>] = shuliang*list_medicine_kucun[bianhao][<span class="string">"药品单价"</span>]</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"已将"</span>,list_medicine_kucun[bianhao][<span class="string">"药品名称"</span>],<span class="string">"成功卖出"</span>)</span><br><span class="line">            <span class="built_in">print</span>(list_medicine_kucun)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            list_medicine_kucun[bianhao][<span class="string">"药品数量"</span>] == 0</span><br><span class="line">            list_medicine_kucun[bianhao][<span class="string">"药品总价"</span>] = list_medicine_kucun[bianhao][<span class="string">"药品数量"</span>]*list_medicine_kucun[bianhao][<span class="string">"药品单价"</span>]</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"已将"</span>,list_medicine_kucun[bianhao][<span class="string">"药品名称"</span>],<span class="string">"全部成功卖出"</span>)</span><br><span class="line">            list_medicine_kucun.pop(bianhao)</span><br><span class="line">            <span class="built_in">print</span>(list_medicine_kucun)</span><br><span class="line">        list_medicine_jiaoyi = list_medicine_kucun.copy()</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"你要卖的东西不在仓库，请按时补货"</span>)</span><br><span class="line">    <span class="built_in">return</span> (list_medicine_kucun,list_medicine_jiaoyi)</span><br><span class="line">def medicine_go(list_medicine_kucun,list_medicine_buy,time):</span><br><span class="line">    <span class="comment">#药品入库</span></span><br><span class="line">    shuxing = input(<span class="string">"请输入你的属性(库存管理员00X):"</span>).strip()</span><br><span class="line">    bianhao = input(<span class="string">"请输入你要入库的药品编号:"</span>).strip()</span><br><span class="line">    <span class="keyword">if</span> bianhao <span class="keyword">in</span> list_medicine_buy:</span><br><span class="line">        <span class="keyword">if</span> bianhao <span class="keyword">in</span> list_medicine_kucun:</span><br><span class="line">            list_medicine_kucun[bianhao][<span class="string">"药品数量"</span>] = int((list_medicine_kucun[bianhao][<span class="string">"药品数量"</span>]))</span><br><span class="line">            list_medicine_buy[bianhao][<span class="string">"药品数量"</span>] = int((list_medicine_buy[bianhao][<span class="string">"药品数量"</span>]))</span><br><span class="line">            (list_medicine_kucun[bianhao][<span class="string">"药品数量"</span>])+=(list_medicine_buy[bianhao][<span class="string">"药品数量"</span>])</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            list_medicine_kucun[bianhao]=list_medicine_buy[bianhao]</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"已将"</span>,list_medicine_buy[bianhao][<span class="string">"药品名称"</span>],<span class="string">"成功入库"</span>)</span><br><span class="line">        list_medicine_buy.pop(bianhao)</span><br><span class="line">        list_medicine_kucun[bianhao][<span class="string">"入库时间"</span>] = time</span><br><span class="line">        list_medicine_kucun[bianhao][<span class="string">'库存管理员'</span>] = shuxing</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"尊敬的仓库管理员,小Ai为您报况"</span>+<span class="string">"&gt;&gt;"</span>*30)</span><br><span class="line">        <span class="built_in">print</span>(list_medicine_kucun)</span><br><span class="line">        <span class="comment"># print(list_medicine_buy)</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"非法操作，药物来历不明"</span>)</span><br><span class="line">    <span class="built_in">return</span> (list_medicine_kucun,list_medicine_buy)</span><br><span class="line">def medicine_count(list_medicine_jiaoyi):</span><br><span class="line">    <span class="comment">#药品统计</span></span><br><span class="line">    <span class="built_in">print</span>(list_medicine_jiaoyi)</span><br><span class="line">    <span class="built_in">return</span> list_medicine_jiaoyi   </span><br><span class="line"><span class="built_in">print</span>(<span class="string">"&#123;0&#125;欢迎进入老中医医药馆管理系统&#123;0&#125;"</span>.format(<span class="string">"*"</span>*20))</span><br><span class="line">list1 = [&#123;<span class="string">"username"</span>:<span class="string">"username"</span>,<span class="string">"password"</span>:<span class="string">"password"</span>,<span class="string">"pid"</span>:<span class="string">"pid"</span>&#125;]</span><br><span class="line">list2 = [<span class="string">"请登录"</span>,<span class="string">"请注册"</span>,<span class="string">"注销"</span>,<span class="string">"退出程序"</span>]</span><br><span class="line">list3 = [<span class="string">"登陆系列操作"</span>,<span class="string">"药品购入"</span>,<span class="string">"销售药品"</span>,<span class="string">"药品入库"</span>,<span class="string">"药品统计"</span>]</span><br><span class="line">import datetime</span><br><span class="line"><span class="comment">#药品进货记录字典</span></span><br><span class="line">list_medicine_jiaoyi = &#123;&#125;</span><br><span class="line">list_medicine_buy = &#123;&#125;</span><br><span class="line">list_medicine_kucun = &#123;&#125;</span><br><span class="line">username = 0</span><br><span class="line">flag = True</span><br><span class="line"><span class="keyword">while</span> flag:</span><br><span class="line">    time = datetime.datetime.now().strftime(<span class="string">'%Y-%m-%d %H:%M:%S'</span>)</span><br><span class="line">    <span class="keyword">for</span> i,j <span class="keyword">in</span> enumerate(list3,1):</span><br><span class="line">        <span class="built_in">print</span>(i,j)</span><br><span class="line">    input2 = input(<span class="string">"请输入你要执行的有效序号:"</span>).strip()</span><br><span class="line">    <span class="keyword">if</span> input2.isdigit():</span><br><span class="line">        <span class="keyword">if</span> int(input2) == 1:</span><br><span class="line">            <span class="comment"># "登陆药品进销存模块"</span></span><br><span class="line">            <span class="keyword">for</span> i,j <span class="keyword">in</span> enumerate(list2,1):</span><br><span class="line">                <span class="built_in">print</span>(i,j)</span><br><span class="line">            input1 = input(<span class="string">"请输入你要执行的有效序号:"</span>).strip()</span><br><span class="line">            <span class="keyword">if</span> input1.isdigit():</span><br><span class="line">                <span class="keyword">if</span> int(input1) == 1:</span><br><span class="line">                    <span class="comment">#登陆</span></span><br><span class="line">                    <span class="built_in">print</span>(<span class="string">"已有账户请登录，如果没有请先注册"</span>)</span><br><span class="line">                    username = login(list1,time)</span><br><span class="line">                <span class="keyword">elif</span> int(input1) == 2:</span><br><span class="line">                    <span class="comment">#注册</span></span><br><span class="line">                    username,list1 = regist(list1)</span><br><span class="line">                <span class="keyword">elif</span> int(input1) == 3:</span><br><span class="line">                    <span class="comment">#注销</span></span><br><span class="line">                    <span class="built_in">print</span>(<span class="string">"当前用户"</span>,username,<span class="string">"已退出"</span>)</span><br><span class="line">                    username = 0</span><br><span class="line">                <span class="keyword">elif</span> int(input1) == 4:</span><br><span class="line">                    <span class="built_in">exit</span>()</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    <span class="built_in">print</span>(<span class="string">"你输入的序号有误，请稍后重试"</span>)</span><br><span class="line">        <span class="keyword">elif</span> int(input2) == 2:</span><br><span class="line">            <span class="comment">#药品购入</span></span><br><span class="line">            <span class="keyword">if</span> username == 0:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">"请先登陆"</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                list_medicine_buy = medicine_buy(list_medicine_buy,time)</span><br><span class="line">        <span class="keyword">elif</span> int(input2) == 3:</span><br><span class="line">            <span class="comment">#销售药品</span></span><br><span class="line">            <span class="keyword">if</span> username == 0:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">"请先登陆"</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                list_medicine_kucun,list_medicine_jiaoyi = medicine_sell(time,list_medicine_kucun,list_medicine_jiaoyi)</span><br><span class="line">        <span class="keyword">elif</span> int(input2) == 4:</span><br><span class="line">            <span class="comment">#药品入库</span></span><br><span class="line">            <span class="keyword">if</span> username == 0:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">"请先登陆"</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                list_medicine_kucun,list_medicine_buy = medicine_go(list_medicine_kucun,list_medicine_buy,time)</span><br><span class="line">        <span class="keyword">elif</span> int(input2) == 5:</span><br><span class="line">            <span class="comment">#药品统计</span></span><br><span class="line">            <span class="keyword">if</span> username == 0:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">"请先登陆"</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                list_medicine_jiaoyi = medicine_count(list_medicine_jiaoyi)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"你输入的序号有误，请稍后重试"</span>)</span><br></pre></td></tr></table></figure>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/22/python个人笔记(三)/" class="archive-article-date">
-  	<time datetime="2018-07-22T01:11:44.590Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/22/python个人笔记(三)/">python个人笔记(三)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -205,364 +233,127 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/07/29/python经典案例（一）/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/22/python经典习题（八）/" class="archive-article-date">
-  	<time datetime="2018-07-22T00:49:17.978Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-22</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2018/07/29/python个人笔记(六)/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          python个人笔记(六)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/07/28/Python_12/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python基础11——高阶函数、变量的作用域</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/22/python经典习题（八）/">python经典习题(八)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">hello</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#购买商品"><span class="toc-number">1.</span> <span class="toc-text">购买商品</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#获取本地指定文件夹下的所有文件"><span class="toc-number">2.</span> <span class="toc-text">获取本地指定文件夹下的所有文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#药品进销存练习题"><span class="toc-number">3.</span> <span class="toc-text">药品进销存练习题</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/22/python经典习题（七）/" class="archive-article-date">
-  	<time datetime="2018-07-22T00:37:30.152Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-22</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/22/python经典习题（七）/">python经典习题(七)</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">hello</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/22/python个人笔记(二)/" class="archive-article-date">
-  	<time datetime="2018-07-21T23:53:38.408Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/22/python个人笔记(二)/">python个人笔记(二)</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">hello</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python经典习题（六）/" class="archive-article-date">
-  	<time datetime="2018-07-21T15:50:21.986Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python经典习题（六）/">python经典习题(六)</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">hello</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python经典习题（五）/" class="archive-article-date">
-  	<time datetime="2018-07-21T15:39:33.567Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python经典习题（五）/">python经典习题(五)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">hello</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python经典习题（四）/" class="archive-article-date">
-  	<time datetime="2018-07-21T15:28:22.821Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python经典习题（四）/">python经典习题(四)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">hello</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python个人笔记(一)/" class="archive-article-date">
-  	<time datetime="2018-07-21T15:17:54.134Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python个人笔记(一)/">python个人笔记(一)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">hello</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python经典习题（三）/" class="archive-article-date">
-  	<time datetime="2018-07-21T15:06:39.495Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python经典习题（三）/">python经典习题(三)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">hello</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python经典习题（二）/" class="archive-article-date">
-  	<time datetime="2018-07-21T14:53:57.653Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python经典习题（二）/">python经典习题(二)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">hello</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2018/page/2/">&laquo; Prev</a><a class="page-number" href="/archives/2018/">1</a><a class="page-number" href="/archives/2018/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/archives/2018/page/4/">4</a><a class="extend next" rel="next" href="/archives/2018/page/4/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -586,8 +377,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
