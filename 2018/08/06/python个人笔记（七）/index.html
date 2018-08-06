@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>YouliChao&#39;s blog</title>
+  <title>python个人笔记(七) | YouliChao&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="使用函数创建一个九九乘法表1.可以指定想要输出的乘法表的范围2.可以随便改成九九（加法，减法，除法）表九九乘法表原型def table():    for m in range(1,10):        for n in range(1,10):            if n &amp;lt;= m:                print(str(n)+”“+str(m)+”=”+str(mn),">
+  <meta name="description" content="偏函数123import functoolsint1 = functools.partial(int,base=2)print(int1(&quot;111&quot;)) 异常12345try:    print(3/0)except ZeroDivisionError as e:    print(&quot;除数不能为0&quot;)print(&quot;***********&quot;) 查看本地某路径下的图片，并加以修改12345678910">
+<meta name="keywords" content="hello">
 <meta property="og:type" content="article">
-<meta property="og:title" content="YouliChao&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/2018/07/23/python个人笔记(五)/index.html">
+<meta property="og:title" content="python个人笔记(七)">
+<meta property="og:url" content="http://yoursite.com/2018/08/06/python个人笔记（七）/index.html">
 <meta property="og:site_name" content="YouliChao&#39;s blog">
-<meta property="og:description" content="使用函数创建一个九九乘法表1.可以指定想要输出的乘法表的范围2.可以随便改成九九（加法，减法，除法）表九九乘法表原型def table():    for m in range(1,10):        for n in range(1,10):            if n &amp;lt;= m:                print(str(n)+”“+str(m)+”=”+str(mn),">
+<meta property="og:description" content="偏函数123import functoolsint1 = functools.partial(int,base=2)print(int1(&quot;111&quot;)) 异常12345try:    print(3/0)except ZeroDivisionError as e:    print(&quot;除数不能为0&quot;)print(&quot;***********&quot;) 查看本地某路径下的图片，并加以修改12345678910">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-23T09:05:34.094Z">
+<meta property="og:updated_time" content="2018-08-06T13:25:35.522Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="YouliChao&#39;s blog">
-<meta name="twitter:description" content="使用函数创建一个九九乘法表1.可以指定想要输出的乘法表的范围2.可以随便改成九九（加法，减法，除法）表九九乘法表原型def table():    for m in range(1,10):        for n in range(1,10):            if n &amp;lt;= m:                print(str(n)+”“+str(m)+”=”+str(mn),">
+<meta name="twitter:title" content="python个人笔记(七)">
+<meta name="twitter:description" content="偏函数123import functoolsint1 = functools.partial(int,base=2)print(int1(&quot;111&quot;)) 异常12345try:    print(3/0)except ZeroDivisionError as e:    print(&quot;除数不能为0&quot;)print(&quot;***********&quot;) 查看本地某路径下的图片，并加以修改12345678910">
   
     <link rel="alternative" href="/atom.xml" title="YouliChao&#39;s blog" type="application/atom+xml">
   
@@ -168,15 +169,32 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-python个人笔记(五)" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-python个人笔记（七）" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      python个人笔记(七)
+    </h1>
+  
+
+        
+        <a href="/2018/08/06/python个人笔记（七）/" class="archive-article-date">
+  	<time datetime="2018-08-06T13:17:47.536Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-06</time>
+</a>
+        
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="使用函数创建一个九九乘法表"><a href="#使用函数创建一个九九乘法表" class="headerlink" title="使用函数创建一个九九乘法表"></a>使用函数创建一个九九乘法表</h1><h1 id="1-可以指定想要输出的乘法表的范围"><a href="#1-可以指定想要输出的乘法表的范围" class="headerlink" title="1.可以指定想要输出的乘法表的范围"></a>1.可以指定想要输出的乘法表的范围</h1><h1 id="2-可以随便改成九九（加法，减法，除法）表"><a href="#2-可以随便改成九九（加法，减法，除法）表" class="headerlink" title="2.可以随便改成九九（加法，减法，除法）表"></a>2.可以随便改成九九（加法，减法，除法）表</h1><h3 id="九九乘法表原型"><a href="#九九乘法表原型" class="headerlink" title="九九乘法表原型"></a>九九乘法表原型</h3><p>def table():<br>    for m in range(1,10):<br>        for n in range(1,10):<br>            if n &lt;= m:<br>                print(str(n)+”<em>“+str(m)+”=”+str(m</em>n),end=” “)<br>        print(“”)<br>table()</p>
-<p>###函数下的乘法表<br>def table(qian,hou):<br>    for m in range(1,qian+1):<br>        for n in range(1,hou+1):<br>            if n &lt;= m:<br>                print(str(n)+”<em>“+str(m)+”=”+str(m</em>n),end=” “)<br>        print(“”)<br>table(3,3)</p>
-<p>###函数下的除法表<br>def table(qian,hou):<br>    for m in range(1,qian+1):<br>        for n in range(1,hou+1):<br>            if n &lt;= m:<br>                print(str(m)+”/“+str(n)+”=”+str(round(m/n,2)),end=” “)<br>        print(“”)<br>table(9,9)</p>
-
+        <h3 id="偏函数"><a href="#偏函数" class="headerlink" title="偏函数"></a>偏函数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import functools</span><br><span class="line">int1 = functools.partial(int,base=2)</span><br><span class="line"><span class="built_in">print</span>(int1(<span class="string">"111"</span>))</span><br></pre></td></tr></table></figure>
+<h3 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">try:</span><br><span class="line">    <span class="built_in">print</span>(3/0)</span><br><span class="line">except ZeroDivisionError as e:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"除数不能为0"</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"***********"</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="查看本地某路径下的图片，并加以修改"><a href="#查看本地某路径下的图片，并加以修改" class="headerlink" title="查看本地某路径下的图片，并加以修改"></a>查看本地某路径下的图片，并加以修改</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">import os.path</span><br><span class="line">import os</span><br><span class="line">import time</span><br><span class="line">list1 = []</span><br><span class="line">def get_picture(path):</span><br><span class="line">    <span class="comment"># path = r"E:\python\新建文件夹"</span></span><br><span class="line">    <span class="comment">#先获取指定路径下的文件</span></span><br><span class="line">    fileList = os.listdir(path)</span><br><span class="line">    <span class="comment">#判断文件下有没有图片，有的话加后缀，如果没有继续遍历文件，直到没有文件</span></span><br><span class="line">    <span class="keyword">for</span> fileName <span class="keyword">in</span> fileList:<span class="comment">#遍历文件名</span></span><br><span class="line">        path_zuhe = os.path.join(path,fileName)</span><br><span class="line">    <span class="comment">#判断组合后的路径对应的是不是文件，如果是继续遍历，如果不是就去找判断是不是图片</span></span><br><span class="line">        <span class="keyword">if</span> os.path.isdir(path_zuhe):</span><br><span class="line">             get_picture(path_zuhe)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">if</span> fileName[-4:] == <span class="string">".jpg"</span> or fileName[-4:] == <span class="string">".gif"</span> or fileName[-4:] == <span class="string">".psd"</span> or fileName[-4:] == <span class="string">".png"</span> or fileName[-4:] == <span class="string">".bmp"</span> or fileName[-5:] == <span class="string">".jpeg"</span>:</span><br><span class="line">                list2 = os.path.splitext(fileName)</span><br><span class="line">                os.rename(path+<span class="string">"/"</span>+fileName,path+<span class="string">"/"</span>+list2[0]+<span class="string">"__fc"</span>+list2[1])</span><br><span class="line">                list1.append(fileName)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                pass</span><br><span class="line">path = input(<span class="string">"请输入你要查询的路径:"</span>).strip()</span><br><span class="line">start_time = time.clock()</span><br><span class="line">get_picture(path)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> list1:</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line"><span class="built_in">print</span>(list1)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;处理了"</span>,len(list1),<span class="string">"张图片"</span>)</span><br><span class="line">end_time = time.clock()</span><br><span class="line"><span class="built_in">print</span>(end_time-start_time)</span><br></pre></td></tr></table></figure>
+<h3 id="统计某个文件下的所有文件的大小"><a href="#统计某个文件下的所有文件的大小" class="headerlink" title="统计某个文件下的所有文件的大小"></a>统计某个文件下的所有文件的大小</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import os.path</span><br><span class="line">list1 = []</span><br><span class="line">def get_size(path):</span><br><span class="line">    fileList = os.listdir(path)  <span class="comment"># 获取path目录下所有文件</span></span><br><span class="line">    <span class="keyword">for</span> filename <span class="keyword">in</span> fileList: <span class="comment">#循环遍历目录下的文件名</span></span><br><span class="line">        pathTmp = os.path.join(path,filename)  <span class="comment"># 获取path与filename组合后的路径</span></span><br><span class="line">        <span class="keyword">if</span> os.path.isdir(pathTmp):   <span class="comment"># 判断是否为目录</span></span><br><span class="line">            get_size(pathTmp)        <span class="comment"># 是目录就继续递归查找</span></span><br><span class="line">        <span class="keyword">elif</span> os.path.isfile(pathTmp):  <span class="comment"># 判断是否为文件</span></span><br><span class="line">            filesize = os.path.getsize(pathTmp)  <span class="comment"># 如果是文件，则获取相应文件的大小</span></span><br><span class="line">            <span class="built_in">print</span>(<span class="string">'目录中的子文件大小：%d字节'</span> % filesize)</span><br><span class="line">            list1.append(filesize)      <span class="comment"># 将文件的大小添加到列表</span></span><br><span class="line">path= input(<span class="string">"输入路径："</span>).strip()  <span class="comment">#由用户指定文件路径</span></span><br><span class="line">get_size(path)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'目录中的文件总大小：%d字节'</span> % sum(list1))</span><br></pre></td></tr></table></figure>
+<h3 id="深度遍历"><a href="#深度遍历" class="headerlink" title="深度遍历"></a>深度遍历</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">import os</span><br><span class="line">def deep(path):</span><br><span class="line">    stack = []</span><br><span class="line">    stack.append(path)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> len(stack) != 0:</span><br><span class="line">        dirPath = stack.pop()</span><br><span class="line">    <span class="comment"># path = r"G:\project"</span></span><br><span class="line">    <span class="comment"># print(os.listdir(path))</span></span><br><span class="line">        listPath = os.listdir(dirPath)</span><br><span class="line">        <span class="keyword">for</span> fileName <span class="keyword">in</span> listPath:</span><br><span class="line">            listPathJoin = os.path.join(dirPath,fileName)</span><br><span class="line">            <span class="keyword">if</span> os.path.isdir(listPathJoin):</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">"目录:"</span>+fileName)</span><br><span class="line">                <span class="comment">#如果是目录在压入到栈中</span></span><br><span class="line">                stack.append(listPathJoin)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">"普通:"</span>+fileName)</span><br><span class="line">deep(r<span class="string">"E:\python\pyDay31"</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="广度遍历"><a href="#广度遍历" class="headerlink" title="广度遍历"></a>广度遍历</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">import os</span><br><span class="line">import collections</span><br><span class="line"><span class="comment">#队列广度遍历</span></span><br><span class="line">def traverse_breadth(path):</span><br><span class="line">    <span class="comment">#声明队列</span></span><br><span class="line">    queue = collections.deque()</span><br><span class="line">    <span class="comment">#进队</span></span><br><span class="line">    queue.append(path)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> len(queue) != 0:</span><br><span class="line">        <span class="comment">#数据出队</span></span><br><span class="line">        dirPath = queue.popleft()</span><br><span class="line">        <span class="comment">#获取指定路径下的文件列表</span></span><br><span class="line">        dirList = os.listdir(dirPath)</span><br><span class="line">        <span class="keyword">for</span> dirr <span class="keyword">in</span> dirList:</span><br><span class="line">            PathJoin = os.path.join(dirPath,dirr)</span><br><span class="line">            <span class="keyword">if</span> os.path.isdir(PathJoin):</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">"这是一个文件夹:"</span>+dirr)</span><br><span class="line">                queue.append(PathJoin)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">"这是一个普通文件:"</span>+dirr)           </span><br><span class="line">traverse_breadth(r<span class="string">"E:\python\pyDay31"</span>)</span><br></pre></td></tr></table></figure>
       
 
       
@@ -205,6 +223,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">hello</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -255,7 +284,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/07/23/python个人笔记(五)/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/06/python个人笔记（七）/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -269,18 +298,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/07/28/Python_13/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Python基础12——函数嵌套、闭包函数、装饰器、二元查找
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/07/22/python个人笔记(四)/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">python个人笔记(四)</div>
+    <a href="/2018/08/06/python个人笔记（六）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">python个人笔记(六)</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -299,6 +319,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#偏函数"><span class="toc-number">1.</span> <span class="toc-text">偏函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#异常"><span class="toc-number">2.</span> <span class="toc-text">异常</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看本地某路径下的图片，并加以修改"><span class="toc-number">3.</span> <span class="toc-text">查看本地某路径下的图片，并加以修改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#统计某个文件下的所有文件的大小"><span class="toc-number">4.</span> <span class="toc-text">统计某个文件下的所有文件的大小</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#深度遍历"><span class="toc-number">5.</span> <span class="toc-text">深度遍历</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#广度遍历"><span class="toc-number">6.</span> <span class="toc-text">广度遍历</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>

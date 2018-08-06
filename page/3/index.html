@@ -166,6 +166,91 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-python经典习题（九）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/22/python经典习题（九）/">python经典习题(九)</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/22/python经典习题（九）/" class="archive-article-date">
+  	<time datetime="2018-07-22T01:24:31.333Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1、-用集合保存4个人的随机投票，列出最终票数及各自的名字，随机给四个人投票【票数限制在1-10票之间】。十轮之后显示投票的数量"><a href="#1、-用集合保存4个人的随机投票，列出最终票数及各自的名字，随机给四个人投票【票数限制在1-10票之间】。十轮之后显示投票的数量" class="headerlink" title="1、 用集合保存4个人的随机投票，列出最终票数及各自的名字，随机给四个人投票【票数限制在1-10票之间】。十轮之后显示投票的数量"></a>1、 用集合保存4个人的随机投票，列出最终票数及各自的名字，随机给四个人投票【票数限制在1-10票之间】。十轮之后显示投票的数量</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import random</span><br><span class="line">sum1 = sum2 = sum3 = sum4 =0</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(1,11):</span><br><span class="line">    a = random.randint(1,4)</span><br><span class="line">    <span class="keyword">if</span> a == 1:</span><br><span class="line">        sum1+=random.randint(1,10)</span><br><span class="line">    <span class="keyword">elif</span> a == 2:</span><br><span class="line">        sum2+=random.randint(1,10)</span><br><span class="line">    <span class="keyword">elif</span> a == 3: </span><br><span class="line">        sum3+=random.randint(1,10)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        sum4+=random.randint(1,10)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"第一个人得%d票,第二个人得%d票,第三个人得%d票,第四个人得%d票"</span> %(sum1,sum2,sum3,sum4))</span><br></pre></td></tr></table></figure>
+<h3 id="2、写程序：模拟公司hr录入员工账号密码的程序"><a href="#2、写程序：模拟公司hr录入员工账号密码的程序" class="headerlink" title="2、写程序：模拟公司hr录入员工账号密码的程序."></a>2、写程序：模拟公司hr录入员工账号密码的程序.</h3><h3 id="1-，员工的账号密码存储在这种数据类型中："><a href="#1-，员工的账号密码存储在这种数据类型中：" class="headerlink" title="1)，员工的账号密码存储在这种数据类型中："></a>1)，员工的账号密码存储在这种数据类型中：</h3><h3 id="user-list"><a href="#user-list" class="headerlink" title="user_list = ["></a>user_list = [</h3><h3 id="‘username’-’barry’-’password’-’1234’"><a href="#‘username’-’barry’-’password’-’1234’" class="headerlink" title="{‘username’:’barry’,’password’:’1234’},"></a>{‘username’:’barry’,’password’:’1234’},</h3><h3 id="‘username’-’alex’-’password’-’asdf’"><a href="#‘username’-’alex’-’password’-’asdf’" class="headerlink" title="{‘username’:’alex’,’password’:’asdf’},"></a>{‘username’:’alex’,’password’:’asdf’},</h3><h3 id="………"><a href="#………" class="headerlink" title="………              ]"></a>………              ]</h3><h3 id="2-非法字符模板：board-‘张三’-’李小四’-’王二麻子’"><a href="#2-非法字符模板：board-‘张三’-’李小四’-’王二麻子’" class="headerlink" title="2)非法字符模板：board = [‘张三’,’李小四’,’王二麻子’]"></a>2)非法字符模板：board = [‘张三’,’李小四’,’王二麻子’]</h3><h3 id="3-Hr输入用户名，密码（可持续输入，如果想终止程序，那就在输入用户名时输入Q或者q退出程序），在Hr输入用户名时，检测此用户名是否有board里面的非法字符，如果有非法字符，则将非法字符替换成同数量的-（如王二麻子替换成-），然后添加到user-list中，如果没有非法字符，则直接添加到user-list中，每次添加成功后，打印出刚添加的用户名，密码。"><a href="#3-Hr输入用户名，密码（可持续输入，如果想终止程序，那就在输入用户名时输入Q或者q退出程序），在Hr输入用户名时，检测此用户名是否有board里面的非法字符，如果有非法字符，则将非法字符替换成同数量的-（如王二麻子替换成-），然后添加到user-list中，如果没有非法字符，则直接添加到user-list中，每次添加成功后，打印出刚添加的用户名，密码。" class="headerlink" title="3)Hr输入用户名，密码（可持续输入，如果想终止程序，那就在输入用户名时输入Q或者q退出程序），在Hr输入用户名时，检测此用户名是否有board里面的非法字符，如果有非法字符，则将非法字符替换成同数量的*（如王二麻子替换成**），然后添加到user_list中，如果没有非法字符，则直接添加到user_list中，每次添加成功后，打印出刚添加的用户名，密码。"></a>3)Hr输入用户名，密码（可持续输入，如果想终止程序，那就在输入用户名时输入Q或者q退出程序），在Hr输入用户名时，检测此用户名是否有board里面的非法字符，如果有非法字符，则将非法字符替换成同数量的*（如王二麻子替换成<em>**</em>），然后添加到user_list中，如果没有非法字符，则直接添加到user_list中，每次添加成功后，打印出刚添加的用户名，密码。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">dict1 = &#123;&#125;  </span><br><span class="line">user_list = []</span><br><span class="line">board = [<span class="string">'张三'</span>,<span class="string">'李小四'</span>,<span class="string">'王二麻子'</span>]</span><br><span class="line">flag = True</span><br><span class="line"><span class="keyword">while</span> flag:</span><br><span class="line">    <span class="comment">#输入用户名和密码</span></span><br><span class="line">    username = input(<span class="string">"请输入你的姓名(如果想退出请按Q/q)："</span>).strip()</span><br><span class="line">    <span class="keyword">if</span> username.upper() == <span class="string">"Q"</span>:</span><br><span class="line">        flag = False</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> board:</span><br><span class="line">            <span class="keyword">if</span> i <span class="keyword">in</span> username:</span><br><span class="line">                username = username.replace(i,len(i)*<span class="string">"*"</span>)</span><br><span class="line">        password = input(<span class="string">"请输入你的密码:"</span>)</span><br><span class="line">        dict1 = dict(&#123;<span class="string">"username"</span>:username,<span class="string">"password"</span>:password&#125;)</span><br><span class="line">        <span class="built_in">print</span>(dict1)</span><br><span class="line">        user_list.append(dict1)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(user_list)</span><br></pre></td></tr></table></figure>
+<h3 id="3、计算列表的长度并输出"><a href="#3、计算列表的长度并输出" class="headerlink" title="3、计算列表的长度并输出"></a>3、计算列表的长度并输出</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">li = [<span class="string">'zhangsan'</span>,<span class="string">'lisi'</span>,<span class="string">'wangwu'</span>,<span class="string">'liliu'</span>,<span class="string">'zhuqi'</span>]</span><br><span class="line"><span class="built_in">print</span>(len(li))</span><br></pre></td></tr></table></figure>
+<h3 id="4、列表中追加元素’wangba’-并输出添加后的列表"><a href="#4、列表中追加元素’wangba’-并输出添加后的列表" class="headerlink" title="4、列表中追加元素’wangba’,并输出添加后的列表"></a>4、列表中追加元素’wangba’,并输出添加后的列表</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># li+=["wangba"]</span></span><br><span class="line"><span class="comment"># print(li)</span></span><br><span class="line">li.append(<span class="string">"wangba"</span>)</span><br><span class="line"><span class="built_in">print</span>(li)</span><br></pre></td></tr></table></figure>
+<h3 id="5、请在列表的第1个位置插入元素’Tony’-并输出添加后的列表"><a href="#5、请在列表的第1个位置插入元素’Tony’-并输出添加后的列表" class="headerlink" title="5、请在列表的第1个位置插入元素’Tony’,并输出添加后的列表"></a>5、请在列表的第1个位置插入元素’Tony’,并输出添加后的列表</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">l2 = [1,<span class="string">'a'</span>,3,4,<span class="string">'heart'</span>]</span><br><span class="line"><span class="comment"># li+=l2</span></span><br><span class="line"><span class="comment"># print(li)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># # for i in l2:</span></span><br><span class="line"><span class="comment"># #     li.append(i)</span></span><br><span class="line"><span class="comment"># # print(li)</span></span><br><span class="line"></span><br><span class="line">[li.append(i) <span class="keyword">for</span> i <span class="keyword">in</span> l2]</span><br><span class="line"><span class="built_in">print</span>(li)</span><br></pre></td></tr></table></figure>
+<h3 id="6、请将字符串s-‘qwert’的每一个元素添加到列表li中，一行代码实现，不允许循环添加"><a href="#6、请将字符串s-‘qwert’的每一个元素添加到列表li中，一行代码实现，不允许循环添加" class="headerlink" title="6、请将字符串s = ‘qwert’的每一个元素添加到列表li中，一行代码实现，不允许循环添加"></a>6、请将字符串s = ‘qwert’的每一个元素添加到列表li中，一行代码实现，不允许循环添加</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">'qwert'</span></span><br><span class="line">[li.append(i) <span class="keyword">for</span> i <span class="keyword">in</span> s]</span><br><span class="line"><span class="built_in">print</span>(li)</span><br></pre></td></tr></table></figure>
+<h3 id="7、请删除列表中的元素’wangwu’-并输出删除后的列表"><a href="#7、请删除列表中的元素’wangwu’-并输出删除后的列表" class="headerlink" title="7、请删除列表中的元素’wangwu’,并输出删除后的列表"></a>7、请删除列表中的元素’wangwu’,并输出删除后的列表</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">del li[2]</span><br><span class="line"><span class="built_in">print</span>(li)</span><br><span class="line"></span><br><span class="line">li.remove(<span class="string">"wangwu"</span>)</span><br><span class="line"><span class="built_in">print</span>(li)</span><br></pre></td></tr></table></figure>
+<h3 id="8、请删除列表中的第2个元素，并输出删除的元素和删除元素后的列表"><a href="#8、请删除列表中的第2个元素，并输出删除的元素和删除元素后的列表" class="headerlink" title="8、请删除列表中的第2个元素，并输出删除的元素和删除元素后的列表"></a>8、请删除列表中的第2个元素，并输出删除的元素和删除元素后的列表</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(li.pop(1))</span><br><span class="line"><span class="built_in">print</span>(li)</span><br></pre></td></tr></table></figure>
+<h3 id="9、请删除列表中的第2至4个元素，并输出删除元素后的列表"><a href="#9、请删除列表中的第2至4个元素，并输出删除元素后的列表" class="headerlink" title="9、请删除列表中的第2至4个元素，并输出删除元素后的列表"></a>9、请删除列表中的第2至4个元素，并输出删除元素后的列表</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">li = [<span class="string">'zhangsan'</span>,<span class="string">'lisi'</span>,<span class="string">'wangwu'</span>,<span class="string">'liliu'</span>,<span class="string">'zhuqi'</span>]</span><br><span class="line">li1 = li.copy()</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> li1:</span><br><span class="line">    <span class="keyword">if</span> li1.index(i) &gt;= 1 and li1.index(i) &lt;= 3:</span><br><span class="line">        <span class="comment"># del li[li.index(i)]</span></span><br><span class="line">        li.remove(i)</span><br><span class="line"><span class="built_in">print</span>(li)</span><br></pre></td></tr></table></figure>
+<h3 id="10、请将列表所有得元素反转，并输出反转后的列表"><a href="#10、请将列表所有得元素反转，并输出反转后的列表" class="headerlink" title="10、请将列表所有得元素反转，并输出反转后的列表"></a>10、请将列表所有得元素反转，并输出反转后的列表</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">li.reverse()</span><br><span class="line"><span class="built_in">print</span>(li)</span><br></pre></td></tr></table></figure>
+<h3 id="11、请计算出‘zhangsan’元素在列表li中出现的次数，并输出该次数"><a href="#11、请计算出‘zhangsan’元素在列表li中出现的次数，并输出该次数" class="headerlink" title="11、请计算出‘zhangsan’元素在列表li中出现的次数，并输出该次数"></a>11、请计算出‘zhangsan’元素在列表li中出现的次数，并输出该次数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(li.count(<span class="string">"zhangsan"</span>))</span><br></pre></td></tr></table></figure>
+<h3 id="二：查找列表li中的元素，移除每个元素的空格"><a href="#二：查找列表li中的元素，移除每个元素的空格" class="headerlink" title="二：查找列表li中的元素，移除每个元素的空格"></a>二：查找列表li中的元素，移除每个元素的空格</h3><h3 id="1、找出以’A’或者’a’开头，并以’c’结尾的所有元素"><a href="#1、找出以’A’或者’a’开头，并以’c’结尾的所有元素" class="headerlink" title="1、找出以’A’或者’a’开头，并以’c’结尾的所有元素"></a>1、找出以’A’或者’a’开头，并以’c’结尾的所有元素</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">li3 = [<span class="string">'taibai  '</span>,<span class="string">'alexC'</span>,<span class="string">'AbC  '</span>,<span class="string">'egon'</span>,<span class="string">' Ritian'</span>,<span class="string">'  Wusir'</span>,<span class="string">'  aqc'</span>]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> li3:</span><br><span class="line">    <span class="keyword">if</span> i.strip().startswith(<span class="string">"A"</span>) or i.strip().startswith(<span class="string">"a"</span>) and i.strip().endswith(<span class="string">"c"</span>):</span><br><span class="line">        <span class="built_in">print</span>(i.strip())</span><br></pre></td></tr></table></figure>
+<h3 id="2、并添加到一个新列表中，最后循环打印这个新列表。"><a href="#2、并添加到一个新列表中，最后循环打印这个新列表。" class="headerlink" title="2、并添加到一个新列表中，最后循环打印这个新列表。"></a>2、并添加到一个新列表中，最后循环打印这个新列表。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># li3 = ['taibai  ','alexC','AbC  ','egon',' Ritian','  Wusir','  aqc']</span></span><br><span class="line"><span class="comment"># li33 = ["a","b","c"]</span></span><br><span class="line"><span class="comment"># # li33.append(li3)</span></span><br><span class="line"><span class="comment"># li33+=li3 </span></span><br><span class="line"><span class="comment"># print(li33)</span></span><br><span class="line"></span><br><span class="line">li3 = [<span class="string">'taibai  '</span>,<span class="string">'alexC'</span>,<span class="string">'AbC  '</span>,<span class="string">'egon'</span>,<span class="string">' Ritian'</span>,<span class="string">'  Wusir'</span>,<span class="string">'  aqc'</span>]</span><br><span class="line">li33 = [<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> li3:</span><br><span class="line">    li33.append(i)</span><br><span class="line">    <span class="built_in">print</span>(li33)</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">hello</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/22/python经典习题（九）/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-python个人笔记(三)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -919,83 +1004,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/07/21/python经典习题（三）/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-python经典习题（二）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/21/python经典习题（二）/">python经典习题(二)</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/21/python经典习题（二）/" class="archive-article-date">
-  	<time datetime="2018-07-21T14:53:57.653Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="2、阅读下面的代码，写出A0，A1至An的最终值。并分析结果"><a href="#2、阅读下面的代码，写出A0，A1至An的最终值。并分析结果" class="headerlink" title="2、阅读下面的代码，写出A0，A1至An的最终值。并分析结果"></a>2、阅读下面的代码，写出A0，A1至An的最终值。并分析结果</h1><h2 id="A0-dict-zip-‘a’-’b’-’c’-’d’-’e’-1-2-3-4-5"><a href="#A0-dict-zip-‘a’-’b’-’c’-’d’-’e’-1-2-3-4-5" class="headerlink" title="A0 = dict(zip((‘a’,’b’,’c’,’d’,’e’),(1,2,3,4,5)))"></a>A0 = dict(zip((‘a’,’b’,’c’,’d’,’e’),(1,2,3,4,5)))</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A0 = dict(zip((<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>),(1,2,3,4,5)))</span><br><span class="line"><span class="built_in">print</span>(list(A0.keys()))</span><br><span class="line"><span class="built_in">print</span>(A0)</span><br><span class="line"><span class="comment">#&#123;'a'=1,'b'=2,'c'=3,'d'=4,'e'=5&#125;</span></span><br></pre></td></tr></table></figure>
-<h1 id="3、列出10个定义成列表的字段，10个元组的字段，并写出详细的信息"><a href="#3、列出10个定义成列表的字段，10个元组的字段，并写出详细的信息" class="headerlink" title="3、列出10个定义成列表的字段，10个元组的字段，并写出详细的信息"></a>3、列出10个定义成列表的字段，10个元组的字段，并写出详细的信息</h1><h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">liebiao = [<span class="string">'first'</span>,<span class="string">'second'</span>,<span class="string">'third'</span>,<span class="string">'fourth'</span>,<span class="string">'fiveth'</span>,<span class="string">'sixth'</span>,<span class="string">'seventh'</span>,<span class="string">'eighth'</span>,<span class="string">'ninth'</span>,<span class="string">'tenth'</span>]</span><br><span class="line"><span class="built_in">print</span>(liebiao)</span><br></pre></td></tr></table></figure>
-<h2 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yuanzu = (1,2,3,<span class="string">'xiaoming'</span>,<span class="string">'xiaohong'</span>,<span class="string">'xiaogang'</span>,<span class="string">'xiongda'</span>,<span class="string">'xionger'</span>,<span class="string">'cuihua'</span>,<span class="string">'guangtouqiang'</span>)</span><br><span class="line"><span class="built_in">print</span>(yuanzu)</span><br></pre></td></tr></table></figure>
-<h1 id="4、扩展：预习for循环，使用for循环打印1-100的值"><a href="#4、扩展：预习for循环，使用for循环打印1-100的值" class="headerlink" title="4、扩展：预习for循环，使用for循环打印1-100的值"></a>4、扩展：预习for循环，使用for循环打印1-100的值</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">xunhuan = (<span class="string">'1'</span>,<span class="string">'100'</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(1,101):</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line"><span class="built_in">print</span>(list(range(1,101)))</span><br></pre></td></tr></table></figure>
-<h1 id="5、扩展：在中断框输入指定的成绩并判断成绩符合那个阶段（优良中差）"><a href="#5、扩展：在中断框输入指定的成绩并判断成绩符合那个阶段（优良中差）" class="headerlink" title="5、扩展：在中断框输入指定的成绩并判断成绩符合那个阶段（优良中差）"></a>5、扩展：在中断框输入指定的成绩并判断成绩符合那个阶段（优良中差）</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">x = int(input(<span class="string">"please enter an doubleNum:"</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(x))</span><br><span class="line"><span class="keyword">if</span> x &lt; 60:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"成绩差"</span>)</span><br><span class="line"><span class="keyword">elif</span> x &gt;= 60 and x &lt; 80:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"成绩良"</span>)</span><br><span class="line"><span class="keyword">elif</span> x &gt;= 80 and x &lt; 90:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"成绩良"</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"成绩优"</span>)</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">hello</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/21/python经典习题（二）/">展开全文 >></a>
         </p>
       
 

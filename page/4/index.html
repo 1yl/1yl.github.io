@@ -166,6 +166,83 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-python经典习题（二）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/21/python经典习题（二）/">python经典习题(二)</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/21/python经典习题（二）/" class="archive-article-date">
+  	<time datetime="2018-07-21T14:53:57.653Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="2、阅读下面的代码，写出A0，A1至An的最终值。并分析结果"><a href="#2、阅读下面的代码，写出A0，A1至An的最终值。并分析结果" class="headerlink" title="2、阅读下面的代码，写出A0，A1至An的最终值。并分析结果"></a>2、阅读下面的代码，写出A0，A1至An的最终值。并分析结果</h1><h2 id="A0-dict-zip-‘a’-’b’-’c’-’d’-’e’-1-2-3-4-5"><a href="#A0-dict-zip-‘a’-’b’-’c’-’d’-’e’-1-2-3-4-5" class="headerlink" title="A0 = dict(zip((‘a’,’b’,’c’,’d’,’e’),(1,2,3,4,5)))"></a>A0 = dict(zip((‘a’,’b’,’c’,’d’,’e’),(1,2,3,4,5)))</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A0 = dict(zip((<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>),(1,2,3,4,5)))</span><br><span class="line"><span class="built_in">print</span>(list(A0.keys()))</span><br><span class="line"><span class="built_in">print</span>(A0)</span><br><span class="line"><span class="comment">#&#123;'a'=1,'b'=2,'c'=3,'d'=4,'e'=5&#125;</span></span><br></pre></td></tr></table></figure>
+<h1 id="3、列出10个定义成列表的字段，10个元组的字段，并写出详细的信息"><a href="#3、列出10个定义成列表的字段，10个元组的字段，并写出详细的信息" class="headerlink" title="3、列出10个定义成列表的字段，10个元组的字段，并写出详细的信息"></a>3、列出10个定义成列表的字段，10个元组的字段，并写出详细的信息</h1><h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">liebiao = [<span class="string">'first'</span>,<span class="string">'second'</span>,<span class="string">'third'</span>,<span class="string">'fourth'</span>,<span class="string">'fiveth'</span>,<span class="string">'sixth'</span>,<span class="string">'seventh'</span>,<span class="string">'eighth'</span>,<span class="string">'ninth'</span>,<span class="string">'tenth'</span>]</span><br><span class="line"><span class="built_in">print</span>(liebiao)</span><br></pre></td></tr></table></figure>
+<h2 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yuanzu = (1,2,3,<span class="string">'xiaoming'</span>,<span class="string">'xiaohong'</span>,<span class="string">'xiaogang'</span>,<span class="string">'xiongda'</span>,<span class="string">'xionger'</span>,<span class="string">'cuihua'</span>,<span class="string">'guangtouqiang'</span>)</span><br><span class="line"><span class="built_in">print</span>(yuanzu)</span><br></pre></td></tr></table></figure>
+<h1 id="4、扩展：预习for循环，使用for循环打印1-100的值"><a href="#4、扩展：预习for循环，使用for循环打印1-100的值" class="headerlink" title="4、扩展：预习for循环，使用for循环打印1-100的值"></a>4、扩展：预习for循环，使用for循环打印1-100的值</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">xunhuan = (<span class="string">'1'</span>,<span class="string">'100'</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(1,101):</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line"><span class="built_in">print</span>(list(range(1,101)))</span><br></pre></td></tr></table></figure>
+<h1 id="5、扩展：在中断框输入指定的成绩并判断成绩符合那个阶段（优良中差）"><a href="#5、扩展：在中断框输入指定的成绩并判断成绩符合那个阶段（优良中差）" class="headerlink" title="5、扩展：在中断框输入指定的成绩并判断成绩符合那个阶段（优良中差）"></a>5、扩展：在中断框输入指定的成绩并判断成绩符合那个阶段（优良中差）</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">x = int(input(<span class="string">"please enter an doubleNum:"</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(x))</span><br><span class="line"><span class="keyword">if</span> x &lt; 60:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"成绩差"</span>)</span><br><span class="line"><span class="keyword">elif</span> x &gt;= 60 and x &lt; 80:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"成绩良"</span>)</span><br><span class="line"><span class="keyword">elif</span> x &gt;= 80 and x &lt; 90:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"成绩良"</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"成绩优"</span>)</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">hello</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/21/python经典习题（二）/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-python经典习题（一）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
