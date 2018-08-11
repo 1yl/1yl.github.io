@@ -166,6 +166,302 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Python_13" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/28/Python_13/">Python基础12——函数嵌套、闭包函数、装饰器、二元查找</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/28/Python_13/" class="archive-article-date">
+  	<time datetime="2018-07-28T08:17:34.790Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="函数嵌套"><a href="#函数嵌套" class="headerlink" title="函数嵌套"></a>函数嵌套</h2><p>在一定情况下，一个函数的内部调用了另外一个函数，这样的函数叫做函数的嵌套调用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">def max2(x,y):</span><br><span class="line">    m = x <span class="keyword">if</span> x &gt; y <span class="keyword">else</span> y</span><br><span class="line">    <span class="built_in">return</span> m</span><br><span class="line">def max4(a,b,c,d):</span><br><span class="line">    res1 = max2(a,b)</span><br><span class="line">    res2 = max2(res1,c)</span><br><span class="line">    res3 = max2(res2,d)</span><br><span class="line">    <span class="built_in">print</span>(res1)</span><br><span class="line">    <span class="built_in">print</span>(res2)</span><br><span class="line">    <span class="built_in">print</span>(res3)</span><br><span class="line">max4(2,5,33,77)				<span class="comment">#5	33	77</span></span><br><span class="line">其中，max4()调用了max2()。我们称为函数嵌套调用。</span><br></pre></td></tr></table></figure></p>
+        
+          <a class="article-more-a" href="/2018/07/28/Python_13/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">函数</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/28/Python_13/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-python个人笔记(五)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="使用函数创建一个九九乘法表"><a href="#使用函数创建一个九九乘法表" class="headerlink" title="使用函数创建一个九九乘法表"></a>使用函数创建一个九九乘法表</h1><h1 id="1-可以指定想要输出的乘法表的范围"><a href="#1-可以指定想要输出的乘法表的范围" class="headerlink" title="1.可以指定想要输出的乘法表的范围"></a>1.可以指定想要输出的乘法表的范围</h1><h1 id="2-可以随便改成九九（加法，减法，除法）表"><a href="#2-可以随便改成九九（加法，减法，除法）表" class="headerlink" title="2.可以随便改成九九（加法，减法，除法）表"></a>2.可以随便改成九九（加法，减法，除法）表</h1><h3 id="九九乘法表原型"><a href="#九九乘法表原型" class="headerlink" title="九九乘法表原型"></a>九九乘法表原型</h3><p>def table():<br>    for m in range(1,10):<br>        for n in range(1,10):<br>            if n &lt;= m:<br>                print(str(n)+”<em>“+str(m)+”=”+str(m</em>n),end=” “)<br>        print(“”)<br>table()</p>
+<p>###函数下的乘法表<br>def table(qian,hou):<br>    for m in range(1,qian+1):<br>        for n in range(1,hou+1):<br>            if n &lt;= m:<br>                print(str(n)+”<em>“+str(m)+”=”+str(m</em>n),end=” “)<br>        print(“”)<br>table(3,3)</p>
+<p>###函数下的除法表<br>def table(qian,hou):<br>    for m in range(1,qian+1):<br>        for n in range(1,hou+1):<br>            if n &lt;= m:<br>                print(str(m)+”/“+str(n)+”=”+str(round(m/n,2)),end=” “)<br>        print(“”)<br>table(9,9)</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/23/python个人笔记(五)/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-python个人笔记(四)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/22/python个人笔记(四)/">python个人笔记(四)</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/22/python个人笔记(四)/" class="archive-article-date">
+  	<time datetime="2018-07-22T01:48:12.312Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1、有字符串”k-1-k1-2-k2-3-k3-4”-处理成字典-‘k’-1-’k1’-2…"><a href="#1、有字符串”k-1-k1-2-k2-3-k3-4”-处理成字典-‘k’-1-’k1’-2…" class="headerlink" title="1、有字符串”k:1|k1:2|k2:3|k3:4” 处理成字典 {‘k’:1,’k1’:2….}"></a>1、有字符串”k:1|k1:2|k2:3|k3:4” 处理成字典 {‘k’:1,’k1’:2….}</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">"k:1|k1:2|k2:3|k3:4"</span></span><br><span class="line">list1 = []</span><br></pre></td></tr></table></figure>
+<h3 id="print-str1-split-“-”"><a href="#print-str1-split-“-”" class="headerlink" title="print(str1.split(“|”))"></a>print(str1.split(“|”))</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">str1_list = str1.split(<span class="string">"|"</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> str1_list:</span><br><span class="line">    list1.append(i.split(<span class="string">":"</span>))</span><br><span class="line"><span class="built_in">print</span>(dict(list1))</span><br></pre></td></tr></table></figure>
+<h3 id="2、元素分类有如下值li-11-22-33-44-55-66-77-88-99-90-，将所有大于-66-的值保存至字典的第一个key中，将小于-66-的值保存至第二个key的值中。即：-‘k1’-大于66的所有值列表-‘k2’-小于66的所有值列表"><a href="#2、元素分类有如下值li-11-22-33-44-55-66-77-88-99-90-，将所有大于-66-的值保存至字典的第一个key中，将小于-66-的值保存至第二个key的值中。即：-‘k1’-大于66的所有值列表-‘k2’-小于66的所有值列表" class="headerlink" title="2、元素分类有如下值li= [11,22,33,44,55,66,77,88,99,90]，将所有大于 66 的值保存至字典的第一个key中，将小于 66 的值保存至第二个key的值中。即： {‘k1’: 大于66的所有值列表, ‘k2’: 小于66的所有值列表}"></a>2、元素分类有如下值li= [11,22,33,44,55,66,77,88,99,90]，将所有大于 66 的值保存至字典的第一个key中，将小于 66 的值保存至第二个key的值中。即： {‘k1’: 大于66的所有值列表, ‘k2’: 小于66的所有值列表}</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">li= [11,22,33,44,55,66,77,88,99,90]</span><br><span class="line">list1 = []</span><br><span class="line">list2 = []</span><br><span class="line">dict1=&#123;<span class="string">"k1"</span>:<span class="string">""</span>,<span class="string">"k2"</span>:<span class="string">""</span>&#125;</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> li:</span><br><span class="line">    <span class="keyword">if</span> i &gt; 66:</span><br><span class="line">        list1.append(i)</span><br><span class="line">        dict1[<span class="string">"k1"</span>] = list1</span><br><span class="line">    <span class="keyword">elif</span> i == 66:</span><br><span class="line">        <span class="built_in">continue</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        list2.append(i)</span><br><span class="line">        dict1[<span class="string">"k2"</span>] = list2</span><br><span class="line"><span class="built_in">print</span>(dict1)</span><br></pre></td></tr></table></figure>
+<h3 id="3、输出商品列表，用户输入序号，显示用户选中的商品"><a href="#3、输出商品列表，用户输入序号，显示用户选中的商品" class="headerlink" title="3、输出商品列表，用户输入序号，显示用户选中的商品"></a>3、输出商品列表，用户输入序号，显示用户选中的商品</h3><h3 id="商品-li-“手机”-“电脑”-‘鼠标垫’-‘游艇’"><a href="#商品-li-“手机”-“电脑”-‘鼠标垫’-‘游艇’" class="headerlink" title="商品 li = [“手机”, “电脑”, ‘鼠标垫’, ‘游艇’]"></a>商品 li = [“手机”, “电脑”, ‘鼠标垫’, ‘游艇’]</h3><h3 id="要求：1：页面显示-序号-商品名称，如："><a href="#要求：1：页面显示-序号-商品名称，如：" class="headerlink" title="要求：1：页面显示 序号 + 商品名称，如："></a>要求：1：页面显示 序号 + 商品名称，如：</h3><h3 id="1-手机"><a href="#1-手机" class="headerlink" title="1 手机"></a>1 手机</h3><h3 id="2-电脑"><a href="#2-电脑" class="headerlink" title="2 电脑"></a>2 电脑</h3><h3 id="…"><a href="#…" class="headerlink" title="…"></a>…</h3><h3 id="2：用户输入选择的商品序号，然后打印商品名称"><a href="#2：用户输入选择的商品序号，然后打印商品名称" class="headerlink" title="2：用户输入选择的商品序号，然后打印商品名称"></a>2：用户输入选择的商品序号，然后打印商品名称</h3><h3 id="3：如果用户输入的商品序号有误，则提示输入有误，并重新输入。"><a href="#3：如果用户输入的商品序号有误，则提示输入有误，并重新输入。" class="headerlink" title="3：如果用户输入的商品序号有误，则提示输入有误，并重新输入。"></a>3：如果用户输入的商品序号有误，则提示输入有误，并重新输入。</h3><h3 id="4：用户输入Q或者q，退出程序。"><a href="#4：用户输入Q或者q，退出程序。" class="headerlink" title="4：用户输入Q或者q，退出程序。"></a>4：用户输入Q或者q，退出程序。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">li = [<span class="string">"手机"</span>, <span class="string">"电脑"</span>, <span class="string">'鼠标垫'</span>, <span class="string">'游艇'</span>]</span><br><span class="line">dict1 = &#123;<span class="string">"001"</span>:<span class="string">""</span>,<span class="string">"002"</span>:<span class="string">""</span>,<span class="string">"003"</span>:<span class="string">""</span>,<span class="string">"004"</span>:<span class="string">""</span>&#125;</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"*"</span>*10+<span class="string">"欢迎来到奶思购商品店"</span>+<span class="string">"*"</span>*10)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"下面为本店的商品列表:"</span>)</span><br><span class="line"><span class="keyword">for</span> i,j <span class="keyword">in</span> enumerate(dict1):</span><br><span class="line">    dict1[j] = li[i]</span><br><span class="line"><span class="built_in">print</span>(dict1)</span><br><span class="line"><span class="keyword">while</span> True:</span><br><span class="line">    shop_id = input(<span class="string">"请输入你选择的商品序号:,退出请输入Q/q:"</span>)</span><br><span class="line">    <span class="keyword">if</span> shop_id <span class="keyword">in</span> dict1:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"您查看的"</span>+dict1[shop_id]+<span class="string">"正在疯狂抢购中..."</span>)</span><br><span class="line">    <span class="keyword">elif</span> shop_id.upper() == <span class="string">"Q"</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"*"</span>*10+<span class="string">"欢迎下次光临"</span>+<span class="string">"*"</span>*10)</span><br><span class="line">        <span class="built_in">break</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"您输入的商品序号有误，请稍后重新尝试！"</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="4、如何将一个整数显示成八进制、十六进制或二进制的形式？"><a href="#4、如何将一个整数显示成八进制、十六进制或二进制的形式？" class="headerlink" title="4、如何将一个整数显示成八进制、十六进制或二进制的形式？"></a>4、如何将一个整数显示成八进制、十六进制或二进制的形式？</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">a = 10</span><br><span class="line"><span class="built_in">print</span>(bin(a))<span class="comment">#二进制</span></span><br><span class="line"><span class="built_in">print</span>(oct(a))<span class="comment">#八进制</span></span><br><span class="line"><span class="built_in">print</span>(hex(a))<span class="comment">#十六进制</span></span><br><span class="line"><span class="comment">#将字母转换为ASCII编码</span></span><br><span class="line"><span class="built_in">print</span>(ord(<span class="string">"A"</span>))</span><br><span class="line"><span class="comment">#将ASCII编码转换为对应字母</span></span><br><span class="line"><span class="built_in">print</span>(chr(97))</span><br></pre></td></tr></table></figure>
+<h3 id="5、给定字符串”Python-language”："><a href="#5、给定字符串”Python-language”：" class="headerlink" title="5、给定字符串”Python language”："></a>5、给定字符串”Python language”：</h3><h3 id="（a）写出表达式，显示第一个字符。"><a href="#（a）写出表达式，显示第一个字符。" class="headerlink" title="（a）写出表达式，显示第一个字符。"></a>（a）写出表达式，显示第一个字符。</h3><h3 id="str1-“Python-language”"><a href="#str1-“Python-language”" class="headerlink" title="str1 = “Python language”"></a>str1 = “Python language”</h3><h3 id="（b）写出表达式，显示最后一个字符。"><a href="#（b）写出表达式，显示最后一个字符。" class="headerlink" title="（b）写出表达式，显示最后一个字符。"></a>（b）写出表达式，显示最后一个字符。</h3><h3 id="（c）写出len函数的表达式，显示最后一个字符。"><a href="#（c）写出len函数的表达式，显示最后一个字符。" class="headerlink" title="（c）写出len函数的表达式，显示最后一个字符。"></a>（c）写出len函数的表达式，显示最后一个字符。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">"Python language"</span></span><br><span class="line"><span class="built_in">print</span>(str1[0])</span><br><span class="line"><span class="built_in">print</span>(str1[14])</span><br><span class="line"><span class="built_in">print</span>(str1[len(str1)-1])</span><br></pre></td></tr></table></figure>
+<h3 id="6、能将多个字符串方法在一个表达式中联合使用吗？例如s-”ab”-s-upper-lower-是什么意思"><a href="#6、能将多个字符串方法在一个表达式中联合使用吗？例如s-”ab”-s-upper-lower-是什么意思" class="headerlink" title="6、能将多个字符串方法在一个表达式中联合使用吗？例如s=”ab”,s.upper().lower()是什么意思"></a>6、能将多个字符串方法在一个表达式中联合使用吗？例如s=”ab”,s.upper().lower()是什么意思</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">s=<span class="string">"ab"</span></span><br><span class="line"><span class="built_in">print</span>(s.upper())</span><br><span class="line"><span class="built_in">print</span>(s.upper().lower())</span><br><span class="line"><span class="comment">#可以在一个表达式中联合使用我们的字符串方法，s.upper().lower()相当于将字符串里的字母变大后再进行变小</span></span><br></pre></td></tr></table></figure>
+<h3 id="7、两个字符串方法：find和index，用于判定一个字符是否在字符串中。"><a href="#7、两个字符串方法：find和index，用于判定一个字符是否在字符串中。" class="headerlink" title="7、两个字符串方法：find和index，用于判定一个字符是否在字符串中。"></a>7、两个字符串方法：find和index，用于判定一个字符是否在字符串中。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">"hello"</span></span><br><span class="line"><span class="built_in">print</span>(str1.find(<span class="string">"p"</span>))<span class="comment">#find进行字符查找时如果能够找到该字符，则返回该字符第一次出现在字符串中的位置,如果找不到则返回-1</span></span><br><span class="line"><span class="built_in">print</span>(str1.index(<span class="string">"p"</span>))<span class="comment">#index进行字符查找时如果能够找到该字符，则返回该字符第一次出现在字符串中的位置,如果找不到则报错“substring not found”</span></span><br></pre></td></tr></table></figure>
+<h3 id="8、写一个程序，提示输入两个字符串，然后进行比较，输出较小的字符串。"><a href="#8、写一个程序，提示输入两个字符串，然后进行比较，输出较小的字符串。" class="headerlink" title="8、写一个程序，提示输入两个字符串，然后进行比较，输出较小的字符串。"></a>8、写一个程序，提示输入两个字符串，然后进行比较，输出较小的字符串。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import operator</span><br><span class="line">str1 = input(<span class="string">"请输入第一个字符串："</span>)</span><br><span class="line">str2 = input(<span class="string">"请输入第二个字符串："</span>)</span><br><span class="line"><span class="keyword">if</span> operator.gt(str1,str2) == False:</span><br><span class="line">    <span class="keyword">if</span> operator.eq(str1,str2) == True:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"输入的两个字符串大小相等"</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(str1)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(str2)</span><br></pre></td></tr></table></figure>
+<h3 id="9、给出字符串strings-’abaabaabbbaba’。写一个表达式，去除其中所有’b’，得到另一个字符串newstring-’aaaaaa’。"><a href="#9、给出字符串strings-’abaabaabbbaba’。写一个表达式，去除其中所有’b’，得到另一个字符串newstring-’aaaaaa’。" class="headerlink" title="9、给出字符串strings=’abaabaabbbaba’。写一个表达式，去除其中所有’b’，得到另一个字符串newstring=’aaaaaa’。"></a>9、给出字符串strings=’abaabaabbbaba’。写一个表达式，去除其中所有’b’，得到另一个字符串newstring=’aaaaaa’。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">strings = <span class="string">'abaabaabbbaba'</span></span><br><span class="line">newstring = <span class="string">""</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> strings:</span><br><span class="line">    <span class="keyword">if</span> i == <span class="string">"b"</span>:</span><br><span class="line">        del i</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        newstring+=i</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"newstring='%s'"</span>%newstring)</span><br></pre></td></tr></table></figure>
+<h3 id="10、按升序合并如下两个list-并去除重复的元素"><a href="#10、按升序合并如下两个list-并去除重复的元素" class="headerlink" title="10、按升序合并如下两个list, 并去除重复的元素"></a>10、按升序合并如下两个list, 并去除重复的元素</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">list1 = [2, 3, 8, 4, 9, 5, 6]</span><br><span class="line">list2 = [5, 6, 10, 17, 11, 2]</span><br><span class="line">list1 += list2</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">set</span>(list1))</span><br></pre></td></tr></table></figure>
+<p>###地区三级结构</p>
+<h3 id="要求"><a href="#要求" class="headerlink" title="要求:"></a>要求:</h3><h3 id="打印省、市、县三级菜单"><a href="#打印省、市、县三级菜单" class="headerlink" title="打印省、市、县三级菜单"></a>打印省、市、县三级菜单</h3><h3 id="可返回上一级"><a href="#可返回上一级" class="headerlink" title="可返回上一级"></a>可返回上一级</h3><h3 id="可随时退出程序"><a href="#可随时退出程序" class="headerlink" title="可随时退出程序"></a>可随时退出程序</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">dict_list = &#123;</span><br><span class="line">    <span class="string">"河南省"</span>:&#123;</span><br><span class="line">        <span class="string">"信阳市"</span>:[<span class="string">"潢川县"</span>,<span class="string">"光山县"</span>,<span class="string">"新县"</span>],</span><br><span class="line">        <span class="string">"新乡市"</span>:[<span class="string">"长垣县"</span>,<span class="string">"原阳县"</span>,<span class="string">"封丘县"</span>],</span><br><span class="line">        <span class="string">"安阳市"</span>:[<span class="string">"滑县"</span>,<span class="string">"安阳县"</span>,<span class="string">"汤阴县"</span>]</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">'湖北省'</span>:&#123;</span><br><span class="line">        <span class="string">'武汉市'</span>: [<span class="string">'新洲'</span>, <span class="string">'武昌'</span>, <span class="string">'汉口'</span>, <span class="string">'汉阳'</span>],</span><br><span class="line">        <span class="string">'黄冈市'</span>: [<span class="string">'麻城'</span>, <span class="string">'黄陂'</span>, <span class="string">'罗田'</span>, <span class="string">'英山'</span>],</span><br><span class="line">        <span class="string">'咸宁市'</span>: [<span class="string">'通城'</span>, <span class="string">'通山'</span>, <span class="string">'嘉鱼'</span>, <span class="string">'崇阳'</span>],</span><br><span class="line">        <span class="string">'孝感市'</span>: [<span class="string">'汉川'</span>, <span class="string">'应城'</span>, <span class="string">'云梦'</span>, <span class="string">'安陆'</span>],</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">'湖南省'</span>: &#123;</span><br><span class="line">        <span class="string">'郴州市'</span>: [<span class="string">'湖区'</span>, <span class="string">'苏仙'</span>, <span class="string">'贵阳'</span>, <span class="string">'桂东'</span>],</span><br><span class="line">        <span class="string">'衡阳市'</span>: [<span class="string">'珠晖'</span>, <span class="string">'石鼓'</span>, <span class="string">'常宁'</span>, <span class="string">'衡山'</span>],</span><br><span class="line">        <span class="string">'长沙市'</span>: [<span class="string">'芙蓉'</span>, <span class="string">'天心'</span>, <span class="string">'开福'</span>, <span class="string">'雨花'</span>],</span><br><span class="line">        <span class="string">'湘潭市'</span>: [<span class="string">'雨湖'</span>, <span class="string">'岳塘'</span>, <span class="string">'韶山'</span>, <span class="string">'湘乡'</span>],</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">while</span> True:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"是否打印省列表:\nY/y(Yes/yes)打印省列表\nQ/q(quit/Quit)退出程序"</span>)</span><br><span class="line">    input1 = input(<span class="string">"请输入您的选择:"</span>).strip()</span><br><span class="line">    <span class="keyword">if</span> input1.upper() == <span class="string">"Y"</span> or input1.upper() == <span class="string">"YES"</span>:</span><br><span class="line">        <span class="comment"># 打印省列表</span></span><br><span class="line">        sheng_list = list(dict_list.keys())</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> sheng_list:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"&#123;&#125;\t&#123;&#125;"</span>.format(sheng_list.index(i)+1,i))</span><br><span class="line">        <span class="keyword">while</span> True:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"选择省名称相应的序号:省--&gt;&gt;打印市\nB/b(Back/back)返回上级菜单\nQ\q(quit\Quit)退出程序"</span>)</span><br><span class="line">            input2 = input(<span class="string">"输入您的选择:"</span>).strip()</span><br><span class="line">            <span class="keyword">if</span> input2.upper() == <span class="string">"B"</span> or input2.upper() == <span class="string">"BACK"</span>:</span><br><span class="line">                <span class="comment">#返回上一层</span></span><br><span class="line">                <span class="built_in">break</span></span><br><span class="line">            <span class="keyword">elif</span> input2.isdigit():</span><br><span class="line">                <span class="comment">#打印市</span></span><br><span class="line">                input2 = int(input2)</span><br><span class="line">                <span class="keyword">if</span> 0 &lt; input2 &lt;= len(sheng_list):</span><br><span class="line">                    input2-=1</span><br><span class="line">                    shi_list = list(dict_list[sheng_list[input2]].keys())</span><br><span class="line">                    <span class="keyword">for</span> j <span class="keyword">in</span> shi_list:</span><br><span class="line">                        <span class="built_in">print</span>(<span class="string">"&#123;&#125;\t&#123;&#125;"</span>.format(shi_list.index(j)+1,j))</span><br><span class="line">                    <span class="built_in">print</span>(<span class="string">"选择省名称相应的序号:市--&gt;&gt;打印县"</span>)</span><br><span class="line">                    <span class="keyword">while</span> True:</span><br><span class="line">                        <span class="built_in">print</span>(<span class="string">"B/b(Back/back)返回上级菜单\nQ\q(quit\Quit)退出程序"</span>)</span><br><span class="line">                        input3 = input(<span class="string">"输入您的选择:"</span>).strip()</span><br><span class="line">                        <span class="keyword">if</span> input3.upper() == <span class="string">"B"</span> or input3.upper() == <span class="string">"BACK"</span>:</span><br><span class="line">                            <span class="comment">#返回上一层</span></span><br><span class="line">                            <span class="built_in">break</span></span><br><span class="line">                        <span class="keyword">elif</span> input3.isdigit():</span><br><span class="line">                            input3 = int(input3)</span><br><span class="line">                            <span class="comment">#打印县</span></span><br><span class="line">                            <span class="keyword">if</span> 0 &lt; input3 &lt;= len(shi_list):</span><br><span class="line">                                input3-=1</span><br><span class="line">                                xian_list = list(dict_list[sheng_list[input2]][shi_list[input3]])</span><br><span class="line">                                <span class="built_in">print</span>(xian_list)</span><br><span class="line">                        <span class="keyword">elif</span> input3.upper() == <span class="string">"Q"</span> or input3.upper() == <span class="string">"BUIT"</span>:</span><br><span class="line">                            <span class="built_in">exit</span>()</span><br><span class="line">                        <span class="keyword">else</span>:</span><br><span class="line">                            <span class="built_in">print</span>(<span class="string">"你执行的操作错误，请稍后再试================\n=========================================\n=========================================\n=========&gt;&gt;"</span>)    </span><br><span class="line">                <span class="keyword">else</span>: </span><br><span class="line">                    <span class="comment">#输入的序号与系统不匹配，请稍后重试</span></span><br><span class="line">                    <span class="built_in">print</span>(<span class="string">"输入的序号与系统不匹配，请稍后重试"</span>)</span><br><span class="line">                    <span class="built_in">break</span></span><br><span class="line">            <span class="keyword">elif</span> input2.upper() == <span class="string">"Q"</span> or input2.upper() == <span class="string">"BUIT"</span>:</span><br><span class="line">                <span class="built_in">exit</span>()</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">"你执行的操作错误，请稍后再试================\n=========================================\n=========================================\n=========&gt;&gt;"</span>)</span><br><span class="line">    <span class="keyword">elif</span> input1.upper() == <span class="string">"Q"</span> or input1.upper() == <span class="string">"QUIT"</span>:</span><br><span class="line">        <span class="comment">#退出程序</span></span><br><span class="line">        <span class="built_in">exit</span>()</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"你执行的操作错误，请稍后再试================\n=========================================\n=========================================\n=========&gt;&gt;"</span>)</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">hello</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/22/python个人笔记(四)/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-python经典习题（十）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/22/python经典习题（十）/">python经典习题(十)</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/22/python经典习题（十）/" class="archive-article-date">
+  	<time datetime="2018-07-22T01:38:42.011Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>写代码：有如下字典<br>按照要求实现每一个功能<br>dict = {“k1”:”v1”,”k2”:”v2”,”k3”:”v3”}<br>1、请循环遍历出所有的key<br>2、请循环遍历出所有的value<br>3、请循环遍历出所有的key和value<br>4、请在字典中增加一个键值对,”k4”:”v4”，输出添加后的字典<br>5、请删除字典中键值对”k1”:”v1”,并输出删除后的结果<br>6、请删除字典中键”k5”对应的键值对，如果字典中不存在键”k5”,则不报错，返回None<br>7、请获取字典中”k2”对应的值<br>8、请获取字典中”k6”对应的值,如果不存在，则不报错，并且让其返回None。<br>9、现有dict2 = {“k1”:”v11”,”a”:”b”},通过一行操作使dict2 = {“k1”:”v1”,”k2”:”v2”,”k3”:”v3”,”a”:”b”}<br>10、组合嵌套题。写代码，有如下列表，按照要求实现每一个功能<br>lis = [[“k”,[“qwe”,20,{“k1”:[“tt”,3,”1”]},89],”ab”]]<br>10.1、将列表中的数字变成字符串”100”(用两种方法)<br>10.2、将列表中的字符串”1”变成数字101(用两种方法)</p>
+<h3 id="1、请循环遍历出所有的key"><a href="#1、请循环遍历出所有的key" class="headerlink" title="1、请循环遍历出所有的key"></a>1、请循环遍历出所有的key</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dict = &#123;<span class="string">"k1"</span>:<span class="string">"v1"</span>,<span class="string">"k2"</span>:<span class="string">"v2"</span>,<span class="string">"k3"</span>:<span class="string">"v3"</span>&#125;</span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> dict:</span><br><span class="line">    <span class="built_in">print</span>(key)</span><br></pre></td></tr></table></figure>
+<h3 id="2、请循环遍历出所有的value"><a href="#2、请循环遍历出所有的value" class="headerlink" title="2、请循环遍历出所有的value"></a>2、请循环遍历出所有的value</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> dict:</span><br><span class="line">    <span class="built_in">print</span>(dict[key])</span><br></pre></td></tr></table></figure>
+<h3 id="3、请循环遍历出所有的key和value"><a href="#3、请循环遍历出所有的key和value" class="headerlink" title="3、请循环遍历出所有的key和value"></a>3、请循环遍历出所有的key和value</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> key,value <span class="keyword">in</span> dict.items():</span><br><span class="line">    <span class="built_in">print</span>(&#123;key:value&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="4、请在字典中增加一个键值对-”k4”-”v4”，输出添加后的字典"><a href="#4、请在字典中增加一个键值对-”k4”-”v4”，输出添加后的字典" class="headerlink" title="4、请在字典中增加一个键值对,”k4”:”v4”，输出添加后的字典"></a>4、请在字典中增加一个键值对,”k4”:”v4”，输出添加后的字典</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dict1 = &#123;<span class="string">"k4"</span>:<span class="string">"v4"</span>&#125; </span><br><span class="line">dict.update(dict1)</span><br><span class="line"><span class="built_in">print</span>(dict)</span><br></pre></td></tr></table></figure>
+<h3 id="5、请删除字典中键值对”k1”-”v1”-并输出删除后的结果"><a href="#5、请删除字典中键值对”k1”-”v1”-并输出删除后的结果" class="headerlink" title="5、请删除字典中键值对”k1”:”v1”,并输出删除后的结果"></a>5、请删除字典中键值对”k1”:”v1”,并输出删除后的结果</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dict.pop(<span class="string">"k1"</span>)</span><br><span class="line"><span class="built_in">print</span>(dict)</span><br></pre></td></tr></table></figure>
+<h3 id="6、请删除字典中键”k5”对应的键值对，如果字典中不存在键”k5”-则不报错，返回None"><a href="#6、请删除字典中键”k5”对应的键值对，如果字典中不存在键”k5”-则不报错，返回None" class="headerlink" title="6、请删除字典中键”k5”对应的键值对，如果字典中不存在键”k5”,则不报错，返回None"></a>6、请删除字典中键”k5”对应的键值对，如果字典中不存在键”k5”,则不报错，返回None</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(dict.pop(<span class="string">"k5"</span>,None))</span><br></pre></td></tr></table></figure>
+<h3 id="7、请获取字典中”k2”对应的值"><a href="#7、请获取字典中”k2”对应的值" class="headerlink" title="7、请获取字典中”k2”对应的值"></a>7、请获取字典中”k2”对应的值</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(dict.get(<span class="string">"k2"</span>))</span><br></pre></td></tr></table></figure>
+<h3 id="8、请获取字典中”k6”对应的值-如果不存在，则不报错，并且让其返回None。"><a href="#8、请获取字典中”k6”对应的值-如果不存在，则不报错，并且让其返回None。" class="headerlink" title="8、请获取字典中”k6”对应的值,如果不存在，则不报错，并且让其返回None。"></a>8、请获取字典中”k6”对应的值,如果不存在，则不报错，并且让其返回None。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(dict.get(<span class="string">"k6"</span>))</span><br></pre></td></tr></table></figure>
+<h3 id="9、现有dict2-“k1”-”v11”-”a”-”b”-通过一行操作使dict2-“k1”-”v1”-”k2”-”v2”-”k3”-”v3”-”a”-”b”"><a href="#9、现有dict2-“k1”-”v11”-”a”-”b”-通过一行操作使dict2-“k1”-”v1”-”k2”-”v2”-”k3”-”v3”-”a”-”b”" class="headerlink" title="9、现有dict2 = {“k1”:”v11”,”a”:”b”},通过一行操作使dict2 = {“k1”:”v1”,”k2”:”v2”,”k3”:”v3”,”a”:”b”}"></a>9、现有dict2 = {“k1”:”v11”,”a”:”b”},通过一行操作使dict2 = {“k1”:”v1”,”k2”:”v2”,”k3”:”v3”,”a”:”b”}</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">dict2 = &#123;<span class="string">"k1"</span>:<span class="string">"v11"</span>,<span class="string">"a"</span>:<span class="string">"b"</span>&#125;</span><br><span class="line">dict.update(dict2)</span><br><span class="line">dict3 = &#123;<span class="string">"k1"</span>:<span class="string">"v1"</span>&#125;</span><br><span class="line">dict.update(dict3)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"dict2="</span>,dict)</span><br><span class="line">lis = [[<span class="string">"k"</span>,[<span class="string">"qwe"</span>,20,&#123;<span class="string">"k1"</span>:[<span class="string">"tt"</span>,3,<span class="string">"1"</span>]&#125;,89],<span class="string">"ab"</span>]]</span><br></pre></td></tr></table></figure>
+<h3 id="10-1、将列表中的数字变成字符串”100”-用两种方法"><a href="#10-1、将列表中的数字变成字符串”100”-用两种方法" class="headerlink" title="10.1、将列表中的数字变成字符串”100”(用两种方法)"></a>10.1、将列表中的数字变成字符串”100”(用两种方法)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">lis[0][1][1]=lis[0][1][3]=lis[0][1][2][<span class="string">"k1"</span>][1]=<span class="string">"100"</span></span><br><span class="line"><span class="built_in">print</span>(lis)</span><br><span class="line"></span><br><span class="line">lis[0][1][1]=str(lis[0][1][1]+80)</span><br><span class="line">lis[0][1][3]=str(lis[0][1][3]+11)</span><br><span class="line">lis[0][1][2][<span class="string">"k1"</span>][1]=str(lis[0][1][2][<span class="string">"k1"</span>][1]+97)</span><br><span class="line"><span class="built_in">print</span>(lis)</span><br></pre></td></tr></table></figure>
+<h3 id="10-2、将列表中的字符串”1”变成数字101-用两种方法"><a href="#10-2、将列表中的字符串”1”变成数字101-用两种方法" class="headerlink" title="10.2、将列表中的字符串”1”变成数字101(用两种方法)"></a>10.2、将列表中的字符串”1”变成数字101(用两种方法)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">lis[0][1][2][<span class="string">"k1"</span>][2]=101</span><br><span class="line"><span class="built_in">print</span>(lis)</span><br><span class="line"></span><br><span class="line">lis[0][1][2][<span class="string">"k1"</span>][2]=int(lis[0][1][2][<span class="string">"k1"</span>][2])+100</span><br><span class="line"><span class="built_in">print</span>(lis)</span><br></pre></td></tr></table></figure>
+<h3 id="整合案例"><a href="#整合案例" class="headerlink" title="整合案例"></a>整合案例</h3><h3 id="写一个购物车，写完了的写三级菜单。"><a href="#写一个购物车，写完了的写三级菜单。" class="headerlink" title="写一个购物车，写完了的写三级菜单。"></a>写一个购物车，写完了的写三级菜单。</h3><h3 id="购物车"><a href="#购物车" class="headerlink" title="购物车"></a>购物车</h3><h3 id="功能要求："><a href="#功能要求：" class="headerlink" title="功能要求："></a>功能要求：</h3><h3 id="要求用户输入总资产，例如：2000"><a href="#要求用户输入总资产，例如：2000" class="headerlink" title="要求用户输入总资产，例如：2000"></a>要求用户输入总资产，例如：2000</h3><h3 id="显示商品列表，让用户根据序号选择商品，加入购物车"><a href="#显示商品列表，让用户根据序号选择商品，加入购物车" class="headerlink" title="显示商品列表，让用户根据序号选择商品，加入购物车"></a>显示商品列表，让用户根据序号选择商品，加入购物车</h3><h3 id="购买，如果商品总额大于总资产，提示账户余额不足，否则，购买成功。"><a href="#购买，如果商品总额大于总资产，提示账户余额不足，否则，购买成功。" class="headerlink" title="购买，如果商品总额大于总资产，提示账户余额不足，否则，购买成功。"></a>购买，如果商品总额大于总资产，提示账户余额不足，否则，购买成功。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line">goods = [</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">"shop_name"</span>:<span class="string">"牛奶"</span>,</span><br><span class="line">        <span class="string">"shop_price"</span>:20,</span><br><span class="line">        <span class="string">"shop_from"</span>:<span class="string">"英国"</span>,</span><br><span class="line">        <span class="string">"shop_effectiveDate"</span>:<span class="string">"2018.12.12"</span>&#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">"shop_name"</span>:<span class="string">"汉堡包"</span>,</span><br><span class="line">        <span class="string">"shop_price"</span>:30,</span><br><span class="line">        <span class="string">"shop_from"</span>:<span class="string">"美国"</span>,</span><br><span class="line">        <span class="string">"shop_effectiveDate"</span>:<span class="string">"2018.8.2"</span>&#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">"shop_name"</span>:<span class="string">"火腿"</span>,</span><br><span class="line">        <span class="string">"shop_price"</span>:120,</span><br><span class="line">        <span class="string">"shop_from"</span>:<span class="string">"新西兰"</span>,</span><br><span class="line">        <span class="string">"shop_effectiveDate"</span>:<span class="string">"2019.2.12"</span></span><br><span class="line">    &#125;</span><br><span class="line">]</span><br><span class="line">shopcar = []</span><br><span class="line"><span class="keyword">while</span> True:</span><br><span class="line">    money = input(<span class="string">"请输入你的资产:"</span>).strip()</span><br><span class="line">    <span class="keyword">if</span> money.isdigit():</span><br><span class="line">        <span class="built_in">break</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"请输入正确的资产金额！"</span>)</span><br><span class="line">money = int(money)</span><br><span class="line"><span class="keyword">while</span> True:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"请选择你要购买的商品序号"</span>.center(50,<span class="string">"*"</span>))</span><br><span class="line">    <span class="keyword">for</span> i,j <span class="keyword">in</span> enumerate(goods,1):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"商品序号:&#123;&#125;,shop_name:&#123;&#125;,shop_price:&#123;&#125;,shop_from:&#123;&#125;,shop_effectiveDate:&#123;&#125;"</span>.format(i,j[<span class="string">"shop_name"</span>],j[<span class="string">"shop_price"</span>],j[<span class="string">"shop_from"</span>],j[<span class="string">"shop_effectiveDate"</span>]))</span><br><span class="line">    <span class="built_in">print</span>(80*<span class="string">"*"</span>)</span><br><span class="line">    input_1 = input(<span class="string">"请输入你要购买的商品编号:\n*充值请按C/c\n*删除请按D/d\n*退出请按Q\q\n:"</span>).strip()</span><br><span class="line">    <span class="keyword">if</span> input_1.isdigit():</span><br><span class="line">        <span class="comment">#判断编号</span></span><br><span class="line">        input_1 = int(input_1)</span><br><span class="line">        <span class="keyword">if</span> 0 &lt; input_1 &lt;= len(goods):</span><br><span class="line">            <span class="comment">#属于可购买的范围</span></span><br><span class="line">            <span class="keyword">if</span>  goods[input_1-1][<span class="string">"shop_price"</span>] &lt; money:</span><br><span class="line">                money-=goods[input_1-1][<span class="string">"shop_price"</span>]</span><br><span class="line">                shopcar.append(goods[input_1-1][<span class="string">"shop_name"</span>])</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">"成功购买&#123;&#125;,剩余余额&#123;&#125;"</span>.format(goods[input_1-1][<span class="string">"shop_name"</span>],money))</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">"有卡余额不足，请给许他充值。"</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"你要购买的商品断货了，不好意思..."</span>)</span><br><span class="line">    <span class="keyword">elif</span> input_1.upper() == <span class="string">"C"</span>:</span><br><span class="line">        <span class="comment">#充值</span></span><br><span class="line">        input_2 = input(<span class="string">"请输入你要充值的金额:"</span>).strip()</span><br><span class="line">        <span class="keyword">if</span> input_2.isdigit():</span><br><span class="line">            input_2 = int(input_2)</span><br><span class="line">            money+=input_2</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"你已成功充值,余额：&#123;&#125;"</span>.format(money))</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"操作异常，请稍后重试。"</span>)</span><br><span class="line">    <span class="keyword">elif</span> input_1.upper() == <span class="string">"Q"</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"你购买的的商品有&#123;&#125;,余额还有&#123;&#125;"</span>.format(shopcar,money))</span><br><span class="line">        <span class="comment">#退出</span></span><br><span class="line">        <span class="built_in">exit</span>()</span><br><span class="line">    <span class="keyword">elif</span> input_1.upper() == <span class="string">"D"</span>:</span><br><span class="line">        <span class="comment">#删除</span></span><br><span class="line">        input_2 = int(input(<span class="string">"请输入你要删除的物品序号:"</span>).strip())</span><br><span class="line">        <span class="keyword">if</span> goods[input_2-1][<span class="string">"shop_name"</span>] <span class="keyword">in</span> shopcar:</span><br><span class="line">            money+=int(goods[input_2-1][<span class="string">"shop_price"</span>])</span><br><span class="line">            shopcar.remove(goods[input_2-1][<span class="string">"shop_name"</span>])</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"你购买的的商品有&#123;&#125;,余额还有&#123;&#125;"</span>.format(shopcar,money))</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"你输入的格式不正确，请稍后重试。"</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"你输入的格式不正确，请稍后重试。"</span>)</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">hello</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/22/python经典习题（十）/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-python经典习题（九）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -711,328 +1007,6 @@
 
 
   
-    <article id="post-python经典习题（五）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/21/python经典习题（五）/">python经典习题(五)</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/21/python经典习题（五）/" class="archive-article-date">
-  	<time datetime="2018-07-21T15:39:33.567Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1、百元买百鸡"><a href="#1、百元买百鸡" class="headerlink" title="1、百元买百鸡"></a>1、百元买百鸡</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># a = 0</span></span><br><span class="line"><span class="comment"># while(a&lt;=20):</span></span><br><span class="line"><span class="comment">#     while(b)</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(0,21):</span><br><span class="line">    <span class="keyword">for</span> m <span class="keyword">in</span> range(0,34):</span><br><span class="line">        <span class="keyword">for</span> n <span class="keyword">in</span> range(1,300):</span><br><span class="line">            <span class="keyword">if</span>(i+n+m==100 and 5*i+3*m+n/3==100):</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">"公鸡有"</span>,i,<span class="string">"只"</span>,end=<span class="string">" "</span>)</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">"母鸡有"</span>,m,<span class="string">"只"</span>,end=<span class="string">" "</span>)</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">"小鸡有"</span>,n,<span class="string">"只"</span>)</span><br></pre></td></tr></table></figure>
-<h3 id="2、白僧吃百馍"><a href="#2、白僧吃百馍" class="headerlink" title="2、白僧吃百馍"></a>2、白僧吃百馍</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(1,100):</span><br><span class="line">    j=100-i</span><br><span class="line">    <span class="keyword">if</span>(3*i+j/3==100):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"大和尚:"</span>,i,<span class="string">"人"</span>,end=<span class="string">" "</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"小和尚:"</span>,j,<span class="string">"人"</span>)</span><br></pre></td></tr></table></figure>
-<h3 id="3、打印输出0-200之间能被7整除但不能被4整除的所有整数"><a href="#3、打印输出0-200之间能被7整除但不能被4整除的所有整数" class="headerlink" title="3、打印输出0-200之间能被7整除但不能被4整除的所有整数!"></a>3、打印输出0-200之间能被7整除但不能被4整除的所有整数!</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(0,201):</span><br><span class="line">    <span class="keyword">if</span>(i%7==0 and i%4!=0):</span><br><span class="line">        <span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure>
-<h3 id="4、求1到100的奇数的平均值"><a href="#4、求1到100的奇数的平均值" class="headerlink" title="4、求1到100的奇数的平均值"></a>4、求1到100的奇数的平均值</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sum=0</span><br><span class="line">m=0</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(1,101):</span><br><span class="line">    <span class="keyword">if</span>(i%2!=0):</span><br><span class="line">        sum+=i</span><br><span class="line">        m+=1</span><br><span class="line">    i+=2 </span><br><span class="line"><span class="built_in">print</span>(sum/m)</span><br></pre></td></tr></table></figure>
-<h3 id="5、获取当前的时间，并判断在7-8点提醒吃早饭，12-1点提醒吃午饭，6点提醒下班，11点提醒该睡觉了。"><a href="#5、获取当前的时间，并判断在7-8点提醒吃早饭，12-1点提醒吃午饭，6点提醒下班，11点提醒该睡觉了。" class="headerlink" title="5、获取当前的时间，并判断在7-8点提醒吃早饭，12-1点提醒吃午饭，6点提醒下班，11点提醒该睡觉了。"></a>5、获取当前的时间，并判断在7-8点提醒吃早饭，12-1点提醒吃午饭，6点提醒下班，11点提醒该睡觉了。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import datetime</span><br><span class="line">datetime.datetime.now().hour</span><br><span class="line"><span class="keyword">if</span>(datetime.datetime.now().hour &gt;= 7 and datetime.datetime.now().hour &lt; 8):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"该吃早饭啦"</span>)</span><br><span class="line"><span class="keyword">elif</span>(datetime.datetime.now().hour &gt;= 12 and datetime.datetime.now().hour &lt; 13):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"该吃午饭啦"</span>)</span><br><span class="line"><span class="keyword">elif</span> (datetime.datetime.now().hour &gt;= 18 and datetime.datetime.now().hour &lt; 23):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"该下班了"</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"该睡觉了"</span>)</span><br></pre></td></tr></table></figure>
-<h3 id="6、使用for循环，打印菱形"><a href="#6、使用for循环，打印菱形" class="headerlink" title="6、使用for循环，打印菱形"></a>6、使用for循环，打印菱形</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">n = int(input(<span class="string">"请输入你需要的行数："</span>))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(1,n+1):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">" "</span>*(n-i)+<span class="string">"★"</span>*(2*i-1))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(n,0,-1):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">" "</span>*(n-i)+<span class="string">"★"</span>*(2*i-1))</span><br></pre></td></tr></table></figure>
-<h3 id="7、乘法表"><a href="#7、乘法表" class="headerlink" title="7、乘法表"></a>7、乘法表</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">i = 1</span><br><span class="line"><span class="keyword">while</span>(i&lt;10):</span><br><span class="line">    j = 1</span><br><span class="line">    <span class="keyword">while</span>(j&lt;=i):</span><br><span class="line">        <span class="built_in">print</span>(str(j)+<span class="string">"*"</span>+str(i)+<span class="string">"="</span>+str(i*j),end=<span class="string">" "</span>)</span><br><span class="line">        j+=1</span><br><span class="line">    i+=1</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">""</span>)</span><br></pre></td></tr></table></figure>
-<h3 id="8、输出金字塔"><a href="#8、输出金字塔" class="headerlink" title="8、输出金字塔"></a>8、输出金字塔</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">i = 0 <span class="comment">#行</span></span><br><span class="line">j = 0 <span class="comment">#列</span></span><br><span class="line">m = <span class="string">"★"</span> <span class="comment">#符号</span></span><br><span class="line">n = <span class="string">" "</span> <span class="comment">#空格</span></span><br><span class="line">a = int(input(<span class="string">"请输入你需要的行数"</span>))</span><br><span class="line"><span class="keyword">while</span>(i&lt;a):</span><br><span class="line">    i+=1</span><br><span class="line">    <span class="keyword">while</span>(j&lt;(2*a-1)):</span><br><span class="line">        j+=1</span><br><span class="line">    <span class="built_in">print</span>((a-i)*n,end=<span class="string">""</span>)</span><br><span class="line">    <span class="built_in">print</span>((2*i-1)*m)</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">hello</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/21/python经典习题（五）/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-python经典习题（四）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/21/python经典习题（四）/">python经典习题(四)</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/21/python经典习题（四）/" class="archive-article-date">
-  	<time datetime="2018-07-21T15:28:22.821Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1、制作简易计算机，输入两个数字能够进行（-、-、-、-）运算"><a href="#1、制作简易计算机，输入两个数字能够进行（-、-、-、-）运算" class="headerlink" title="1、制作简易计算机，输入两个数字能够进行（+、-、*、/）运算"></a>1、制作简易计算机，输入两个数字能够进行（+、-、*、/）运算</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="built_in">float</span>(input(<span class="string">"请输入一个数字:"</span>))</span><br><span class="line">b = <span class="built_in">float</span>(input(<span class="string">"请再输入一个数字:"</span>))</span><br><span class="line">c = input(<span class="string">"请输入运算符:"</span>)</span><br><span class="line"><span class="keyword">if</span> (c == <span class="string">"+"</span>):</span><br><span class="line">    <span class="built_in">print</span> (a+b)</span><br><span class="line"><span class="keyword">elif</span> (c == <span class="string">"-"</span>):</span><br><span class="line">    <span class="built_in">print</span> (a-b)</span><br><span class="line"><span class="keyword">elif</span> (c == <span class="string">"*"</span>):</span><br><span class="line">    <span class="built_in">print</span> (a*b)</span><br><span class="line"><span class="keyword">elif</span> (c == <span class="string">"/"</span>):</span><br><span class="line">    <span class="keyword">if</span> b == 0:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"除数不能为0"</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span> (a/b)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"输入错误"</span>)</span><br></pre></td></tr></table></figure>
-<h3 id="2、小明身高1-75，体重80-5kg。请根据BMI公式（体重除以身高的平方）帮小明计算他的BMI指数，并根据BMI指数："><a href="#2、小明身高1-75，体重80-5kg。请根据BMI公式（体重除以身高的平方）帮小明计算他的BMI指数，并根据BMI指数：" class="headerlink" title="2、小明身高1.75，体重80.5kg。请根据BMI公式（体重除以身高的平方）帮小明计算他的BMI指数，并根据BMI指数："></a>2、小明身高1.75，体重80.5kg。请根据BMI公式（体重除以身高的平方）帮小明计算他的BMI指数，并根据BMI指数：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># # 低于18.5：过轻 </span></span><br><span class="line"><span class="comment"># # 18.5-25：正常 </span></span><br><span class="line"><span class="comment"># # 25-28：过重 </span></span><br><span class="line"><span class="comment"># # 28-32：肥胖 </span></span><br><span class="line"><span class="comment"># # 高于32：严重肥胖 </span></span><br><span class="line"><span class="comment"># # height/pow(weight,2)</span></span><br><span class="line"><span class="comment"># # height = 1.75</span></span><br><span class="line"><span class="comment"># # weight = 80.5</span></span><br><span class="line"><span class="comment"># # BMI = weight/(height**2)</span></span><br><span class="line">height = <span class="built_in">float</span>(input(<span class="string">"请输入你的身高:"</span>))</span><br><span class="line">weight = <span class="built_in">float</span>(input(<span class="string">"请输入你的体重:"</span>))</span><br><span class="line">BMI = weight/pow(height,2)</span><br><span class="line"><span class="keyword">if</span>(BMI &lt; 18.5):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"过轻"</span>)</span><br><span class="line"><span class="keyword">elif</span>(BMI &gt; 18.5 and BMI &lt; 25):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"正常"</span>)</span><br><span class="line"><span class="keyword">elif</span>(BMI &gt; 25 and BMI &lt; 28):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"过重"</span>)</span><br><span class="line"><span class="keyword">elif</span>(BMI &gt; 28 and BMI &lt; 32):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"肥胖"</span>)</span><br><span class="line"><span class="keyword">elif</span>(BMI &gt; 32):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"严重肥胖"</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"系统繁忙"</span>)</span><br></pre></td></tr></table></figure>
-<h3 id="3、cars-‘audi’-’bmw’-’subaru’-’toyota’"><a href="#3、cars-‘audi’-’bmw’-’subaru’-’toyota’" class="headerlink" title="3、cars=[‘audi’,’bmw’,’subaru’,’toyota’]"></a>3、cars=[‘audi’,’bmw’,’subaru’,’toyota’]</h3><h3 id="将列表中的第一个单词大写，后面每个单词首字母大写，并输出在一行显示，用空格隔开"><a href="#将列表中的第一个单词大写，后面每个单词首字母大写，并输出在一行显示，用空格隔开" class="headerlink" title="将列表中的第一个单词大写，后面每个单词首字母大写，并输出在一行显示，用空格隔开"></a>将列表中的第一个单词大写，后面每个单词首字母大写，并输出在一行显示，用空格隔开</h3><h3 id="参考函数-str-upper-和str-title"><a href="#参考函数-str-upper-和str-title" class="headerlink" title="参考函数:str.upper()和str.title()"></a>参考函数:str.upper()和str.title()</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">cars=[<span class="string">'audi'</span>,<span class="string">'bmw'</span>,<span class="string">'subaru'</span>,<span class="string">'toyota'</span>]</span><br><span class="line">A = str(cars[0]).upper()</span><br><span class="line"><span class="built_in">print</span>(A,end=<span class="string">" "</span>)</span><br><span class="line">cars.remove(cars[0])</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> cars:</span><br><span class="line">    <span class="built_in">print</span>(i.title(),end=<span class="string">" "</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"\n"</span>)</span><br><span class="line"></span><br><span class="line">cars=[<span class="string">'audi'</span>,<span class="string">'bmw'</span>,<span class="string">'subaru'</span>,<span class="string">'toyota'</span>]</span><br><span class="line"><span class="built_in">print</span>(cars[0].upper(),end=<span class="string">" "</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(1,4):</span><br><span class="line">    <span class="built_in">print</span>(cars[i].title(),end=<span class="string">" "</span>)</span><br></pre></td></tr></table></figure>
-<h3 id="4、计算1-到10的和。并输出格式1-2-3-4-5-6-7-8-9-10-55"><a href="#4、计算1-到10的和。并输出格式1-2-3-4-5-6-7-8-9-10-55" class="headerlink" title="4、计算1+到10的和。并输出格式1+2+3+4+5+6+7+8+9+10=55"></a>4、计算1+到10的和。并输出格式1+2+3+4+5+6+7+8+9+10=55</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sum = 0</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(1,11):</span><br><span class="line">    <span class="keyword">if</span>(i&lt;10):</span><br><span class="line">        <span class="built_in">print</span>(i,end=<span class="string">"+"</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(i,end=<span class="string">"="</span>)</span><br><span class="line">    sum = sum+i</span><br><span class="line"><span class="built_in">print</span>(sum)</span><br></pre></td></tr></table></figure>
-<h3 id="5、运算符优先级"><a href="#5、运算符优先级" class="headerlink" title="5、运算符优先级"></a>5、运算符优先级</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">a = 4*2**3</span><br><span class="line">a = 2*3+5 &lt;= 5+1*3</span><br><span class="line">a=3+4-7 or 4*0.25-0.09</span><br><span class="line">a=(a and b)-c</span><br><span class="line"></span><br><span class="line"><span class="comment">#2**3==8 4*8==32</span></span><br><span class="line">a = 4*2**3</span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"><span class="comment">#2*3==6 6+5==11  1*3==3 3+5==8  11&gt;8 返回False</span></span><br><span class="line">a = 2*3+5 &lt;= 5+1*3</span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"><span class="comment">#3+4==7 7-7==0 4*0.25==1 1-0.09==0.91 返回0.91</span></span><br><span class="line">a=3+4-7 or 4*0.25-0.09</span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"><span class="comment">#先判断小括号里面的，在进行减法运算</span></span><br></pre></td></tr></table></figure>
-<h3 id="判断当前时间是星期几-根据本地时间，不是网络时间"><a href="#判断当前时间是星期几-根据本地时间，不是网络时间" class="headerlink" title="判断当前时间是星期几(根据本地时间，不是网络时间)"></a>判断当前时间是星期几(根据本地时间，不是网络时间)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">import datetime</span><br><span class="line">weenks = datetime.datetime.now().weekday()</span><br><span class="line"><span class="built_in">print</span>(weenks)</span><br><span class="line"><span class="keyword">if</span> weenks == 0:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"今天是星期一"</span>)</span><br><span class="line"><span class="keyword">elif</span> weenks == 1:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"今天是星期二"</span>)</span><br><span class="line"><span class="keyword">elif</span> weenks == 2:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"今天是星期三"</span>)</span><br><span class="line"><span class="keyword">elif</span> weenks == 3:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"今天是星期四"</span>)</span><br><span class="line"><span class="keyword">elif</span> weenks == 4:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"今天是星期五"</span>)</span><br><span class="line"><span class="keyword">elif</span> weenks == 5:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"今天是星期六"</span>)</span><br><span class="line"><span class="keyword">elif</span> weenks == 6:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"今天是星期日"</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"今天星期几？"</span>)</span><br></pre></td></tr></table></figure>
-<h3 id="取值范围"><a href="#取值范围" class="headerlink" title="取值范围"></a>取值范围</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#     # 四舍五入</span></span><br><span class="line"><span class="comment">#     round()</span></span><br><span class="line"><span class="comment">#     #向下取</span></span><br><span class="line"><span class="comment">#     math.floor()</span></span><br><span class="line"><span class="comment">#     #向上取</span></span><br><span class="line"><span class="comment">#     math.ceil()</span></span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">hello</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/21/python经典习题（四）/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-python个人笔记(一)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/21/python个人笔记(一)/">python个人笔记(一)</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/21/python个人笔记(一)/" class="archive-article-date">
-  	<time datetime="2018-07-21T15:17:54.134Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="运算过程中的自动转换规则"><a href="#运算过程中的自动转换规则" class="headerlink" title="运算过程中的自动转换规则"></a>运算过程中的自动转换规则</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">num=250</span><br><span class="line">num1=3.14</span><br><span class="line">result=num+int(num1)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">float</span>(num))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(result))</span><br></pre></td></tr></table></figure>
-<h3 id="判断中的自动转换"><a href="#判断中的自动转换" class="headerlink" title="判断中的自动转换"></a>判断中的自动转换</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> 120 (bool  120num-&gt;bool):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'true'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'false'</span>)</span><br></pre></td></tr></table></figure>
-<h3 id="int-强制转换"><a href="#int-强制转换" class="headerlink" title="int 强制转换"></a>int 强制转换</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">num=10</span><br><span class="line">bool=5 <span class="comment">#转换成数字1</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(num//bool))</span><br><span class="line"><span class="built_in">print</span>(int(<span class="string">'250'</span>))  <span class="comment">#250</span></span><br><span class="line"><span class="comment"># print(int('250.5'))  # Error</span></span><br><span class="line"><span class="comment">#print(int('10k'))   # Error</span></span><br><span class="line"><span class="built_in">print</span>(int(<span class="string">'abc123'</span>)) <span class="comment">#Error</span></span><br></pre></td></tr></table></figure>
-<h3 id="float行强制转换"><a href="#float行强制转换" class="headerlink" title="float行强制转换"></a>float行强制转换</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># num=3.157</span></span><br><span class="line"><span class="comment">#print(round(num)) </span></span><br><span class="line">n=10</span><br><span class="line"><span class="built_in">print</span>((n/2).is_integer())</span><br></pre></td></tr></table></figure>
-<h3 id="复数强制转换"><a href="#复数强制转换" class="headerlink" title="复数强制转换"></a>复数强制转换</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(complex(5))</span><br><span class="line"><span class="built_in">print</span>(complex(5,5))</span><br><span class="line"><span class="built_in">print</span>(complex(True))</span><br><span class="line"><span class="built_in">print</span>(complex(False))</span><br></pre></td></tr></table></figure>
-<h3 id="bool值强制转换"><a href="#bool值强制转换" class="headerlink" title="bool值强制转换"></a>bool值强制转换</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var1=0</span><br><span class="line">var1=[0]</span><br><span class="line">var1=(0)</span><br><span class="line">newvar=bool(var1)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(var1))</span><br><span class="line"><span class="comment"># print(bool(var1))</span></span><br><span class="line"><span class="keyword">if</span> newvar:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'当前为true'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'当前为false'</span>)</span><br></pre></td></tr></table></figure>
-<h3 id="字符串强制转换"><a href="#字符串强制转换" class="headerlink" title="字符串强制转换"></a>字符串强制转换</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var=[<span class="string">'one'</span>,<span class="string">'two'</span>]</span><br><span class="line">var=<span class="string">'one two thr'</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(var))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(str(var)))</span><br><span class="line"><span class="built_in">print</span>(str(var))</span><br><span class="line"><span class="built_in">print</span>(var)</span><br><span class="line"><span class="built_in">print</span>(repr(var))</span><br></pre></td></tr></table></figure>
-<h3 id="eval用法，字符串转为其他类型"><a href="#eval用法，字符串转为其他类型" class="headerlink" title="eval用法，字符串转为其他类型"></a>eval用法，字符串转为其他类型</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">str=<span class="string">'pow(2,3)'</span></span><br><span class="line">str=<span class="string">"['one','two','thr']"</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(str))</span><br><span class="line">newstr=<span class="built_in">eval</span>(str)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(newstr))</span><br></pre></td></tr></table></figure>
-<h3 id="列表转为字典类型"><a href="#列表转为字典类型" class="headerlink" title="列表转为字典类型"></a>列表转为字典类型</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">list1=([<span class="string">'uname'</span>,<span class="string">'张三'</span>],[<span class="string">'age'</span>,45],[<span class="string">'class'</span>,<span class="string">'python'</span>])</span><br><span class="line"><span class="built_in">print</span>(list1)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(list1))</span><br><span class="line">dict1=dict(list1)</span><br><span class="line"><span class="comment"># &#123;键：值&#125;</span></span><br><span class="line"><span class="built_in">print</span>(dict1)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(dict1))</span><br><span class="line"><span class="comment">#把其他类型转为元组类型，注意键：值的分配</span></span><br><span class="line"><span class="comment">#字典转为其他（列表），只获取键部分</span></span><br></pre></td></tr></table></figure>
-<h3 id="random-random-的取值范围在0到1这个区间内"><a href="#random-random-的取值范围在0到1这个区间内" class="headerlink" title="random.random()的取值范围在0到1这个区间内"></a>random.random()的取值范围在0到1这个区间内</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(0-10)(10之内)</span><br><span class="line">import random</span><br><span class="line">import math</span><br><span class="line">num = random.random()*10</span><br><span class="line"><span class="built_in">print</span>(math.floor(num))</span><br></pre></td></tr></table></figure>
-<h3 id="19-180的随机数-乘上两数之差加1-最小数"><a href="#19-180的随机数-乘上两数之差加1-最小数" class="headerlink" title="19-180的随机数(乘上两数之差加1+最小数)"></a>19-180的随机数(乘上两数之差加1+最小数)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import random</span><br><span class="line">import math</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(14):</span><br><span class="line">    num1 = random.random()*162+19</span><br><span class="line">    <span class="built_in">print</span>(math.floor(num1))</span><br></pre></td></tr></table></figure>
-<h3 id="累加运算"><a href="#累加运算" class="headerlink" title="累加运算"></a>累加运算</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sum = 0 </span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(1,11):</span><br><span class="line">    sum+=i</span><br><span class="line"><span class="built_in">print</span>(sum)</span><br></pre></td></tr></table></figure>
-<h3 id="被除数-除数"><a href="#被除数-除数" class="headerlink" title="被除数%除数"></a>被除数%除数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">num1 = -9</span><br><span class="line">num2 = 2</span><br><span class="line">num = num1 % num2</span><br><span class="line"><span class="built_in">print</span>(num)</span><br></pre></td></tr></table></figure>
-<h3 id="闰年问题"><a href="#闰年问题" class="headerlink" title="闰年问题"></a>闰年问题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">year = int(input(<span class="string">"请输入年份："</span>))</span><br><span class="line"><span class="keyword">if</span>(year%4 == 0 and year%100 != 0):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"闰年"</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"平年"</span>)</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">hello</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/21/python个人笔记(一)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-python经典习题（三）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/21/python经典习题（三）/">python经典习题(三)</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/21/python经典习题（三）/" class="archive-article-date">
-  	<time datetime="2018-07-21T15:06:39.495Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>作业一：获取19-180之间的随机数<br>作业二：将list1=[‘one’,’two’,’thr’]拼接成一个字符串<br>作业三：将当前字典user = {‘姓名’:’张三’,’年龄’:’18’,’性别’:’男’}，输出字典user的key,以’,’ 连接，如 ‘姓名，年龄，性别’。</p>
-<h3 id="作业一：获取19-180之间的随机数"><a href="#作业一：获取19-180之间的随机数" class="headerlink" title="作业一：获取19-180之间的随机数"></a>作业一：获取19-180之间的随机数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">    <span class="comment">#解题思路：180-19+1=162 random.random()*162+19</span></span><br><span class="line">import random</span><br><span class="line">import math</span><br><span class="line"><span class="built_in">print</span>(random.random()*162+19)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(1,11):</span><br><span class="line">    <span class="built_in">print</span>(math.floor(random.random()*162+19))</span><br></pre></td></tr></table></figure>
-<h3 id="作业二：将list1-‘one’-’two’-’thr’-拼接成一个字符串"><a href="#作业二：将list1-‘one’-’two’-’thr’-拼接成一个字符串" class="headerlink" title="作业二：将list1=[‘one’,’two’,’thr’]拼接成一个字符串"></a>作业二：将list1=[‘one’,’two’,’thr’]拼接成一个字符串</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">list = [<span class="string">'one'</span>,<span class="string">'two'</span>,<span class="string">'thr'</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">""</span>.join(list))</span><br><span class="line"><span class="built_in">print</span>(list[0]+list[1]+list[2])</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> list:</span><br><span class="line">    <span class="comment"># print(i,end=""+"\n")</span></span><br><span class="line">    <span class="built_in">print</span>(i,end=<span class="string">""</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'\n'</span>)</span><br></pre></td></tr></table></figure>
-<h3 id="作业三：将当前字典user-‘姓名’-’张三’-’年龄’-’18’-’性别’-’男’-，"><a href="#作业三：将当前字典user-‘姓名’-’张三’-’年龄’-’18’-’性别’-’男’-，" class="headerlink" title="作业三：将当前字典user = {‘姓名’:’张三’,’年龄’:’18’,’性别’:’男’}，"></a>作业三：将当前字典user = {‘姓名’:’张三’,’年龄’:’18’,’性别’:’男’}，</h3><h3 id="输出字典user的key-以’-’-连接，如-‘姓名，年龄，性别’。"><a href="#输出字典user的key-以’-’-连接，如-‘姓名，年龄，性别’。" class="headerlink" title="输出字典user的key,以’,’ 连接，如 ‘姓名，年龄，性别’。"></a>输出字典user的key,以’,’ 连接，如 ‘姓名，年龄，性别’。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">user = &#123;<span class="string">'姓名'</span>:<span class="string">'张三'</span>,<span class="string">'年龄'</span>:<span class="string">'18'</span>,<span class="string">'性别'</span>:<span class="string">'男'</span>&#125;</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> user:</span><br><span class="line">    <span class="built_in">print</span>(i,end=<span class="string">","</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"\n"</span>)    </span><br><span class="line"><span class="comment"># print(tuple(user.keys()))</span></span><br><span class="line"><span class="comment"># user1 = tuple(user.keys())</span></span><br><span class="line"><span class="comment"># for k in user1:</span></span><br><span class="line"><span class="comment">#     print(k,end=",")</span></span><br><span class="line"><span class="built_in">print</span>(repr(<span class="string">","</span>.join(user)))</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">hello</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/21/python经典习题（三）/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
@@ -1171,6 +1145,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">hello</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">OS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">time</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">模块、包</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">面向对象</a>
               </li>
             
             <div class="clearfix"></div>
