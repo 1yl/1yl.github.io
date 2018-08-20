@@ -166,6 +166,149 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-python爬虫笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>a.什么是爬虫？</p>
+<pre><code>爬虫就是web spider，它是一种按照一定的规则，自动的抓取万维网信息的程序或者脚本。
+</code></pre><p>b.为什么要使用爬虫?</p>
+<pre><code>    2015年马云曾提及 IT(information technology) 将转向 DT(data technology),所谓DT也就是数据技术,外国很多公司很早就有了数据这个概念
+，并且成立了数据交易所，中国近年也在搭建数据交易市场，所以说数据是有价值意义的。爬虫工程师可以满足一些企业不愿意花费金钱去购买数据的需求。
+</code></pre><p>c.Python中使用爬虫的前提？</p>
+<pre><code>    python爬虫需要一个完善的爬虫架构，即包括调度器、URL管理器、网页下载器、网页解析器、应用程序.
+
+    调度器：相当于一台电脑的CPU，主要负责调度URL管理器、下载器、解析器之间的协调工作。
+    URL管理器：包括待爬取的URL地址和已爬取的URL地址，防止重复抓取URL和循环抓取URL，实现URL管理器主要用三种方式，通过内存、数据库、缓存数
+据库来实现。
+    网页下载器：通过传入一个URL地址来下载网页，将网页转换成一个字符串，网页下载器有urllib2（Python官方基础模块）包括需要登录、代理、和
+cookie，requests(第三方包)
+    网页解析器：将一个网页字符串进行解析，可以按照我们的要求来提取出我们有用的信息，也可以根据DOM树的解析方式来解析。网页解析器有正则表达式
+（直观，将网页转成字符串通过模糊匹配的方式来提取有价值的信息，当文档比较复杂的时候，该方法提取数据的时候就会非常的困难）、html.parser
+（Python自带的）、beautifulsoup（第三方插件，可以使用Python自带的html.parser进行解析，也可以使用lxml进行解析，相对于其他几种来说要强
+大一些）、lxml（第三方插件，可以解析 xml 和 HTML），html.parser 和 beautifulsoup 以及 lxml 都是以 DOM 树的方式进行解析的。
+    应用程序：就是从网页中提取的有用数据组成的一个应用。
+</code></pre><p>d.什么是协议?</p>
+<pre><code>由双方协定的某种规范，所有操作必须遵守这种规范的规则就是协议。
+</code></pre><p>e.什么是HTTP协议?</p>
+<pre><code>超文本传输协议(Hyper Text Transfer Protocol)是互联网上应用最为广泛的一种网络协议，所有的WWW文件都必须遵守这个标准。
+</code></pre><p>f.什么是URL?输入URL之后发生的过程?</p>
+<pre><code>    URL即统一资源定位符(Uniform Resource Locator)，用来唯一地标识万维网中的某一个文档。URL由协议、主机和端口(默认为80)以及文件名三部
+分构成。如：http://www.baidu.com:80/news/index.html,其中http://是协议，www.baidu.com:80/是主机:端口,也就是我们常说的域名,news
+/index.html是文件名.
+</code></pre><p>g.完成一次HTTP的过程?(cs)</p>
+<pre><code>    cs(客户端client-服务器server)一种由客户端与服务器进行交互的模式，完成一次HTTP的工作有以下7个步骤:
+
+1.用户通过客户端请求服务器，首先由本机的浏览器分析请求的超链接中的URL，例如http://www.baidu.com/index.html
+2.浏览器向DNS（域名解析器）请求解析访问的主机和端口的IP地址,例如解析www.baidu.com的IP地址
+3.DNS将解析出来的IP地址返回浏览器,例如www.baidu.com ==&gt; 202.2.16.20
+4.浏览器与服务器建立TCP链接(默认80端口)
+5.浏览器请求文档:GET/index.html
+6.服务器给出响应,将文档index.html的内容返回发送给浏览器
+7.释放TCP链接
+</code></pre><p>h.HTTP报文(请求报文和响应报文)</p>
+<pre><code>    请求报文是客户端(浏览器)向Web服务器发送的请求报文
+请求行:方法 URL 版本   如：GET/index.html HTTP/1.1
+首部行:首部字段名:值   如:Host:www.baidu.com  ==&gt; 域名
+                      Connection:close  ==&gt; 连接状态
+                      User-Agent:Mozilla/5.0  ==&gt; 用户代理
+                      Accept-Language:cn   ==&gt; 接收语言格式
+
+    相应报文是Web服务器向客户端(浏览器)的应答
+状态行:版本 状态码 短语   如:HTTP:/1.1 200 OK
+首部行:首部字段名:值     如:Date:Wed,08 May 2008 22 ==&gt; 说明浏览器、服务器的日期信息
+
+Action:报文的所有字段都是ASCII编码(请求报文和响应报文)
+</code></pre><p>i.HTTP的状态码有哪些?</p>
+<pre><code>1XX:通知信息
+2XX:成功
+3XX:重定向
+4XX:客户错误
+5XX:服务器错误
+</code></pre><p>j.HTML页面的组成部分?</p>
+<pre><code>&lt;!--
+文档声明部分
+DOCTYPE = document type 文档类型
+&lt;!DOCTYPE html&gt;如果文档类型不是HTML就不予解析
+--&gt;
+&lt;!DOCTYPE html&gt;
+&lt;!--html标记 所标记的内容都是html的内容
+lang 属性是用来设置当前页面的内容
+当加载页面的时候 浏览器会自动配置语言，如何和当前属地不符合的时候会提示翻译
+en 表示英语 zh-cn 表示中文简体
+--&gt;
+&lt;html lang=&quot;zh-cn&quot;&gt;
+&lt;!--页面的相关信息--&gt;
+&lt;head&gt;
+    &lt;!--页面的编码的设置--&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;!--页面的标题内容--&gt;
+    &lt;title&gt;my frist page&lt;/title&gt;
+&lt;/head&gt;
+&lt;!--页面内容--&gt;
+&lt;body&gt;
+&lt;/body&gt;
+</code></pre><p>k.HTML标记语言的格式?</p>
+<pre><code>&lt;&gt;&lt;/&gt;:用尖括号表示，&lt;/&gt;表示属性结束,&lt;&gt;可以在其中设置属性格式
+</code></pre><p>l.HTML基本页面的结构?</p>
+<pre><code>Header ==&gt; 放网站的导航或者目录
+content ==&gt; 放网站的内容
+footer ==&gt; 放网站的联系方式或者监管
+</code></pre><p>m.使用到的单双标签有哪些?</p>
+<pre><code>单标签:
+    &lt;br /&gt;换行 
+    &lt;hr /&gt;水平分割线
+双标签:
+    &lt;b&gt;&lt;/b&gt;加粗
+    &lt;font&gt;&lt;/font&gt;字体
+    &lt;p&gt;&lt;/p&gt;段落
+    &lt;u&gt;&lt;/u&gt;下划线
+    &lt;del&gt;&lt;/del&gt;删除线
+</code></pre><p>n.使用标签的意义？</p>
+<pre><code>使代码更加规范，变现形式更加美观
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/20/python爬虫笔记/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Python_17" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -834,83 +977,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/07/28/Python_12/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Python_11" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/28/Python_11/">Python基础10——了解函数</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/28/Python_11/" class="archive-article-date">
-  	<time datetime="2018-07-28T08:17:35.600Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="查看系统内置的所有函数"><a href="#查看系统内置的所有函数" class="headerlink" title="查看系统内置的所有函数"></a>查看系统内置的所有函数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(dir(__builtins__))</span><br></pre></td></tr></table></figure>
-<h3 id="认识函数"><a href="#认识函数" class="headerlink" title="认识函数"></a>认识函数</h3><p>函数（function）是一段完成特定功能的已命名代码块。函数可以遵照参数完成特定的任务，并且可能返回一个值<br>在Python中有两种函数：自定义函数与内置函数<br>页面加载时函数不会立即执行，函数只有在被调用时才会执行<br>循环可以使单行代码重复利用，函数使代码功能可以重复利用<br>本质：函数就是对功能的封装<br>函数的优越性：<br>    提高软件的开发效率<br>    提高软件的可维护性<br>    提高程序的重用性<br>
-        
-          <a class="article-more-a" href="/2018/07/28/Python_11/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">函数</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/28/Python_11/">展开全文 >></a>
         </p>
       
 
